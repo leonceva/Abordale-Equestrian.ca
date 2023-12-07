@@ -25,7 +25,6 @@ export const DesktopNavbar = () => {
 
 	const handleScroll = () => {
 		const position = window.scrollY;
-		console.log(`Position: ${position}`);
 		setScrollPosition(position);
 	};
 
