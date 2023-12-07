@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import logo from '../images/placeholder-logo-02.jpg';
+import logo from '../images/logo-custom-transparent.png';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
@@ -139,7 +139,11 @@ export const MobileNavbar = () => {
 	}, []);
 
 	return (
-		<MobileNavDiv style={{ opacity: `${scrollPosition > 50 ? '0.9' : '1'}` }}>
+		<MobileNavDiv
+			style={{
+				backgroundColor: `${scrollPosition > 50 ? 'rgba(18, 17, 31, 0.9)' : 'rgba(18, 17, 31, 1)'}`,
+			}}
+		>
 			<img
 				src={logo}
 				alt='Abordale Equestrian Logo'
@@ -159,7 +163,7 @@ export const MobileNavbar = () => {
 export const MobileNavDiv = styled.div`
 	width: 100%;
 	height: 100%;
-	background-color: rgb(18, 17, 31);
+	// background-color: rgb(18, 17, 31);
 	display: flex;
 	flex-direction: row;
 	align-items: center;
