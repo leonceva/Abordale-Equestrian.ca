@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import logo from '../images/placeholder-logo-02.jpg';
 import { Link, useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 const MOBILE_MODE_LIMIT = process.env.REACT_APP_MOBILE_MODE;
 
@@ -20,8 +21,24 @@ export default Navbar;
 export const DesktopNavbar = () => {
 	const navigate = useNavigate();
 
+	const [scrollPosition, setScrollPosition] = useState(0);
+
+	const handleScroll = () => {
+		const position = window.scrollY;
+		console.log(`Position: ${position}`);
+		setScrollPosition(position);
+	};
+
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll, { passive: true });
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
+
 	return (
-		<DesktopNavDiv>
+		<DesktopNavDiv style={{ opacity: `${scrollPosition > 200 ? '0.9' : '1'}` }}>
 			<img
 				className='logo'
 				src={logo}
@@ -44,8 +61,8 @@ export const DesktopNavbar = () => {
 export const DesktopNavDiv = styled.div`
 	width: 100%;
 	height: 100%;
-	// background-color: black;
-	background-image: linear-gradient(to right, rgb(126, 184, 232), rgb(45, 43, 78));
+	background-color: rgb(18, 17, 31);
+	// background-image: linear-gradient(to right, rgb(126, 184, 232), rgb(45, 43, 78));
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -59,7 +76,7 @@ export const DesktopNavDiv = styled.div`
 		max-width: 28%;
 		margin: 0 1%;
 		cursor: pointer;
-		border: 4px solid;
+		border: 2px solid;
 		border-color: transparent;
 
 		&:hover {

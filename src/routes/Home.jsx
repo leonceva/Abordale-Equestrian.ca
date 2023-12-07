@@ -46,7 +46,7 @@ export const DesktopContent = () => {
 							enhance your riding experience
 						</p>
 						<span
-							className='link'
+							className='link  button'
 							onClick={() => {
 								navigate('/facilities');
 							}}
@@ -71,7 +71,7 @@ export const DesktopContent = () => {
 							for all levels of riders.
 						</p>
 						<span
-							className='link'
+							className='link button'
 							onClick={() => {
 								navigate('/about');
 							}}
@@ -91,7 +91,7 @@ export const DesktopContent = () => {
 							guaranteeing that every horse receives the highest standard of care.
 						</p>
 						<span
-							className='link'
+							className='link button'
 							onClick={() => {
 								navigate('/about');
 							}}
@@ -105,7 +105,7 @@ export const DesktopContent = () => {
 				<div className='get-started-container'>
 					<h1>Ready To Start?</h1>
 					<span
-						className='link'
+						className='link button'
 						onClick={() => {
 							navigate('/lessons-and-boarding');
 						}}
@@ -182,12 +182,7 @@ export const DesktopDiv = styled.div`
 
 				& > .link {
 					font-weight: bold;
-					color: white;
-					border: 2px solid black;
-					border-radius: 10px;
 					padding: 5px 10px;
-					background-color: rgb(45, 43, 78);
-					cursor: pointer;
 					align-self: start;
 					margin-left: 5%;
 					margin-bottom: 2.5%;
@@ -234,13 +229,8 @@ export const DesktopDiv = styled.div`
 
 				& > .link {
 					font-weight: bold;
-					color: white;
-					border: 2px solid black;
-					border-radius: 10px;
-					padding: 5px 10px;
-					background-color: rgb(45, 43, 78);
-					cursor: pointer;
 					align-self: start;
+					padding: 5px 10px;
 					margin-left: 2.5%;
 					margin-bottom: 2.5%;
 				}
@@ -267,14 +257,9 @@ export const DesktopDiv = styled.div`
 
 			& > .link {
 				max-width: 25%;
+				padding: 5px 10px;
 				text-align: center;
 				font-weight: bold;
-				color: white;
-				border: 2px solid black;
-				border-radius: 10px;
-				padding: 5px 10px;
-				background-color: rgb(45, 43, 78);
-				cursor: pointer;
 				font-size: calc(min(3vw, 3vh));
 			}
 

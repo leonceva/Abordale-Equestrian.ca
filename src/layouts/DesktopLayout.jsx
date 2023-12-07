@@ -5,6 +5,7 @@ const MOBILE_MODE_LIMIT = process.env.REACT_APP_MOBILE_MODE;
 
 const DesktopLayout = (props) => {
 	const content = props.content;
+
 	return (
 		<DesktopDiv>
 			<div className='background' />
