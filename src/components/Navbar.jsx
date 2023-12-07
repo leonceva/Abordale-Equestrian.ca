@@ -316,14 +316,15 @@ export const NavButtonDiv = styled.div`
 		width: 220px;
 		right: 5.5%;
 		top: calc(100% - 20px);
+		font-size: calc(max(2.2vh, 2.2vw));
+		overflow: hidden;
 
 		& > .expanded-link {
-			margin: 2% 0;
+			padding: 5% 0;
 			text-decoration: none;
 			color: white;
-			width: 90%;
+			width: 100%;
 			text-align: center;
-			border-radius: 10px;
 
 			&:hover {
 				background-color: rgb(17, 56, 72);
