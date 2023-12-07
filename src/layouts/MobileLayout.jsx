@@ -18,6 +18,7 @@ export const MobileDiv = styled.div`
 	flex-direction: column;
 	width: 100%;
 	position: relative;
+	font-size: calc(max(2vh, 2vw));
 
 	@media screen and (min-width: ${MOBILE_MODE_LIMIT}) {
 		display: none;
@@ -25,5 +26,11 @@ export const MobileDiv = styled.div`
 
 	@media screen and (width: ${MOBILE_MODE_LIMIT}) {
 		display: inherit;
+	}
+
+	& > .mobile-content {
+		width: 100%;
+		min-height: calc(100vh - 100px);
+		z-index: 2;
 	}
 `;

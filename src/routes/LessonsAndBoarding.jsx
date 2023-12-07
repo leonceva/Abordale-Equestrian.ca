@@ -13,9 +13,9 @@ const LessonsAndBoarding = () => {
 export default LessonsAndBoarding;
 
 export const DesktopContent = () => {
-	return <>Lessons Desktop Mode</>;
+	return <>Lessons and Boarding Desktop Mode</>;
 };
 
 export const MobileContent = () => {
-	return <>Lessons Mobile Mode</>;
+	return <>Lessons and Boarding Mobile Mode</>;
 };
