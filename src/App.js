@@ -5,7 +5,7 @@ import ErrorPage from "./routes/Error";
 import Home from "./routes/Home";
 import About from "./routes/About";
 import Facilities from "./routes/Facilities";
-import Lessons from "./routes/Lessons";
+import LessonsAndBoarding from "./routes/LessonsAndBoarding";
 import Contact from "./routes/Contact";
 
 function App() {
@@ -29,8 +29,8 @@ function App() {
           element: <Facilities />
         },
         {
-          path: "/lessons",
-          element: <Lessons />
+          path: "/lessons-and-boarding",
+          element: <LessonsAndBoarding />
         },
         {
           path: "/contact",

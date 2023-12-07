@@ -1,7 +1,7 @@
 import DesktopLayout from '../layouts/DesktopLayout';
 import MobileLayout from '../layouts/MobileLayout';
 
-const Lessons = () => {
+const LessonsAndBoarding = () => {
 	return (
 		<>
 			<DesktopLayout content={<DesktopContent />} />
@@ -10,7 +10,7 @@ const Lessons = () => {
 	);
 };
 
-export default Lessons;
+export default LessonsAndBoarding;
 
 export const DesktopContent = () => {
 	return <>Lessons Desktop Mode</>;

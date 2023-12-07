@@ -32,9 +32,9 @@ export const DesktopNavbar = () => {
 			/>
 			<div className='link-container'>
 				<NavLink to='/'>Home</NavLink>
-				<NavLink to='/about'>About</NavLink>
+				<NavLink to='/about'>Meet the Team</NavLink>
 				<NavLink to='/facilities'>Facilities</NavLink>
-				<NavLink to='/lessons'>Lessons & Boarding</NavLink>
+				<NavLink to='/lessons-and-boarding'>Lessons & Boarding</NavLink>
 				<NavLink to='/contact'>Contact</NavLink>
 			</div>
 		</DesktopNavDiv>
@@ -49,7 +49,6 @@ export const DesktopNavDiv = styled.div`
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	position: relative;
 
 	@media screen and (max-width: ${MOBILE_MODE_LIMIT}) {
 		display: none;
@@ -97,7 +96,7 @@ export const NavLink = styled(Link)`
 		font-size: calc(min(2.5vw, 2.5vh));
 	}
 
-	@media screen and (min-width: ${'900px'}) {
+	@media screen and (min-width: ${'1000px'}) {
 		font-size: calc(min(3vw, 3vh)) !important;
 	}
 `;
