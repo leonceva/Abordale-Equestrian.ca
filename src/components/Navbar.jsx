@@ -123,8 +123,23 @@ export const MobileNavbar = () => {
 	const navigate = useNavigate();
 	const [isExpanded, setIsExpanded] = useState(false);
 
+	const [scrollPosition, setScrollPosition] = useState(0);
+
+	const handleScroll = () => {
+		const position = window.scrollY;
+		setScrollPosition(position);
+	};
+
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll, { passive: true });
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
+
 	return (
-		<MobileNavDiv>
+		<MobileNavDiv style={{ opacity: `${scrollPosition > 50 ? '0.9' : '1'}` }}>
 			<img
 				src={logo}
 				alt='Abordale Equestrian Logo'
