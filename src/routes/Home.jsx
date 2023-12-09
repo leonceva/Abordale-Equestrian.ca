@@ -387,25 +387,32 @@ export const MobileContent = () => {
 				adventure begin!
 			</div>
 			<div className='facility'>
-				<h2>Discover Our Facilities</h2>
-				<div className='img-container'>
-					<img src={facility_01} alt='Facility 01' />
-					<img src={facility_02} alt='Facility 02' />
+				<div className='facility-container'>
+					<div className='carousel'>
+						<Carousel />
+					</div>
+					<div className='description-container'>
+						<h2>Discover Our Facilities</h2>
+						<p>
+							The equestrian center boasts a range of well-maintained facilities catering to horse
+							enthusiasts of all levels. The center includes spacious and secure stables, an
+							expansive riding arena, and well-groomed trails for leisurely rides. Riders can make
+							use of basic equipment and grooming areas, while the center also provides a cozy
+							clubhouse for gatherings and events. With a focus on functionality and comfort, the
+							equestrian center offers a welcoming environment for both riders and their equine
+							companions.
+						</p>
+						<span
+							className='button link'
+							onClick={() => {
+								window.scrollTo(0, 0);
+								navigate('/facilities');
+							}}
+						>
+							Learn More
+						</span>
+					</div>
 				</div>
-				<div className='description'>
-					Discover a premier equestrian environment at our state-of-the-art facilities. From
-					well-appointed stables to meticulously maintained arenas, our space is designed to enhance
-					your riding experience
-				</div>
-				<span
-					className='link button'
-					onClick={() => {
-						window.scrollTo(0, 0);
-						navigate('/facilities');
-					}}
-				>
-					Learn More
-				</span>
 			</div>
 			<div className='short-about'>
 				<div className='staff-container'>
@@ -484,39 +491,119 @@ export const MobileDiv = styled.div`
 	}
 
 	& > .welcome-message {
-		padding: 0 2.5%;
+		padding: 0 2.5% 5%;
 		line-height: 125%;
 	}
 
 	& > .facility {
 		width: 95%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin-top: 5%;
 
-		& > .img-container {
+		& > .facility-container {
+			width: 100%;
+			height: 80vh;
 			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
+			flex-direction: column;
+			justify-content: start;
+			align-items: center;
 
-			& > img {
-				width: calc(50% - 2vw);
+			& > .carousel {
+				flex: 4;
+				height: 100%;
+				width: 100%;
 				border: 2px solid black;
+				position: relative;
+
+				& > .img-div {
+					height: 100%;
+					width: 100%;
+
+					& > img {
+						transition: all 1s;
+						position: absolute;
+					}
+
+					& > .img-show {
+						max-width: 100%;
+						max-height: 100%;
+						left: 50%;
+						top: 50%;
+						transform: translate(-50%, -50%);
+						z-index: 2;
+						opacity: 1;
+					}
+
+					& > .img-bg {
+						height: 100%;
+						width: 100%;
+						opacity: 0.2;
+					}
+
+					& > .left {
+						position: absolute;
+						height: 100%;
+						width: 25px;
+						left: 0;
+						background-color: black;
+						color: white;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						cursor: pointer;
+						z-index: 3;
+
+						&:active {
+							transition: all 100ms;
+							width: 20px;
+						}
+					}
+					& > .right {
+						position: absolute;
+						height: 100%;
+						width: 25px;
+						right: 0;
+						background-color: black;
+						color: white;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						cursor: pointer;
+						z-index: 3;
+
+						&:active {
+							transition: all 100ms;
+							width: 20px;
+						}
+					}
+				}
 			}
-		}
+			& > .description-container {
+				flex: 1;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
 
-		& > .description {
-			margin-top: 2.5%;
-			width: 95%;
-			align-self: center;
-		}
+				& > h2 {
+					margin: 0;
+					padding: 2.5% 2.5% 0;
+					width: 100%;
+					text-align: center;
+				}
 
-		& > .link {
-			font-weight: bold;
-			padding: 5px 10px;
-			align-self: center;
-			margin: 2.5% 0;
+				& > p {
+					width: 100%;
+					padding: 0 2.5%;
+					text-align: justify;
+				}
+
+				& > .link {
+					font-weight: bold;
+					align-self: center;
+					padding: 5px 10px;
+					margin-bottom: 2.5%;
+				}
+			}
 		}
 	}
 
@@ -593,7 +680,7 @@ export const MobileDiv = styled.div`
 				align-items: center;
 
 				& > .link {
-					width: 50%;
+					width: 75%;
 					font-weight: bold;
 					padding: 5px 10px;
 					align-self: center;
