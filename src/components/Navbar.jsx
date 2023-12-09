@@ -76,8 +76,8 @@ export const DesktopNavDiv = styled.div`
 	}
 
 	& > .logo {
-		max-height: 150%;
-		max-width: 28%;
+		max-height: 250px;
+		width: 28%;
 		margin: 0 1%;
 		cursor: pointer;
 	}
@@ -164,7 +164,7 @@ export const MobileNavDiv = styled.div`
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-between;
 	font-size: calc(max(2.5vw, 2.5vh));
 
 	@media screen and (min-width: ${MOBILE_MODE_LIMIT}) {
@@ -176,9 +176,9 @@ export const MobileNavDiv = styled.div`
 	}
 
 	& > .logo {
-		max-height: 150%;
-		max-width: 40%;
-		margin-left: 3%;
+		max-height: 175px;
+		max-width: 70%;
+		margin-left: 0%;
 
 		&:hover {
 			cursor: pointer;
@@ -186,7 +186,7 @@ export const MobileNavDiv = styled.div`
 	}
 
 	& > .menu {
-		flex: 1;
+		max-width: 10%;
 		height: 100%;
 		margin-right: 3%;
 		display: flex;
