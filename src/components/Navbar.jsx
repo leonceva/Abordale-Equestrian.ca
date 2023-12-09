@@ -70,6 +70,7 @@ export const DesktopNavDiv = styled.div`
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	overflow: hidden;
 
 	@media screen and (max-width: ${MOBILE_MODE_LIMIT}) {
 		display: none;
@@ -152,6 +153,7 @@ export const MobileNavDiv = styled.div`
 	align-items: center;
 	justify-content: space-between;
 	font-size: calc(max(2.5vw, 2.5vh));
+	overflow: hidden;
 
 	@media screen and (min-width: ${MOBILE_MODE_LIMIT}) {
 		display: none;
