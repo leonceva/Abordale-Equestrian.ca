@@ -176,7 +176,7 @@ export const MobileNavDiv = styled.div`
 	}
 
 	& > .logo {
-		max-height: 150%;
+		max-height: 175px;
 		max-width: 40%;
 		margin-left: 3%;
 
