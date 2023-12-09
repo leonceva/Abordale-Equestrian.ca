@@ -1,10 +1,17 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import { styled } from 'styled-components';
 import Navbar from '../components/Navbar';
+import { useEffect } from 'react';
 
 const MOBILE_MODE_LIMIT = process.env.REACT_APP_MOBILE_MODE;
 
 const Root = () => {
+	const { pathname } = useLocation();
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [pathname]);
+
 	return (
 		<RootDiv>
 			<div className='navbar'>
@@ -20,7 +27,6 @@ const Root = () => {
 export const RootDiv = styled.div`
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
 
 	& > .navbar {
 		width: 100%;
