@@ -151,7 +151,6 @@ export const MobileNavbar = () => {
 				}}
 			/>
 			<div className='menu'>
-				Menu
 				<NavButton isExpanded={isExpanded} setIsExpanded={setIsExpanded} />
 			</div>
 		</MobileNavDiv>
