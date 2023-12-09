@@ -38,7 +38,13 @@ export const DesktopNavbar = () => {
 	}, []);
 
 	return (
-		<DesktopNavDiv style={{ opacity: `${scrollPosition > 200 ? '0.9' : '1'}` }}>
+		<DesktopNavDiv
+			style={{
+				backgroundColor: `${
+					scrollPosition > 200 ? 'rgba(11, 13, 37, 0.9)' : 'rgba(11, 13, 37, 1)'
+				}`,
+			}}
+		>
 			<img
 				className='logo'
 				src={logo}
@@ -61,7 +67,6 @@ export const DesktopNavbar = () => {
 export const DesktopNavDiv = styled.div`
 	width: 100%;
 	height: 100%;
-	background-color: #0b0d25;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -134,7 +139,7 @@ export const MobileNavbar = () => {
 	return (
 		<MobileNavDiv
 			style={{
-				backgroundColor: `${scrollPosition > 50 ? 'rgba(18, 17, 31, 0.9)' : 'rgba(18, 17, 31, 1)'}`,
+				backgroundColor: `${scrollPosition > 50 ? 'rgba(11, 13, 37, 0.9)' : 'rgba(11, 13, 37, 1)'}`,
 			}}
 		>
 			<img
@@ -161,7 +166,6 @@ export const MobileNavDiv = styled.div`
 	align-items: center;
 	justify-content: center;
 	font-size: calc(max(2.5vw, 2.5vh));
-	background-color: #0b0d25;
 
 	@media screen and (min-width: ${MOBILE_MODE_LIMIT}) {
 		display: none;
