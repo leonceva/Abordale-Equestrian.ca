@@ -149,7 +149,7 @@ export const MobileContent = () => {
 						<img src={sean_img} alt='Sean Jenkin' />
 					</div>
 					<h2>Sean Jenkin</h2>
-					<h3>Your Guardian of Equine Comfort and Care</h3>
+					<h3>Your Versatile Equestrian Expert</h3>
 					<p className='bio'>
 						With a deep passion for equine excellence, Sean stands as a versatile equestrian
 						professional specializing in eventing, hunter/jumper, and dressage. He brings years of

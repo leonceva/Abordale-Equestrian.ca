@@ -48,6 +48,7 @@ export const DesktopContent = () => {
 						<span
 							className='link button'
 							onClick={() => {
+								window.scrollTo(0, 0);
 								navigate('/facilities');
 							}}
 						>
@@ -73,6 +74,7 @@ export const DesktopContent = () => {
 						<span
 							className='link button'
 							onClick={() => {
+								window.scrollTo(0, 0);
 								navigate('/about');
 							}}
 						>
@@ -93,6 +95,7 @@ export const DesktopContent = () => {
 						<span
 							className='link button'
 							onClick={() => {
+								window.scrollTo(0, 0);
 								navigate('/about');
 							}}
 						>
@@ -107,6 +110,7 @@ export const DesktopContent = () => {
 					<span
 						className='link button'
 						onClick={() => {
+							window.scrollTo(0, 0);
 							navigate('/lessons-and-boarding');
 						}}
 					>
@@ -323,6 +327,7 @@ export const MobileContent = () => {
 				<span
 					className='link button'
 					onClick={() => {
+						window.scrollTo(0, 0);
 						navigate('/facilities');
 					}}
 				>
@@ -338,6 +343,7 @@ export const MobileContent = () => {
 						<span
 							className='link button'
 							onClick={() => {
+								window.scrollTo(0, 0);
 								navigate('/about');
 							}}
 						>
@@ -353,6 +359,7 @@ export const MobileContent = () => {
 						<span
 							className='link button'
 							onClick={() => {
+								window.scrollTo(0, 0);
 								navigate('/about');
 							}}
 						>
@@ -365,7 +372,15 @@ export const MobileContent = () => {
 				<div className='get-started-container'>
 					<h2>Ready To Start?</h2>
 					<div className='right-side'>
-						<span className='link button'>Explore Lessons and Boarding</span>
+						<span
+							className='link button'
+							onClick={() => {
+								window.scrollTo(0, 0);
+								navigate('/lessons-and-boarding');
+							}}
+						>
+							Explore Lessons and Boarding
+						</span>
 					</div>
 				</div>
 				<div className='get-started-container'>

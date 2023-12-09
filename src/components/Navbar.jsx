@@ -29,10 +29,12 @@ export const DesktopNavbar = () => {
 	};
 
 	useEffect(() => {
+		console.log(scrollPosition);
 		window.addEventListener('scroll', handleScroll, { passive: true });
 
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
+			setScrollPosition(0);
 		};
 	}, []);
 
