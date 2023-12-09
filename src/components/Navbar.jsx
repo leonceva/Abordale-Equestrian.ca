@@ -29,7 +29,6 @@ export const DesktopNavbar = () => {
 	};
 
 	useEffect(() => {
-		console.log(scrollPosition);
 		window.addEventListener('scroll', handleScroll, { passive: true });
 
 		return () => {
@@ -77,13 +76,6 @@ export const DesktopNavDiv = styled.div`
 		max-width: 28%;
 		margin: 0 1%;
 		cursor: pointer;
-		border: 2px solid;
-		border-color: transparent;
-
-		&:hover {
-			transition: 200ms;
-			border-color: white;
-		}
 	}
 
 	& > .link-container {

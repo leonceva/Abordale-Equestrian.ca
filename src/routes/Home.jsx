@@ -4,9 +4,13 @@ import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 import sean_img from '../images/placeholder-sean-01.jpg';
 import brandon_img from '../images/placeholder-brandon-01.jpg';
-import facility_left from '../images/placeholder-facility-01.jpg';
-import facility_right from '../images/placeholder-facility-02.jpg';
+import facility_01 from '../images/placeholder-facility-01.jpg';
+import facility_02 from '../images/placeholder-facility-02.jpg';
+import facility_03 from '../images/placeholder-facility-03.jpg';
+import facility_04 from '../images/placeholder-facility-04.jpg';
+import facility_05 from '../images/placeholder-facility-05.jpg';
 import SocialMediaLink from '../components/SocialMediaLink';
+import { useRef, useState, useEffect } from 'react';
 
 const Home = () => {
 	return (
@@ -25,7 +29,7 @@ export const DesktopContent = () => {
 	const navigate = useNavigate();
 	return (
 		<DesktopDiv>
-			<h2>Welcome To Abordale Equestrian</h2>
+			<h2 className='title'>Welcome To Abordale Equestrian</h2>
 			<div className='welcome-message'>
 				Discover the perfect blend of passion and purpose at Abordale Equestrian. Located just south
 				of Stittsville, our premier facility offers top-notch boarding, expert training, and
@@ -37,16 +41,22 @@ export const DesktopContent = () => {
 			</div>
 			<div className='facility'>
 				<div className='facility-container'>
-					<img src={facility_left} alt='Facility 01' className='left' />
+					<div className='carousel'>
+						<Carousel />
+					</div>
 					<div className='description-container'>
-						<h3 className='title'>Discover Our Facilities</h3>
-						<p className='description'>
-							Discover a premier equestrian environment at our state-of-the-art facilities. From
-							well-appointed stables to meticulously maintained arenas, our space is designed to
-							enhance your riding experience
+						<h2>Discover Our Facilities</h2>
+						<p>
+							The equestrian center boasts a range of well-maintained facilities catering to horse
+							enthusiasts of all levels. The center includes spacious and secure stables, an
+							expansive riding arena, and well-groomed trails for leisurely rides. Riders can make
+							use of basic equipment and grooming areas, while the center also provides a cozy
+							clubhouse for gatherings and events. With a focus on functionality and comfort, the
+							equestrian center offers a welcoming environment for both riders and their equine
+							companions.
 						</p>
 						<span
-							className='link button'
+							className='button link'
 							onClick={() => {
 								window.scrollTo(0, 0);
 								navigate('/facilities');
@@ -55,7 +65,6 @@ export const DesktopContent = () => {
 							Learn More
 						</span>
 					</div>
-					<img src={facility_right} alt='Facility 02' className='right' />
 				</div>
 			</div>
 			<div className='short-about'>
@@ -139,8 +148,13 @@ export const DesktopDiv = styled.div`
 	justify-content: start;
 	align-items: center;
 
+	& > .title {
+		margin: 15px 0;
+	}
+
 	& > .welcome-message {
 		padding-bottom: 25px;
+		text-align: justify;
 	}
 
 	& > .facility {
@@ -148,47 +162,106 @@ export const DesktopDiv = styled.div`
 
 		& > .facility-container {
 			width: 100%;
-			height: max-content;
+			height: 60vh;
 			display: flex;
 			flex-direction: row;
+			justify-content: start;
 			align-items: center;
-			justify-content: space-around;
 
-			& > img {
+			& > .carousel {
+				flex: 2;
+				height: 100%;
 				border: 2px solid black;
-				max-width: 30%;
-				max-height: 100%;
-			}
+				position: relative;
 
-			& > .left {
-				justify-self: start;
-			}
+				& > .img-div {
+					height: 100%;
+					width: 100%;
 
-			& > .right {
-				justify-self: flex-end;
+					& > img {
+						transition: all 1s;
+						position: absolute;
+					}
+
+					& > .img-show {
+						max-width: 100%;
+						max-height: 100%;
+						left: 50%;
+						top: 50%;
+						transform: translate(-50%, -50%);
+						z-index: 2;
+						opacity: 1;
+					}
+
+					& > .img-bg {
+						height: 100%;
+						width: 100%;
+						opacity: 0.2;
+					}
+
+					& > .left {
+						position: absolute;
+						height: 100%;
+						width: 25px;
+						left: 0;
+						background-color: black;
+						color: white;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						cursor: pointer;
+						z-index: 3;
+
+						&:active {
+							transition: all 100ms;
+							width: 20px;
+						}
+					}
+					& > .right {
+						position: absolute;
+						height: 100%;
+						width: 25px;
+						right: 0;
+						background-color: black;
+						color: white;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						cursor: pointer;
+						z-index: 3;
+
+						&:active {
+							transition: all 100ms;
+							width: 20px;
+						}
+					}
+				}
 			}
 
 			& > .description-container {
+				flex: 3;
+				height: 100%;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
-				flex: 1;
 
-				& > .title {
-					margin: 2.5%;
+				& > h2 {
+					margin: 0;
+					padding-left: 2.5%;
+					width: 100%;
 				}
 
-				& > .description {
+				& > p {
+					padding-left: 2.5%;
 					text-align: justify;
-					margin: 5%;
 				}
 
 				& > .link {
 					font-weight: bold;
-					padding: 5px 10px;
 					align-self: start;
-					margin-left: 5%;
+					padding: 5px 10px;
+					margin-left: 2.5%;
 					margin-bottom: 2.5%;
 				}
 			}
@@ -316,8 +389,8 @@ export const MobileContent = () => {
 			<div className='facility'>
 				<h2>Discover Our Facilities</h2>
 				<div className='img-container'>
-					<img src={facility_left} alt='Facility 01' />
-					<img src={facility_right} alt='Facility 02' />
+					<img src={facility_01} alt='Facility 01' />
+					<img src={facility_02} alt='Facility 02' />
 				</div>
 				<div className='description'>
 					Discover a premier equestrian environment at our state-of-the-art facilities. From
@@ -538,3 +611,98 @@ export const MobileDiv = styled.div`
 		}
 	}
 `;
+
+/************************************************************* Component ****************************************************************************/
+
+export const Carousel = () => {
+	const [imgNumber, setImgNumber] = useState(1);
+	let current_num = useRef(imgNumber);
+	let timerID = useRef(null);
+
+	const NUMBER_IMAGES = 5;
+
+	let img_src, img_alt;
+
+	switch (imgNumber) {
+		case 1:
+			img_src = facility_01;
+			img_alt = 'Facility 01';
+			break;
+		case 2:
+			img_src = facility_02;
+			img_alt = 'Facility 02';
+			break;
+		case 3:
+			img_src = facility_03;
+			img_alt = 'Facility 03';
+			break;
+		case 4:
+			img_src = facility_04;
+			img_alt = 'Facility 04';
+			break;
+		case 5:
+			img_src = facility_05;
+			img_alt = 'Facility 05';
+			break;
+
+		default:
+			break;
+	}
+
+	const handleClick = (side) => {
+		if (side === 'left') {
+			if (imgNumber > 1) {
+				setImgNumber(imgNumber - 1);
+				current_num.current--;
+			} else {
+				setImgNumber(NUMBER_IMAGES);
+				current_num.current = NUMBER_IMAGES;
+			}
+			clearInterval(timerID.current);
+		}
+		if (side === 'right') {
+			if (imgNumber < NUMBER_IMAGES) {
+				setImgNumber(imgNumber + 1);
+				current_num.current++;
+			} else {
+				setImgNumber(1);
+				current_num.current = 1;
+			}
+		}
+		clearInterval(timerID.current);
+	};
+
+	useEffect(() => {
+		timerID.current = setInterval(() => {
+			current_num.current < NUMBER_IMAGES ? current_num.current++ : (current_num.current = 1);
+			setImgNumber(current_num.current);
+		}, 5000);
+
+		return () => clearInterval(timerID.current);
+	}, [imgNumber]);
+
+	return (
+		<>
+			<div className='img-div'>
+				<img loading='lazy' className='img-show' src={img_src} alt={img_alt} />
+				<img src={img_src} alt='Background' className='img-bg' />
+				<div
+					className='left'
+					onClick={() => {
+						handleClick('left');
+					}}
+				>
+					<i class='bi bi-chevron-double-left' style={{ fontSize: '25px' }} />
+				</div>
+				<div
+					className='right'
+					onClick={() => {
+						handleClick('right');
+					}}
+				>
+					<i class='bi bi-chevron-double-right' style={{ fontSize: '25px' }} />
+				</div>
+			</div>
+		</>
+	);
+};
