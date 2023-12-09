@@ -151,17 +151,16 @@ export const MobileContent = () => {
 					<h2>Sean Jenkin</h2>
 					<h3>Your Versatile Equestrian Expert</h3>
 					<p className='bio'>
-						With a deep passion for equine excellence, Sean stands as a versatile equestrian
-						professional specializing in eventing, hunter/jumper, and dressage. He brings years of
-						dedicated experience to the arena, seamlessly blending expertise across disciplines. As
-						a seasoned trainer, Sean has honed a unique approach that not only focuses on technical
-						precision but also nurtures the unique bond between rider and horse. With a commitment
-						to cultivating well-rounded equestrians, he tailors training programs to suit riders of
-						all levels, from aspiring novices to seasoned competitors. Embark on a transformative
-						journey with Sean, where the artistry of dressage, the precision of hunter/jumper, and
-						the exhilaration of eventing converge into a holistic and enriching equestrian
-						experience. Whether you're aiming for the podium or seeking a harmonious connection with
-						your equine partner, Sean is here to guide you every stride of the way.
+						He brings years of dedicated experience to the arena, seamlessly blending expertise
+						across disciplines. As a seasoned trainer, Sean has honed a unique approach that not
+						only focuses on technical precision but also nurtures the unique bond between rider and
+						horse. With a commitment to cultivating well-rounded equestrians, he tailors training
+						programs to suit riders of all levels, from aspiring novices to seasoned competitors.
+						Embark on a transformative journey with Sean, where the artistry of dressage, the
+						precision of hunter/jumper, and the exhilaration of eventing converge into a holistic
+						and enriching equestrian experience. Whether you're aiming for the podium or seeking a
+						harmonious connection with your equine partner, Sean is here to guide you every stride
+						of the way.
 					</p>
 				</div>
 				<div className='staff-container'>
@@ -196,11 +195,13 @@ export const MobileDiv = styled.div`
 	justify-content: start;
 
 	& > .intro-message {
-		margin: 2.5%;
+		margin: 5%;
+		text-align: justify;
+		line-height: 130%;
 	}
 
 	& > .staff {
-		width: 100%;
+		width: 95%;
 		display: flex;
 		flex-direction: column;
 		justify-content: start;
