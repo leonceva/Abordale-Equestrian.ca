@@ -34,20 +34,26 @@ export const DesktopContent = () => {
 			</div>
 			<div className='img-container'>
 				<div className='img-wrapper'>
-					<img src={facility_01} alt='Facility 01' />
+					<img src={facility_01} alt='Facility 01 Background' className='facility-bg' />
+					<img className='facility-img' src={facility_01} alt='Facility 01' />
 				</div>
 				<div className='img-wrapper'>
-					<img src={facility_02} alt='Facility 02' />
+					<img src={facility_02} alt='Facility 02 Background' className='facility-bg' />
+					<img className='facility-img' src={facility_02} alt='Facility 01' />
 				</div>
 				<div className='img-wrapper'>
-					<img src={facility_03} alt='Facility 03' />
+					<img src={facility_03} alt='Facility 03 Background' className='facility-bg' />
+					<img className='facility-img' src={facility_03} alt='Facility 01' />
 				</div>
 				<div className='img-wrapper'>
-					<img src={facility_04} alt='Facility 04' />
+					<img src={facility_04} alt='Facility 04 Background' className='facility-bg' />
+					<img className='facility-img' src={facility_04} alt='Facility 01' />
 				</div>
 				<div className='img-wrapper'>
-					<img src={facility_05} alt='Facility 05' />
+					<img src={facility_05} alt='Facility 05 Background' className='facility-bg' />
+					<img className='facility-img' src={facility_05} alt='Facility 01' />
 				</div>
+				<div className='bottom-space' />
 			</div>
 		</DesktopDiv>
 	);
@@ -68,8 +74,7 @@ export const DesktopDiv = styled.div`
 
 	& > .img-container {
 		width: 100%;
-		min-height: 50vh;
-		height: max-content;
+		height: 50vh;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -77,18 +82,35 @@ export const DesktopDiv = styled.div`
 		flex-wrap: wrap;
 
 		& > .img-wrapper {
-			max-width: 32%;
+			width: 30%;
 			height: 100%;
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			align-items: center;
+			border: 2px solid black;
+			position: relative;
+			margin-bottom: 2.5%;
+			background-color: white;
+			z-index: 1;
 
-			& > img {
-				border: 2px solid black;
-				max-width: 100%;
-				max-height: 95%;
+			& > .facility-bg {
+				width: 100%;
+				height: 100%;
+				opacity: 0.3;
+				position: absolute;
+				z-index: 2;
 			}
+
+			& > .facility-img {
+				position: absolute;
+				max-width: calc(100% - 6px);
+				max-height: calc(100% - 6px);
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 3;
+			}
+		}
+		& > .bottom-space {
+			height: 5%;
+			width: 100%;
 		}
 	}
 `;
