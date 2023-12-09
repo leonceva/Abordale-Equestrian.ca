@@ -27,6 +27,7 @@ const Root = () => {
 export const RootDiv = styled.div`
 	display: flex;
 	flex-direction: column;
+	position: relative;
 
 	& > .navbar {
 		width: 100%;
@@ -49,6 +50,7 @@ export const RootDiv = styled.div`
 
 	& > .outlet {
 		position: relative;
+		flex: 1;
 		@media screen and (min-width: ${MOBILE_MODE_LIMIT}) {
 			height: calc(100vh - 150px);
 			top: 150px;
