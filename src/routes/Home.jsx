@@ -491,8 +491,9 @@ export const MobileDiv = styled.div`
 	}
 
 	& > .welcome-message {
-		padding: 0 2.5% 5%;
+		padding: 0 5% 5%;
 		line-height: 125%;
+		text-align: justify;
 	}
 
 	& > .facility {
@@ -586,14 +587,14 @@ export const MobileDiv = styled.div`
 
 				& > h2 {
 					margin: 0;
-					padding: 2.5% 2.5% 0;
+					padding: 2.5% 5% 0;
 					width: 100%;
 					text-align: center;
 				}
 
 				& > p {
 					width: 100%;
-					padding: 0 2.5%;
+					margin: 0 5% 2.5%;
 					text-align: justify;
 				}
 

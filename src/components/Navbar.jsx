@@ -61,8 +61,7 @@ export const DesktopNavbar = () => {
 export const DesktopNavDiv = styled.div`
 	width: 100%;
 	height: 100%;
-	background-color: rgb(18, 17, 31);
-	// background-image: linear-gradient(to right, rgb(126, 184, 232), rgb(45, 43, 78));
+	background-color: #0b0d25;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -72,7 +71,7 @@ export const DesktopNavDiv = styled.div`
 	}
 
 	& > .logo {
-		max-height: 100%;
+		max-height: 150%;
 		max-width: 28%;
 		margin: 0 1%;
 		cursor: pointer;
@@ -157,12 +156,12 @@ export const MobileNavbar = () => {
 export const MobileNavDiv = styled.div`
 	width: 100%;
 	height: 100%;
-	// background-color: rgb(18, 17, 31);
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
 	font-size: calc(max(2.5vw, 2.5vh));
+	background-color: #0b0d25;
 
 	@media screen and (min-width: ${MOBILE_MODE_LIMIT}) {
 		display: none;
@@ -173,7 +172,7 @@ export const MobileNavDiv = styled.div`
 	}
 
 	& > .logo {
-		max-height: 100%;
+		max-height: 150%;
 		max-width: 40%;
 		margin-left: 3%;
 

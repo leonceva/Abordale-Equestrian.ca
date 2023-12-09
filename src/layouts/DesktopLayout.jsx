@@ -57,7 +57,7 @@ export const DesktopDiv = styled.div`
 		background-image: url(${background_img});
 		background-size: cover;
 		background-position: center;
-		opacity: 0.15;
+		opacity: 0.25;
 	}
 
 	& > .desktop-content {
