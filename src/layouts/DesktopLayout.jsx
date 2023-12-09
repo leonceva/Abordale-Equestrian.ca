@@ -19,10 +19,10 @@ export default DesktopLayout;
 export const DesktopDiv = styled.div`
 	display: flex;
 	flex-direction: column;
-	height: 100%;
-	position: relative;
 	align-items: center;
-	overflow-y: scroll;
+	justify-content: start;
+	position: relative;
+	width: 100%;
 
 	@media screen and (min-width: ${MOBILE_MODE_LIMIT}) {
 		font-size: calc(min(2vw, 2vh));
@@ -63,7 +63,8 @@ export const DesktopDiv = styled.div`
 	& > .desktop-content {
 		padding: 0 10%;
 		max-width: 2000px;
-		min-height: 100%;
 		z-index: 2;
+		position: relative;
+		top: 0;
 	}
 `;

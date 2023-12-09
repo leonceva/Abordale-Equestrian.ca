@@ -6,10 +6,24 @@ import { useState, useEffect } from 'react';
 const MOBILE_MODE_LIMIT = process.env.REACT_APP_MOBILE_MODE;
 
 const Navbar = () => {
+	const [scrollPosition, setPosition] = useState(0);
+
+	useEffect(() => {
+		function updatePosition() {
+			setPosition(window.scrollY);
+		}
+		window.addEventListener('scroll', updatePosition);
+		updatePosition();
+
+		return () => {
+			window.removeEventListener('scroll', updatePosition);
+		};
+	}, []);
+
 	return (
 		<>
-			<DesktopNavbar />
-			<MobileNavbar />
+			<DesktopNavbar scrollPosition={scrollPosition} />
+			<MobileNavbar scrollPosition={scrollPosition} />
 		</>
 	);
 };
@@ -18,24 +32,10 @@ export default Navbar;
 
 /************************************************************* DESKTOP MODE ****************************************************************************/
 
-export const DesktopNavbar = () => {
+export const DesktopNavbar = (props) => {
 	const navigate = useNavigate();
 
-	const [scrollPosition, setScrollPosition] = useState(0);
-
-	const handleScroll = () => {
-		const position = window.scrollY;
-		setScrollPosition(position);
-	};
-
-	useEffect(() => {
-		window.addEventListener('scroll', handleScroll, { passive: true });
-
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-			setScrollPosition(0);
-		};
-	}, []);
+	const scrollPosition = props.scrollPosition;
 
 	return (
 		<DesktopNavDiv
@@ -117,24 +117,11 @@ export const NavLink = styled(Link)`
 
 /*************************************************** MOBILE MODE ***********************************************************************/
 
-export const MobileNavbar = () => {
+export const MobileNavbar = (props) => {
 	const navigate = useNavigate();
 	const [isExpanded, setIsExpanded] = useState(false);
 
-	const [scrollPosition, setScrollPosition] = useState(0);
-
-	const handleScroll = () => {
-		const position = window.scrollY;
-		setScrollPosition(position);
-	};
-
-	useEffect(() => {
-		window.addEventListener('scroll', handleScroll, { passive: true });
-
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-		};
-	}, []);
+	const scrollPosition = props.scrollPosition;
 
 	return (
 		<MobileNavDiv

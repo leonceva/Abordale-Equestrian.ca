@@ -780,7 +780,7 @@ export const Carousel = () => {
 						handleClick('left');
 					}}
 				>
-					<i class='bi bi-chevron-double-left' style={{ fontSize: '25px' }} />
+					<i className='bi bi-chevron-double-left' style={{ fontSize: '25px' }} />
 				</div>
 				<div
 					className='right'
@@ -788,7 +788,7 @@ export const Carousel = () => {
 						handleClick('right');
 					}}
 				>
-					<i class='bi bi-chevron-double-right' style={{ fontSize: '25px' }} />
+					<i className='bi bi-chevron-double-right' style={{ fontSize: '25px' }} />
 				</div>
 			</div>
 		</>
