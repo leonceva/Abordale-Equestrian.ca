@@ -142,7 +142,7 @@ export const DesktopContent = () => {
 
 export const DesktopDiv = styled.div`
 	width: 100%;
-	height: 100%;
+	height: fit-content;
 	display: flex;
 	flex-direction: column;
 	justify-content: start;

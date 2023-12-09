@@ -54,10 +54,10 @@ export const DesktopNavbar = () => {
 				}}
 			/>
 			<div className='link-container'>
-				<NavLink to='/'>Home</NavLink>
 				<NavLink to='/about'>Meet the Team</NavLink>
 				<NavLink to='/facilities'>Facilities</NavLink>
 				<NavLink to='/lessons-and-boarding'>Lessons & Boarding</NavLink>
+				<NavLink to='/horse-shows'>Horse Shows</NavLink>
 				<NavLink to='/contact'>Contact</NavLink>
 			</div>
 		</DesktopNavDiv>
@@ -369,8 +369,11 @@ export const ModalMenu = (props) => {
 						<Link to='/facilities' className='expanded-link'>
 							Facilities
 						</Link>
-						<Link to='lessons-and-boarding' className='expanded-link'>
+						<Link to='/lessons-and-boarding' className='expanded-link'>
 							Lessons and Boarding
+						</Link>
+						<Link to='/horse-shows' className='expanded-link'>
+							Horse Shows
 						</Link>
 						<Link to='/contact' className='expanded-link'>
 							Contact
