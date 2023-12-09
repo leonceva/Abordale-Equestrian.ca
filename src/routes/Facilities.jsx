@@ -32,6 +32,7 @@ export const DesktopContent = () => {
 				excellence. This is more than a facility; it is a destination where riders and horses forge
 				enduring connections and achievements.
 			</div>
+
 			<div className='img-container'>
 				<div className='img-wrapper'>
 					<img src={facility_01} alt='Facility 01 Background' className='facility-bg' />
@@ -61,29 +62,26 @@ export const DesktopContent = () => {
 
 export const DesktopDiv = styled.div`
 	width: 100%;
-	height: 100%;
+	height: fit-content;
 	display: flex;
 	flex-direction: column;
 	justify-content: start;
-	align-items: center;
-	position: relative;
 
 	& > .intro {
 		margin: 2.5% 0;
+		text-align: justify;
 	}
 
 	& > .img-container {
 		width: 100%;
-		height: 50vh;
+		min-height: 50vh;
 		display: flex;
-		flex-direction: row;
-		align-items: center;
 		justify-content: space-evenly;
 		flex-wrap: wrap;
 
 		& > .img-wrapper {
 			width: 30%;
-			height: 100%;
+			height: calc(50vh - 4px);
 			border: 2px solid black;
 			position: relative;
 			margin-bottom: 2.5%;
@@ -113,6 +111,14 @@ export const DesktopDiv = styled.div`
 			height: 5%;
 			width: 100%;
 		}
+	}
+
+	& > .bottom {
+		width: 100%;
+		height: 20px;
+		background-color: blue;
+		position: absolute;
+		bottom: 0;
 	}
 `;
 
