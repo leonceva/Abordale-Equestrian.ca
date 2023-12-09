@@ -6,10 +6,24 @@ import { useState, useEffect } from 'react';
 const MOBILE_MODE_LIMIT = process.env.REACT_APP_MOBILE_MODE;
 
 const Navbar = () => {
+	const [scrollPosition, setPosition] = useState(0);
+
+	useEffect(() => {
+		function updatePosition() {
+			setPosition(window.scrollY);
+		}
+		window.addEventListener('scroll', updatePosition);
+		updatePosition();
+
+		return () => {
+			window.removeEventListener('scroll', updatePosition);
+		};
+	}, []);
+
 	return (
 		<>
-			<DesktopNavbar />
-			<MobileNavbar />
+			<DesktopNavbar scrollPosition={scrollPosition} />
+			<MobileNavbar scrollPosition={scrollPosition} />
 		</>
 	);
 };
@@ -18,24 +32,10 @@ export default Navbar;
 
 /************************************************************* DESKTOP MODE ****************************************************************************/
 
-export const DesktopNavbar = () => {
+export const DesktopNavbar = (props) => {
 	const navigate = useNavigate();
 
-	const [scrollPosition, setScrollPosition] = useState(0);
-
-	const handleScroll = () => {
-		const position = window.scrollY;
-		setScrollPosition(position);
-	};
-
-	useEffect(() => {
-		window.addEventListener('scroll', handleScroll, { passive: true });
-
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-			setScrollPosition(0);
-		};
-	}, []);
+	const scrollPosition = props.scrollPosition;
 
 	return (
 		<DesktopNavDiv
@@ -54,10 +54,10 @@ export const DesktopNavbar = () => {
 				}}
 			/>
 			<div className='link-container'>
-				<NavLink to='/'>Home</NavLink>
 				<NavLink to='/about'>Meet the Team</NavLink>
 				<NavLink to='/facilities'>Facilities</NavLink>
 				<NavLink to='/lessons-and-boarding'>Lessons & Boarding</NavLink>
+				<NavLink to='/horse-shows'>Horse Shows</NavLink>
 				<NavLink to='/contact'>Contact</NavLink>
 			</div>
 		</DesktopNavDiv>
@@ -70,6 +70,7 @@ export const DesktopNavDiv = styled.div`
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	overflow: hidden;
 
 	@media screen and (max-width: ${MOBILE_MODE_LIMIT}) {
 		display: none;
@@ -117,24 +118,11 @@ export const NavLink = styled(Link)`
 
 /*************************************************** MOBILE MODE ***********************************************************************/
 
-export const MobileNavbar = () => {
+export const MobileNavbar = (props) => {
 	const navigate = useNavigate();
 	const [isExpanded, setIsExpanded] = useState(false);
 
-	const [scrollPosition, setScrollPosition] = useState(0);
-
-	const handleScroll = () => {
-		const position = window.scrollY;
-		setScrollPosition(position);
-	};
-
-	useEffect(() => {
-		window.addEventListener('scroll', handleScroll, { passive: true });
-
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-		};
-	}, []);
+	const scrollPosition = props.scrollPosition;
 
 	return (
 		<MobileNavDiv
@@ -165,6 +153,7 @@ export const MobileNavDiv = styled.div`
 	align-items: center;
 	justify-content: space-between;
 	font-size: calc(max(2.5vw, 2.5vh));
+	overflow: hidden;
 
 	@media screen and (min-width: ${MOBILE_MODE_LIMIT}) {
 		display: none;
@@ -369,8 +358,11 @@ export const ModalMenu = (props) => {
 						<Link to='/facilities' className='expanded-link'>
 							Facilities
 						</Link>
-						<Link to='lessons-and-boarding' className='expanded-link'>
+						<Link to='/lessons-and-boarding' className='expanded-link'>
 							Lessons and Boarding
+						</Link>
+						<Link to='/horse-shows' className='expanded-link'>
+							Horse Shows
 						</Link>
 						<Link to='/contact' className='expanded-link'>
 							Contact

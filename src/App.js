@@ -7,6 +7,7 @@ import About from "./routes/About";
 import Facilities from "./routes/Facilities";
 import LessonsAndBoarding from "./routes/LessonsAndBoarding";
 import Contact from "./routes/Contact";
+import HorseShows from "./routes/HorseShows";
 
 function App() {
 
@@ -35,6 +36,10 @@ function App() {
         {
           path: "/contact",
           element: <Contact />
+        },
+        {
+          path: "/horse-shows",
+          element: <HorseShows />
         }
       ]
     }
