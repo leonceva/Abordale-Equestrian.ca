@@ -58,7 +58,6 @@ export const DesktopContent = () => {
 						<span
 							className='button link'
 							onClick={() => {
-								window.scrollTo(0, 0);
 								navigate('/facilities');
 							}}
 						>
@@ -83,7 +82,6 @@ export const DesktopContent = () => {
 						<span
 							className='link button'
 							onClick={() => {
-								window.scrollTo(0, 0);
 								navigate('/about');
 							}}
 						>
@@ -104,7 +102,6 @@ export const DesktopContent = () => {
 						<span
 							className='link button'
 							onClick={() => {
-								window.scrollTo(0, 0);
 								navigate('/about');
 							}}
 						>
@@ -119,7 +116,6 @@ export const DesktopContent = () => {
 					<span
 						className='link button'
 						onClick={() => {
-							window.scrollTo(0, 0);
 							navigate('/lessons-and-boarding');
 						}}
 					>
@@ -405,7 +401,6 @@ export const MobileContent = () => {
 						<span
 							className='button link'
 							onClick={() => {
-								window.scrollTo(0, 0);
 								navigate('/facilities');
 							}}
 						>
@@ -423,7 +418,6 @@ export const MobileContent = () => {
 						<span
 							className='link button'
 							onClick={() => {
-								window.scrollTo(0, 0);
 								navigate('/about');
 							}}
 						>
@@ -439,7 +433,6 @@ export const MobileContent = () => {
 						<span
 							className='link button'
 							onClick={() => {
-								window.scrollTo(0, 0);
 								navigate('/about');
 							}}
 						>

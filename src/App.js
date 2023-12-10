@@ -9,46 +9,49 @@ import LessonsAndBoarding from "./routes/LessonsAndBoarding";
 import Contact from "./routes/Contact";
 import HorseShows from "./routes/HorseShows";
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "/",
+        element: <Home />
+      },
+      {
+        path: "/about",
+        element: <About />
+      },
+      {
+        path: "/facilities",
+        element: <Facilities />
+      },
+      {
+        path: "/lessons-and-boarding",
+        element: <LessonsAndBoarding />
+      },
+      {
+        path: "/contact",
+        element: <Contact />
+      },
+      {
+        path: "/horse-shows",
+        element: <HorseShows />
+      }
+    ]
+  }
+]);
+
 function App() {
 
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Root />,
-      errorElement: <ErrorPage />,
-      children: [
-        {
-          path: "/",
-          element: <Home />
-        },
-        {
-          path: "/about",
-          element: <About />
-        },
-        {
-          path: "/facilities",
-          element: <Facilities />
-        },
-        {
-          path: "/lessons-and-boarding",
-          element: <LessonsAndBoarding />
-        },
-        {
-          path: "/contact",
-          element: <Contact />
-        },
-        {
-          path: "/horse-shows",
-          element: <HorseShows />
-        }
-      ]
-    }
-  ]);
   return (
     <>
       <RouterProvider router={router} />
     </>
+
   );
 }
+
 
 export default App;
