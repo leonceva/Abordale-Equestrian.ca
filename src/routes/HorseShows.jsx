@@ -108,5 +108,91 @@ export const DesktopDiv = styled.div`
 /************************************************************* MOBILE MODE ****************************************************************************/
 
 export const MobileContent = () => {
-	return <>Horse Shows Mobile Mode</>;
+	return (
+		<MobileDiv>
+			<div className='intro'>
+				Explore past events, witness memorable moments, and experience the dynamic spirit of our
+				equestrian community. Whether you're a passionate enthusiast or a newcomer to the world of
+				horse shows, this page is your window into the captivating world of equestrian sports. Dive
+				in and discover the beauty of horsemanship in action.
+			</div>
+			<div className='photo-container'>
+				<div className='wrapper'>
+					<img src={show_photo_01} alt='Show 01' />
+					<div className='caption'>
+						Grace in motion, this chestnut mare captures the essence of equestrian elegance as she
+						soars through the air in a captivating jump. A moment frozen in time, where strength,
+						beauty, and skill converge.
+					</div>
+				</div>
+				<div className='wrapper'>
+					<img src={show_photo_02} alt='Show 01' />
+					<div className='caption'>
+						Armani, showcasing style and finesse in the hunter event arena. A captivating snapshot
+						of this exceptional horse navigating the course with grace.
+					</div>
+				</div>
+				<div className='wrapper'>
+					<img src={show_photo_03} alt='Show 03' />
+					<div className='caption'>
+						Rose, the spirited pony, conquering cross country with boundless energy and
+						determination. A picture of courage and agility in the heart of competition.
+					</div>
+				</div>
+			</div>
+		</MobileDiv>
+	);
 };
+
+export const MobileDiv = styled.div`
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	line-height: 130%;
+
+	& > .intro {
+		margin: 5%;
+		text-align: justify;
+	}
+
+	& > .photo-container {
+		width: 100%;
+		height: fit-content;
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		align-items: center;
+
+		& > .wrapper {
+			width: 90%;
+			height: fit-content;
+			display: flex;
+			flex-direction: column;
+			justify-content: start;
+			align-items: center;
+			position: relative;
+			margin-bottom: 5%;
+
+			& > img {
+				max-width: 100%;
+				max-height: 70vh;
+				border: 2px solid black;
+				z-index: 1;
+			}
+
+			& > .caption {
+				width: 90%;
+				bottom: 0%;
+				z-index: 2;
+				background-color: rgba(11, 13, 37, 0.8);
+				color: white;
+				padding: 2.5% 5%;
+				border: solid black;
+				border-width: 0 2px 2px;
+			}
+		}
+	}
+`;
