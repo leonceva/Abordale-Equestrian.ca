@@ -41,7 +41,7 @@ export const DesktopNavbar = (props) => {
 		<DesktopNavDiv
 			style={{
 				backgroundColor: `${
-					scrollPosition > 200 ? 'rgba(11, 13, 37, 0.9)' : 'rgba(11, 13, 37, 1)'
+					scrollPosition > 100 ? 'rgba(11, 13, 37, 0.9)' : 'rgba(11, 13, 37, 1)'
 				}`,
 			}}
 		>

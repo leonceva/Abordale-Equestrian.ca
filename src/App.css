@@ -1,3 +1,7 @@
+body {
+    overflow-y: scroll;
+  }
+
 .button {
     color: white;
     background-color: rgb(18, 17, 31);    

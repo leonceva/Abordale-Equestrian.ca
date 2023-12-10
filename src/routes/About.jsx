@@ -3,7 +3,6 @@ import MobileLayout from '../layouts/MobileLayout';
 import styled from 'styled-components';
 import sean_img from '../images/placeholder-sean-01.jpg';
 import brandon_img from '../images/placeholder-brandon-01.jpg';
-import { useEffect } from 'react';
 
 const About = () => {
 	return (
@@ -19,10 +18,6 @@ export default About;
 /************************************************************* DESKTOP MODE ****************************************************************************/
 
 export const DesktopContent = () => {
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
-
 	return (
 		<DesktopDiv>
 			<div className='intro-message'>
