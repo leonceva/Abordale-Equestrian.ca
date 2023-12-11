@@ -71,6 +71,7 @@ export const DesktopNavDiv = styled.div`
 	flex-direction: row;
 	align-items: center;
 	overflow: hidden;
+	justify-content: space-between;
 
 	@media screen and (max-width: ${MOBILE_MODE_LIMIT}) {
 		display: none;
@@ -78,7 +79,7 @@ export const DesktopNavDiv = styled.div`
 
 	& > .logo {
 		max-height: 250px;
-		width: 28%;
+		max-width: 28%;
 		margin: 0 1%;
 		cursor: pointer;
 	}

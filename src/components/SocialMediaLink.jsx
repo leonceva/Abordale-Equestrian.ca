@@ -3,8 +3,6 @@ import instagram_logo from '../images/instagram-logo.png';
 import facebook_logo from '../images/facebook-logo.png';
 import email_logo from '../images/email-logo.png';
 
-// https://www.instagram.com/abordaleequestrian/
-
 const SocialMediaLink = (props) => {
 	let size = props.size;
 	const type = props.type;
