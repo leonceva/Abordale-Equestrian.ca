@@ -43,7 +43,7 @@ export const DesktopContent = () => {
 					<p>
 						<strong>abordale.equestrian@gmail.com</strong>
 					</p>
-					<Map size='300px' />
+					<Map />
 				</div>
 			</div>
 		</DesktopDiv>
@@ -102,5 +102,71 @@ export const DesktopDiv = styled.div`
 /************************************************************* MOBILE MODE ****************************************************************************/
 
 export const MobileContent = () => {
-	return <>Contact Mobile Mode</>;
+	return (
+		<MobileDiv>
+			<div className='intro'>
+				Whether you're seeking information about lessons, boarding, or any other inquiry, we're here
+				to help. Reach out to us to explore the world of horses and schedule your next riding
+				experience. We look forward to hearing from you soon!
+			</div>
+			<div className='container'>
+				<div className='social-media'>
+					<div className='link-wrapper'>
+						<SocialMediaLink type='instagram' size='50px' />
+					</div>
+					<div className='link-wrapper'>
+						<SocialMediaLink type='facebook' size='50px' />
+					</div>
+					<div className='link-wrapper'>
+						<SocialMediaLink type='email' size='50px' />
+					</div>
+				</div>
+				<p>
+					<strong>abordale.equestrian@gmail.com</strong>
+				</p>
+				<Map />
+			</div>
+		</MobileDiv>
+	);
 };
+
+export const MobileDiv = styled.div`
+	width: 100%;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: start;
+
+	& > .intro {
+		margin: 5%;
+		text-align: justify;
+		line-height: 130%;
+	}
+
+	& > .container {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		align-items: center;
+
+		& > .social-media {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+
+			& > .link-wrapper {
+				padding: 0 5%;
+			}
+		}
+
+		& > #map-container {
+			width: 80vw;
+			height: 50vh;
+			background-color: red;
+		}
+	}
+`;
