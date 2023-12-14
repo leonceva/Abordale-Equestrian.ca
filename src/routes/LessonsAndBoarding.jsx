@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import DesktopLayout from '../layouts/DesktopLayout';
 import MobileLayout from '../layouts/MobileLayout';
 import lesson_img from '../images/placeholder-lesson-01.jpg';
+import lesson_img_lowRes from '../images/placeholder-lesson-01-lazy.jpg';
+import Image from '../components/Image';
 
 const LessonsAndBoarding = () => {
 	return (
@@ -17,9 +19,37 @@ export default LessonsAndBoarding;
 /************************************************************* DESKTOP MODE ****************************************************************************/
 
 export const DesktopContent = () => {
+	const styleWrapper = {
+		position: 'relative',
+		width: '100%',
+		height: '50vh',
+		marginTop: '5%',
+		display: 'flex',
+		flexDirection: 'row',
+		flexAlign: 'center',
+		justifyContent: 'center',
+	};
+
+	const styleImage = {
+		position: 'absolute',
+		maxWidth: '100%',
+		maxHeight: '100%',
+		objectFit: 'fill',
+		border: '2px solid black',
+		left: '50%',
+		top: '50%',
+		transform: 'translate(-50%, -50%)',
+	};
+
 	return (
 		<DesktopDiv>
-			<img src={lesson_img} alt='Lesson 01' />
+			<Image
+				styleWrapper={styleWrapper}
+				styleImage={styleImage}
+				lowResSrc={lesson_img_lowRes}
+				highResSrc={lesson_img}
+			/>
+			{/* <img src={lesson_img} alt='Lesson 01' /> */}
 			<div className='intro'>
 				<p>
 					Explore equestrian excellence with our tailored lessons and boarding options. Our
@@ -41,19 +71,12 @@ export const DesktopDiv = styled.div`
 	width: 100%;
 	height: fit-content;
 	display: flex;
-	flex-direction: row;
-	justify-content: start;
+	flex-direction: column;
+	justify-content: space;
 	align-items: center;
-
-	& > img {
-		max-width: 60%;
-		max-height: 50vh;
-		border: 2px solid black;
-		margin-top: 5%;
-	}
+	flex-wrap: wrap;
 
 	& > .intro {
-		flex: 1;
 		margin: 2.5% 0;
 		text-align: justify;
 		padding: 0 5%;
