@@ -20,25 +20,19 @@ export default LessonsAndBoarding;
 
 export const DesktopContent = () => {
 	const styleWrapper = {
+		aspectRatio: '1/1',
+		width: '50%',
 		position: 'relative',
-		width: '100%',
-		height: '40vh',
 		marginTop: '2.5%',
-		display: 'flex',
-		flexDirection: 'row',
-		flexAlign: 'center',
-		justifyContent: 'center',
 	};
 
 	const styleImage = {
+		width: '100%',
 		position: 'absolute',
-		maxWidth: '100%',
-		maxHeight: '100%',
-		objectFit: 'fill',
-		border: '2px solid black',
 		left: '50%',
 		top: '50%',
 		transform: 'translate(-50%, -50%)',
+		border: '2px solid black',
 	};
 
 	return (
@@ -71,14 +65,14 @@ export const DesktopDiv = styled.div`
 	width: 100%;
 	height: fit-content;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: space;
 	align-items: center;
-	flex-wrap: wrap;
 
 	& > .intro {
 		text-align: justify;
 		padding: 0 5%;
+		flex: 1;
 
 		& .start {
 		}
@@ -89,24 +83,21 @@ export const DesktopDiv = styled.div`
 
 export const MobileContent = () => {
 	const styleWrapper = {
-		position: 'relative',
-		width: '90%',
+		aspectRatio: '1/1',
+		maxWidth: '90%',
 		height: '70vh',
-		display: 'flex',
-		flexDirection: 'row',
-		flexAlign: 'center',
-		justifyContent: 'center',
+		position: 'relative',
 	};
 
 	const styleImage = {
+		aspectRatio: '1/1',
+		height: '100%',
+		width: '100%',
 		position: 'absolute',
-		maxWidth: '100%',
-		maxHeight: '100%',
-		objectFit: 'fill',
 		border: '2px solid black',
 		left: '50%',
-		top: '0%',
-		transform: 'translate(-50%, 0%)',
+		top: '50%',
+		transform: 'translate(-50%, -50%)',
 	};
 
 	return (
