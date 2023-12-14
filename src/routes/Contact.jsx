@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 import DesktopLayout from '../layouts/DesktopLayout';
 import MobileLayout from '../layouts/MobileLayout';
-import group_photo from '../images/placeholder-lesson-02.png';
+import group_photo_highRes from '../images/placeholder-lesson-02.png';
+import group_photo_lowRes from '../images/placeholder-lesson-02-lazy.png';
 import SocialMediaLink from '../components/SocialMediaLink';
 import Map from '../components/Map';
+import Image from '../components/Image';
 
 const Contact = () => {
 	return (
@@ -19,6 +21,22 @@ export default Contact;
 /************************************************************* DESKTOP MODE ****************************************************************************/
 
 export const DesktopContent = () => {
+	const styleWrapper = {
+		aspectRatio: '1/1',
+		position: 'relative',
+		width: '50%',
+		maxHeight: '100%',
+	};
+
+	const styleImage = {
+		height: '100%',
+		position: 'absolute',
+		left: '50%',
+		top: '50%',
+		transform: 'translate(-50%, -50%)',
+		border: '2px solid black',
+	};
+
 	return (
 		<DesktopDiv>
 			<div className='intro'>
@@ -27,7 +45,13 @@ export const DesktopContent = () => {
 				experience. We look forward to hearing from you soon!
 			</div>
 			<div className='container'>
-				<img src={group_photo} alt='Group' />
+				<Image
+					styleWrapper={styleWrapper}
+					styleImage={styleImage}
+					lowResSrc={group_photo_lowRes}
+					highResSrc={group_photo_highRes}
+				/>
+				{/* <img src={group_photo_highRes} alt='Group' /> */}
 				<div className='info'>
 					<div className='social-media'>
 						<div className='link-wrapper'>
