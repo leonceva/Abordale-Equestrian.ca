@@ -1,7 +1,9 @@
 import styled from 'styled-components';
-import logo from '../images/logo-custom-transparent.png';
+import logo_highRes from '../images/logo-custom-transparent.png';
+import logo_lowRes from '../images/logo-custom-transparent-lazy.png';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import Image from '../components/Image';
 
 const MOBILE_MODE_LIMIT = process.env.REACT_APP_MOBILE_MODE;
 
@@ -36,6 +38,7 @@ export const DesktopNavbar = (props) => {
 	const navigate = useNavigate();
 
 	const scrollPosition = props.scrollPosition;
+	const [isLoaded, setIsLoaded] = useState(false);
 
 	return (
 		<DesktopNavDiv
@@ -46,11 +49,22 @@ export const DesktopNavbar = (props) => {
 			}}
 		>
 			<img
-				className='logo'
-				src={logo}
-				alt='Abordale Equestrian Logo'
+				className={`logo ${!isLoaded ? 'show' : 'hide'}`}
+				src={logo_lowRes}
+				alt='Abordale Equestrian Logo Low Res'
 				onClick={() => {
 					navigate('/');
+				}}
+			/>
+			<img
+				className={`logo ${isLoaded ? 'show' : 'hide'}`}
+				src={logo_highRes}
+				alt='Abordale Equestrian Logo High Res'
+				onClick={() => {
+					navigate('/');
+				}}
+				onLoad={() => {
+					setIsLoaded(true);
 				}}
 			/>
 			<div className='link-container'>
@@ -71,26 +85,38 @@ export const DesktopNavDiv = styled.div`
 	flex-direction: row;
 	align-items: center;
 	overflow: hidden;
-	justify-content: space-between;
+	justify-content: start;
+	position: relative;
 
 	@media screen and (max-width: ${MOBILE_MODE_LIMIT}) {
 		display: none;
 	}
 
 	& > .logo {
-		max-height: 250px;
-		max-width: 28%;
-		margin: 0 1%;
 		cursor: pointer;
+		left: 0;
+	}
+
+	& > .show {
+		max-height: 250px;
+		max-width: 30%;
+		min-width: 350px;
+		opacity: 1;
+		transition: opacity 500ms ease-in 50ms;
+	}
+	& > .hide {
+		height: 0px;
+		opacity: 0;
+		transition: opacity 500ms ease-in 50ms;
 	}
 
 	& > .link-container {
-		width: 68%;
-		margin: 0 1%;
+		min-width: calc(100vw - 350px);
+		max-width: 70%;
 		height: 100%;
 		display: flex;
 		flex-direction: row;
-		justify-content: space-evenly;
+		justify-content: end;
 		align-items: center;
 	}
 `;
@@ -100,8 +126,7 @@ export const NavLink = styled(Link)`
 	text-decoration: none;
 	font-weight: bold;
 	text-align: center;
-	width: 15%;
-	padding: 2px 0;
+	margin: 0 2.5%;
 
 	&:hover {
 		transition: 200ms;
@@ -109,11 +134,14 @@ export const NavLink = styled(Link)`
 	}
 
 	@media screen and (min-width: ${MOBILE_MODE_LIMIT}) {
-		font-size: calc(min(2.5vw, 2.5vh));
+		font-size: calc(min(1.8vw, 1.8vh));
 	}
 
 	@media screen and (min-width: ${'1000px'}) {
-		font-size: calc(min(3vw, 3vh)) !important;
+		font-size: calc(min(2.2vw, 2.2vh));
+	}
+	@media screen and (min-width: ${'1400px'}) {
+		font-size: calc(min(2.5vw, 2.5vh));
 	}
 `;
 
@@ -124,6 +152,7 @@ export const MobileNavbar = (props) => {
 	const [isExpanded, setIsExpanded] = useState(false);
 
 	const scrollPosition = props.scrollPosition;
+	const [isLoaded, setIsLoaded] = useState(false);
 
 	return (
 		<MobileNavDiv
@@ -132,11 +161,22 @@ export const MobileNavbar = (props) => {
 			}}
 		>
 			<img
-				src={logo}
-				alt='Abordale Equestrian Logo'
-				className='logo'
+				className={`logo ${!isLoaded ? 'show' : 'hide'}`}
+				src={logo_lowRes}
+				alt='Abordale Equestrian Logo Low Res'
 				onClick={() => {
 					navigate('/');
+				}}
+			/>
+			<img
+				className={`logo ${isLoaded ? 'show' : 'hide'}`}
+				src={logo_highRes}
+				alt='Abordale Equestrian Logo High Res'
+				onClick={() => {
+					navigate('/');
+				}}
+				onLoad={() => {
+					setIsLoaded(true);
 				}}
 			/>
 			<div className='menu'>
@@ -165,13 +205,24 @@ export const MobileNavDiv = styled.div`
 	}
 
 	& > .logo {
-		max-height: 175px;
-		max-width: 70%;
-		margin-left: 0%;
+		margin: 0%;
 
 		&:hover {
 			cursor: pointer;
 		}
+	}
+
+	& > .show {
+		height: 150px;
+		opacity: 1;
+		transition: opacity 500ms ease-in 50ms;
+	}
+	& > .hide {
+		height: 0px;
+		width: 0px;
+		opacity: 0;
+		transition: opacity 500ms ease-in 50ms;
+		position: absolute;
 	}
 
 	& > .menu {

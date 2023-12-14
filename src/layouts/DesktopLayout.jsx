@@ -80,7 +80,6 @@ export const DesktopDiv = styled.div`
 			opacity: 0.25;
 			width: 100vw;
 			height: 100vh;
-			transition: opacity 500ms ease-in 50ms;
 		}
 
 		& > .hide {
