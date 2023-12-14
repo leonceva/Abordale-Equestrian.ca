@@ -24,16 +24,16 @@ export const DesktopContent = () => {
 	const styleWrapper = {
 		aspectRatio: '1/1',
 		position: 'relative',
-		width: '50%',
-		maxHeight: '100%',
+		maxWidth: '100%',
+		height: '90%',
 	};
 
 	const styleImage = {
 		height: '100%',
 		position: 'absolute',
-		left: '50%',
+		right: '5%',
 		top: '50%',
-		transform: 'translate(-50%, -50%)',
+		transform: 'translate(0%, -50%)',
 		border: '2px solid black',
 	};
 
@@ -67,7 +67,9 @@ export const DesktopContent = () => {
 					<p>
 						<strong>abordale.equestrian@gmail.com</strong>
 					</p>
-					<Map />
+					<div className='map-container'>
+						<Map />
+					</div>
 				</div>
 			</div>
 		</DesktopDiv>
@@ -91,7 +93,7 @@ export const DesktopDiv = styled.div`
 		height: 60vh;
 		display: flex;
 		flex-direction: row;
-		justify-content: space-evenly;
+		justify-content: center;
 		align-items: end;
 
 		& > img {
@@ -104,12 +106,27 @@ export const DesktopDiv = styled.div`
 		& > .info {
 			height: 100%;
 			display: flex;
+			width: 50%;
 			flex-direction: column;
-			justify-content: end;
+			justify-content: start;
 			align-items: center;
+
+			& > .map-container {
+				position: relative;
+				height: 70%;
+				max-width: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: end;
+				align-items: center;
+				aspect-ratio: 1/1;
+				border: 2px solid black;
+				background-color: lightgray;
+			}
 
 			& > .social-media {
 				display: flex;
+				flex: 1;
 				flex-direction: row;
 				align-items: center;
 				justify-content: space-around;
@@ -148,7 +165,9 @@ export const MobileContent = () => {
 				<p>
 					<strong>abordale.equestrian@gmail.com</strong>
 				</p>
-				<Map />
+				<div className='map-container'>
+					<Map />
+				</div>
 			</div>
 		</MobileDiv>
 	);
@@ -187,10 +206,13 @@ export const MobileDiv = styled.div`
 			}
 		}
 
-		& > #map-container {
-			width: 80vw;
+		& > .map-container {
+			position: relative;
+			max-width: 90vw;
 			height: 50vh;
-			background-color: red;
+			aspect-ratio: 1/1;
+			background-color: lightgray;
+			border: 2px solid black;
 		}
 	}
 `;
