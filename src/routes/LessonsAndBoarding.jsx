@@ -89,6 +89,27 @@ export const DesktopDiv = styled.div`
 /************************************************************* MOBILE MODE ****************************************************************************/
 
 export const MobileContent = () => {
+	const styleWrapper = {
+		position: 'relative',
+		width: '90%',
+		height: '70vh',
+		display: 'flex',
+		flexDirection: 'row',
+		flexAlign: 'center',
+		justifyContent: 'center',
+	};
+
+	const styleImage = {
+		position: 'absolute',
+		maxWidth: '100%',
+		maxHeight: '100%',
+		objectFit: 'fill',
+		border: '2px solid black',
+		left: '50%',
+		top: '0%',
+		transform: 'translate(-50%, 0%)',
+	};
+
 	return (
 		<MobileDiv>
 			<p className='intro'>
@@ -98,7 +119,13 @@ export const MobileContent = () => {
 				secure and nurturing environment. Join us for a journey into the timeless beauty of horse
 				riding and companionship.
 			</p>
-			<img src={lesson_img} alt='Lesson 01' />
+			<Image
+				styleWrapper={styleWrapper}
+				styleImage={styleImage}
+				lowResSrc={lesson_img_lowRes}
+				highResSrc={lesson_img}
+			/>
+			{/* <img src={lesson_img} alt='Lesson 01' /> */}
 			<h3 className='start'>
 				Contact us for details regarding boarding or to book your first lesson. We look forward to
 				riding with you!
@@ -119,12 +146,6 @@ export const MobileDiv = styled.div`
 		margin: 5%;
 		text-align: justify;
 		line-height: 130%;
-	}
-
-	& > img {
-		max-width: 90vw;
-		max-height: 70vh;
-		border: solid 2px black;
 	}
 
 	& > .start {
