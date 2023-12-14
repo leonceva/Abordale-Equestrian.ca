@@ -1,14 +1,39 @@
 import styled from 'styled-components';
-import background_img from '../images/stock-01.jpg';
+import background_img_highRes from '../images/stock-01.jpg';
+import background_img_lowRes from '../images/stock-01-lazy.jpg';
+import Image from '../components/Image';
 
 const MOBILE_MODE_LIMIT = process.env.REACT_APP_MOBILE_MODE;
 
 const DesktopLayout = (props) => {
 	const content = props.content;
 
+	const styleWrapper = {
+		position: 'fixed',
+		width: '100vw',
+		height: '100vh',
+		zIndex: '1',
+		opacity: '0.25',
+		display: 'flex',
+		flexDirection: 'row',
+		flexAlign: 'center',
+		justifyContent: 'center',
+	};
+
+	const styleImage = {
+		position: 'absolute',
+		width: '100vw',
+	};
+
 	return (
 		<DesktopDiv>
-			<div className='background' />
+			<Image
+				styleWrapper={styleWrapper}
+				styleImage={styleImage}
+				lowResSrc={background_img_lowRes}
+				highResSrc={background_img_highRes}
+			/>
+			{/* <div className='background' /> */}
 			<div className='desktop-content'>{content}</div>
 		</DesktopDiv>
 	);
@@ -54,7 +79,7 @@ export const DesktopDiv = styled.div`
 		width: 100%;
 		height: 100%;
 		z-index: 1;
-		background-image: url(${background_img});
+		background-image: url(${background_img_highRes});
 		background-size: cover;
 		background-position: center;
 		opacity: 0.25;

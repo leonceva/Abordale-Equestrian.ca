@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import DesktopLayout from '../layouts/DesktopLayout';
 import MobileLayout from '../layouts/MobileLayout';
-import lesson_img from '../images/placeholder-lesson-01.jpg';
+import lesson_img_highRes from '../images/placeholder-lesson-01.jpg';
 import lesson_img_lowRes from '../images/placeholder-lesson-01-lazy.jpg';
 import Image from '../components/Image';
 
@@ -22,8 +22,8 @@ export const DesktopContent = () => {
 	const styleWrapper = {
 		position: 'relative',
 		width: '100%',
-		height: '50vh',
-		marginTop: '5%',
+		height: '40vh',
+		marginTop: '2.5%',
 		display: 'flex',
 		flexDirection: 'row',
 		flexAlign: 'center',
@@ -47,7 +47,7 @@ export const DesktopContent = () => {
 				styleWrapper={styleWrapper}
 				styleImage={styleImage}
 				lowResSrc={lesson_img_lowRes}
-				highResSrc={lesson_img}
+				highResSrc={lesson_img_highRes}
 			/>
 			{/* <img src={lesson_img} alt='Lesson 01' /> */}
 			<div className='intro'>
@@ -77,7 +77,6 @@ export const DesktopDiv = styled.div`
 	flex-wrap: wrap;
 
 	& > .intro {
-		margin: 2.5% 0;
 		text-align: justify;
 		padding: 0 5%;
 
@@ -123,7 +122,7 @@ export const MobileContent = () => {
 				styleWrapper={styleWrapper}
 				styleImage={styleImage}
 				lowResSrc={lesson_img_lowRes}
-				highResSrc={lesson_img}
+				highResSrc={lesson_img_highRes}
 			/>
 			{/* <img src={lesson_img} alt='Lesson 01' /> */}
 			<h3 className='start'>
