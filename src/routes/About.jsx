@@ -165,6 +165,24 @@ export const DesktopDiv = styled.div`
 /************************************************************* MOBILE MODE ****************************************************************************/
 
 export const MobileContent = () => {
+	const styleWrapper = {
+		aspectRatio: '1/1',
+		position: 'relative',
+		float: 'left',
+		width: '45vw',
+		margin: '0 2vw 2vw 0',
+	};
+
+	const styleImage = {
+		aspectRatio: '1/1',
+		height: '100%',
+		position: 'absolute',
+		left: '50%',
+		top: '50%',
+		transform: 'translate(-50%, -50%)',
+		border: '2px solid black',
+	};
+
 	return (
 		<MobileDiv>
 			<div className='intro-message'>
@@ -176,9 +194,15 @@ export const MobileContent = () => {
 			</div>
 			<div className='staff'>
 				<div className='staff-container'>
-					<div className='img-container'>
+					<Image
+						styleWrapper={styleWrapper}
+						styleImage={styleImage}
+						lowResSrc={sean_img_lowRes}
+						highResSrc={sean_img_highRes}
+					/>
+					{/* <div className='img-container'>
 						<img src={sean_img_highRes} alt='Sean Jenkin' />
-					</div>
+					</div> */}
 					<h2>Sean Jenkin</h2>
 					<h3>Your Versatile Equestrian Expert</h3>
 					<p className='bio'>
@@ -195,9 +219,15 @@ export const MobileContent = () => {
 					</p>
 				</div>
 				<div className='staff-container'>
-					<div className='img-container'>
+					<Image
+						styleWrapper={styleWrapper}
+						styleImage={styleImage}
+						lowResSrc={brandon_img_lowRes}
+						highResSrc={brandon_img_highRes}
+					/>
+					{/* <div className='img-container'>
 						<img src={brandon_img_highRes} alt='Brandon Fehér' />
-					</div>
+					</div> */}
 					<h2>Brandon Fehér</h2>
 					<h3>Your Guardian of Equine Comfort and Care</h3>
 					<p className='bio'>

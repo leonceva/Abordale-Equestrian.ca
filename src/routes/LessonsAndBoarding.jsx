@@ -91,6 +91,7 @@ export const MobileContent = () => {
 
 	const styleImage = {
 		width: '100%',
+		maxHeigth: '100%',
 		position: 'absolute',
 		left: '50%',
 		top: '50%',
