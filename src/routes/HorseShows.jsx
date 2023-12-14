@@ -147,6 +147,23 @@ export const DesktopDiv = styled.div`
 /************************************************************* MOBILE MODE ****************************************************************************/
 
 export const MobileContent = () => {
+	const styleWrapper = {
+		position: 'relative',
+		maxWidth: '100%',
+		height: '60vh',
+		aspectRatio: '1/1',
+	};
+
+	const styleImage = {
+		position: 'absolute',
+		maxHeight: '100%',
+		maxWidth: '100%',
+		left: '50%',
+		top: '50%',
+		transform: 'translate(-50%, -50%)',
+		border: '2px solid black',
+	};
+
 	return (
 		<MobileDiv>
 			<div className='intro'>
@@ -157,7 +174,13 @@ export const MobileContent = () => {
 			</div>
 			<div className='photo-container'>
 				<div className='wrapper'>
-					<img src={show_photo_01_highRes} alt='Show 01' />
+					<Image
+						styleWrapper={styleWrapper}
+						styleImage={styleImage}
+						lowResSrc={show_photo_01_lowRes}
+						highResSrc={show_photo_01_highRes}
+					/>
+					{/* <img src={show_photo_01_highRes} alt='Show 01' /> */}
 					<div className='caption'>
 						Grace in motion, this chestnut mare captures the essence of equestrian elegance as she
 						soars through the air in a captivating jump. A moment frozen in time, where strength,
