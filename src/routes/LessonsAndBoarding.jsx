@@ -84,20 +84,18 @@ export const DesktopDiv = styled.div`
 export const MobileContent = () => {
 	const styleWrapper = {
 		aspectRatio: '1/1',
-		maxWidth: '90%',
-		height: '70vh',
+		width: '90%',
+		height: '60vh',
 		position: 'relative',
 	};
 
 	const styleImage = {
-		aspectRatio: '1/1',
-		height: '100%',
 		width: '100%',
 		position: 'absolute',
-		border: '2px solid black',
 		left: '50%',
 		top: '50%',
 		transform: 'translate(-50%, -50%)',
+		border: '2px solid black',
 	};
 
 	return (
