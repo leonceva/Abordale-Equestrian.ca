@@ -118,6 +118,10 @@ export const MobileContent = () => {
 				secure and nurturing environment. Join us for a journey into the timeless beauty of horse
 				riding and companionship.
 			</p>
+			<h3 className='start'>
+				Contact us for details regarding boarding or to book your first lesson. We look forward to
+				riding with you!
+			</h3>
 			<Image
 				styleWrapper={styleWrapper}
 				styleImage={styleImage}
@@ -125,10 +129,6 @@ export const MobileContent = () => {
 				highResSrc={lesson_img_highRes}
 			/>
 			{/* <img src={lesson_img} alt='Lesson 01' /> */}
-			<h3 className='start'>
-				Contact us for details regarding boarding or to book your first lesson. We look forward to
-				riding with you!
-			</h3>
 		</MobileDiv>
 	);
 };
@@ -148,6 +148,6 @@ export const MobileDiv = styled.div`
 	}
 
 	& > .start {
-		margin: 5%;
+		margin: 0 5% 5%;
 	}
 `;
