@@ -3,7 +3,7 @@ import useImageOnLoad from '../hooks/useImageOnLoad';
 const Image = ({ styleWrapper, styleImage, lowResSrc, highResSrc }) => {
 	const { handleImageLoad, transitionStyles } = useImageOnLoad();
 
-	const lowResStyle = { ...styleImage, ...transitionStyles.lowRes, objectFit: 'contain' };
+	const lowResStyle = { ...styleImage, ...transitionStyles.lowRes };
 	const highResStyle = { ...styleImage, ...transitionStyles.highRes };
 
 	return (
