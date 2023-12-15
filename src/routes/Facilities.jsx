@@ -35,8 +35,8 @@ export const DesktopContent = () => {
 	};
 
 	const styleImage = {
-		maxHeight: '100%',
-		maxWidth: '100%',
+		maxHeight: 'calc(100% - 4px)',
+		maxWidth: 'calc(100% - 4px)',
 		position: 'absolute',
 		left: '50%',
 		top: '50%',
