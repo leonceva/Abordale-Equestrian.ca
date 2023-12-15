@@ -1,9 +1,13 @@
 import styled from 'styled-components';
 import DesktopLayout from '../layouts/DesktopLayout';
 import MobileLayout from '../layouts/MobileLayout';
-import show_photo_01 from '../images/placeholder-horse-shows-01.jpg';
-import show_photo_02 from '../images/placeholder-horse-shows-02.jpg';
-import show_photo_03 from '../images/placeholder-horse-shows-03.jpg';
+import show_photo_01_highRes from '../images/placeholder-horse-shows-01.jpg';
+import show_photo_02_highRes from '../images/placeholder-horse-shows-02.jpg';
+import show_photo_03_highRes from '../images/placeholder-horse-shows-03.jpg';
+import show_photo_01_lowRes from '../images/placeholder-horse-shows-01-lazy.jpg';
+import show_photo_02_lowRes from '../images/placeholder-horse-shows-02-lazy.jpg';
+import show_photo_03_lowRes from '../images/placeholder-horse-shows-03-lazy.jpg';
+import Image from '../components/Image';
 
 const HorseShows = () => {
 	return (
@@ -19,6 +23,23 @@ export default HorseShows;
 /************************************************************* DESKTOP MODE ****************************************************************************/
 
 export const DesktopContent = () => {
+	const styleWrapper = {
+		position: 'relative',
+		maxWidth: '50%',
+		height: '100%',
+		aspectRatio: '1/1',
+	};
+
+	const styleImage = {
+		position: 'absolute',
+		maxHeight: '100%',
+		maxWidth: '100%',
+		left: '50%',
+		top: '50%',
+		transform: 'translate(-50%, -50%)',
+		border: '2px solid black',
+	};
+
 	return (
 		<DesktopDiv>
 			<div className='intro'>
@@ -29,7 +50,13 @@ export const DesktopContent = () => {
 			</div>
 			<div className='photo-container'>
 				<div className='wrapper'>
-					<img src={show_photo_01} alt='Show 01' />
+					<Image
+						styleWrapper={styleWrapper}
+						styleImage={styleImage}
+						lowResSrc={show_photo_01_lowRes}
+						highResSrc={show_photo_01_highRes}
+					/>
+					{/* <img src={show_photo_01_highRes} alt='Show 01' /> */}
 					<div className='caption'>
 						Grace in motion, this chestnut mare captures the essence of equestrian elegance as she
 						soars through the air in a captivating jump. A moment frozen in time, where strength,
@@ -37,14 +64,26 @@ export const DesktopContent = () => {
 					</div>
 				</div>
 				<div className='wrapper'>
-					<img src={show_photo_02} alt='Show 01' />
+					<Image
+						styleWrapper={styleWrapper}
+						styleImage={styleImage}
+						lowResSrc={show_photo_02_lowRes}
+						highResSrc={show_photo_02_highRes}
+					/>
+					{/* <img src={show_photo_02_highRes} alt='Show 02' /> */}
 					<div className='caption'>
 						Armani, showcasing style and finesse in the hunter event arena. A captivating snapshot
 						of this exceptional horse navigating the course with grace.
 					</div>
 				</div>
 				<div className='wrapper'>
-					<img src={show_photo_03} alt='Show 03' />
+					<Image
+						styleWrapper={styleWrapper}
+						styleImage={styleImage}
+						lowResSrc={show_photo_03_lowRes}
+						highResSrc={show_photo_03_highRes}
+					/>
+					{/* <img src={show_photo_03_highRes} alt='Show 03' /> */}
 					<div className='caption'>
 						Rose, the spirited pony, conquering cross country with boundless energy and
 						determination. A picture of courage and agility in the heart of competition.
@@ -79,10 +118,10 @@ export const DesktopDiv = styled.div`
 		& > .wrapper {
 			width: 100%;
 			margin-bottom: 3%;
-			height: fit-content;
+			height: 55vh;
 			display: flex;
 			flex-direction: row;
-			justify-content: start;
+			justify-content: center;
 			align-items: center;
 			position: relative;
 
@@ -108,6 +147,23 @@ export const DesktopDiv = styled.div`
 /************************************************************* MOBILE MODE ****************************************************************************/
 
 export const MobileContent = () => {
+	const styleWrapper = {
+		position: 'relative',
+		maxWidth: '100%',
+		height: '60vh',
+		aspectRatio: '1/1',
+	};
+
+	const styleImage = {
+		position: 'absolute',
+		maxHeight: '100%',
+		maxWidth: '100%',
+		left: '50%',
+		top: '50%',
+		transform: 'translate(-50%, -50%)',
+		border: '2px solid black',
+	};
+
 	return (
 		<MobileDiv>
 			<div className='intro'>
@@ -118,7 +174,13 @@ export const MobileContent = () => {
 			</div>
 			<div className='photo-container'>
 				<div className='wrapper'>
-					<img src={show_photo_01} alt='Show 01' />
+					<Image
+						styleWrapper={styleWrapper}
+						styleImage={styleImage}
+						lowResSrc={show_photo_01_lowRes}
+						highResSrc={show_photo_01_highRes}
+					/>
+					{/* <img src={show_photo_01_highRes} alt='Show 01' /> */}
 					<div className='caption'>
 						Grace in motion, this chestnut mare captures the essence of equestrian elegance as she
 						soars through the air in a captivating jump. A moment frozen in time, where strength,
@@ -126,14 +188,14 @@ export const MobileContent = () => {
 					</div>
 				</div>
 				<div className='wrapper'>
-					<img src={show_photo_02} alt='Show 01' />
+					<img src={show_photo_02_highRes} alt='Show 01' />
 					<div className='caption'>
 						Armani, showcasing style and finesse in the hunter event arena. A captivating snapshot
 						of this exceptional horse navigating the course with grace.
 					</div>
 				</div>
 				<div className='wrapper'>
-					<img src={show_photo_03} alt='Show 03' />
+					<img src={show_photo_03_highRes} alt='Show 03' />
 					<div className='caption'>
 						Rose, the spirited pony, conquering cross country with boundless energy and
 						determination. A picture of courage and agility in the heart of competition.

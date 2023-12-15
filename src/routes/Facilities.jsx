@@ -1,11 +1,17 @@
 import styled from 'styled-components';
 import DesktopLayout from '../layouts/DesktopLayout';
 import MobileLayout from '../layouts/MobileLayout';
-import facility_01 from '../images/placeholder-facility-01.jpg';
-import facility_02 from '../images/placeholder-facility-02.jpg';
-import facility_03 from '../images/placeholder-facility-03.jpg';
-import facility_04 from '../images/placeholder-facility-04.jpg';
-import facility_05 from '../images/placeholder-facility-05.jpg';
+import facility_01_highRes from '../images/placeholder-facility-01.jpg';
+import facility_02_highRes from '../images/placeholder-facility-02.jpg';
+import facility_03_highRes from '../images/placeholder-facility-03.jpg';
+import facility_04_highRes from '../images/placeholder-facility-04.jpg';
+import facility_05_highRes from '../images/placeholder-facility-05.jpg';
+import facility_01_lowRes from '../images/placeholder-facility-01-lazy.jpg';
+import facility_02_lowRes from '../images/placeholder-facility-02-lazy.jpg';
+import facility_03_lowRes from '../images/placeholder-facility-03-lazy.jpg';
+import facility_04_lowRes from '../images/placeholder-facility-04-lazy.jpg';
+import facility_05_lowRes from '../images/placeholder-facility-05-lazy.jpg';
+import Image from '../components/Image';
 
 const Facilities = () => {
 	return (
@@ -21,6 +27,22 @@ export default Facilities;
 /************************************************************* DESKTOP MODE ****************************************************************************/
 
 export const DesktopContent = () => {
+	const styleWrapper = {
+		position: 'relative',
+		width: '100%',
+		height: '100%',
+		zIndex: '3',
+	};
+
+	const styleImage = {
+		maxHeight: 'calc(100% - 4px)',
+		maxWidth: 'calc(100% - 4px)',
+		position: 'absolute',
+		left: '50%',
+		top: '50%',
+		transform: 'translate(-50%, -50%)',
+	};
+
 	return (
 		<DesktopDiv>
 			<div className='intro'>
@@ -35,24 +57,54 @@ export const DesktopContent = () => {
 
 			<div className='img-container'>
 				<div className='img-wrapper'>
-					<img src={facility_01} alt='Facility 01 Background' className='facility-bg' />
-					<img className='facility-img' src={facility_01} alt='Facility 01' />
+					<img src={facility_01_lowRes} alt='Facility 01 Background' className='facility-bg' />
+					{/* <img className='facility-img' src={facility_01_highRes} alt='Facility 01' /> */}
+					<Image
+						styleWrapper={styleWrapper}
+						styleImage={styleImage}
+						lowResSrc={facility_01_lowRes}
+						highResSrc={facility_01_highRes}
+					/>
 				</div>
 				<div className='img-wrapper'>
-					<img src={facility_02} alt='Facility 02 Background' className='facility-bg' />
-					<img className='facility-img' src={facility_02} alt='Facility 02' />
+					<img src={facility_02_lowRes} alt='Facility 02 Background' className='facility-bg' />
+					{/* <img className='facility-img' src={facility_02_highRes} alt='Facility 02' /> */}
+					<Image
+						styleWrapper={styleWrapper}
+						styleImage={styleImage}
+						lowResSrc={facility_02_lowRes}
+						highResSrc={facility_02_highRes}
+					/>
 				</div>
 				<div className='img-wrapper'>
-					<img src={facility_03} alt='Facility 03 Background' className='facility-bg' />
-					<img className='facility-img' src={facility_03} alt='Facility 03' />
+					<img src={facility_03_lowRes} alt='Facility 03 Background' className='facility-bg' />
+					{/* <img className='facility-img' src={facility_03_highRes} alt='Facility 03' /> */}
+					<Image
+						styleWrapper={styleWrapper}
+						styleImage={styleImage}
+						lowResSrc={facility_03_lowRes}
+						highResSrc={facility_03_highRes}
+					/>
 				</div>
 				<div className='img-wrapper'>
-					<img src={facility_04} alt='Facility 04 Background' className='facility-bg' />
-					<img className='facility-img' src={facility_04} alt='Facility 04' />
+					<img src={facility_04_lowRes} alt='Facility 04 Background' className='facility-bg' />
+					{/* <img className='facility-img' src={facility_04_highRes} alt='Facility 04' /> */}
+					<Image
+						styleWrapper={styleWrapper}
+						styleImage={styleImage}
+						lowResSrc={facility_04_lowRes}
+						highResSrc={facility_04_highRes}
+					/>
 				</div>
 				<div className='img-wrapper'>
-					<img src={facility_05} alt='Facility 05 Background' className='facility-bg' />
-					<img className='facility-img' src={facility_05} alt='Facility 05' />
+					<img src={facility_05_lowRes} alt='Facility 05 Background' className='facility-bg' />
+					{/* <img className='facility-img' src={facility_05_highRes} alt='Facility 05' /> */}
+					<Image
+						styleWrapper={styleWrapper}
+						styleImage={styleImage}
+						lowResSrc={facility_05_lowRes}
+						highResSrc={facility_05_highRes}
+					/>
 				</div>
 				<div className='bottom-space' />
 			</div>
@@ -91,9 +143,10 @@ export const DesktopDiv = styled.div`
 			& > .facility-bg {
 				width: 100%;
 				height: 100%;
-				opacity: 0.3;
+				opacity: 0.5;
 				position: absolute;
 				z-index: 2;
+				filter: blur(1px);
 			}
 
 			& > .facility-img {
@@ -125,6 +178,22 @@ export const DesktopDiv = styled.div`
 /************************************************************* MOBILE MODE ****************************************************************************/
 
 export const MobileContent = () => {
+	const styleWrapper = {
+		position: 'relative',
+		width: '100%',
+		height: '100%',
+		zIndex: '3',
+	};
+
+	const styleImage = {
+		maxHeight: 'calc(100% - 4px)',
+		maxWidth: 'calc(100% - 4px)',
+		position: 'absolute',
+		left: '50%',
+		top: '50%',
+		transform: 'translate(-50%, -50%)',
+	};
+
 	return (
 		<MobileDiv>
 			<div className='intro'>
@@ -138,24 +207,54 @@ export const MobileContent = () => {
 			</div>
 			<div className='img-container'>
 				<div className='img-wrapper'>
-					<img src={facility_01} alt='Facility 01 Background' className='facility-bg' />
-					<img src={facility_01} alt='Facility 01' className='facility-img' />
+					<img src={facility_01_lowRes} alt='Facility 01 Background' className='facility-bg' />
+					{/* <img src={facility_01_highRes} alt='Facility 01' className='facility-img' /> */}
+					<Image
+						styleWrapper={styleWrapper}
+						styleImage={styleImage}
+						lowResSrc={facility_01_lowRes}
+						highResSrc={facility_01_highRes}
+					/>
 				</div>
 				<div className='img-wrapper'>
-					<img src={facility_02} alt='Facility 02 Background' className='facility-bg' />
-					<img src={facility_02} alt='Facility 02' className='facility-img' />
+					<img src={facility_02_lowRes} alt='Facility 02 Background' className='facility-bg' />
+					{/* <img src={facility_02_highRes} alt='Facility 02' className='facility-img' /> */}
+					<Image
+						styleWrapper={styleWrapper}
+						styleImage={styleImage}
+						lowResSrc={facility_02_lowRes}
+						highResSrc={facility_02_highRes}
+					/>
 				</div>
 				<div className='img-wrapper'>
-					<img src={facility_03} alt='Facility 03 Background' className='facility-bg' />
-					<img src={facility_03} alt='Facility 03' className='facility-img' />
+					<img src={facility_03_lowRes} alt='Facility 03 Background' className='facility-bg' />
+					{/* <img src={facility_03_highRes} alt='Facility 03' className='facility-img' /> */}
+					<Image
+						styleWrapper={styleWrapper}
+						styleImage={styleImage}
+						lowResSrc={facility_03_lowRes}
+						highResSrc={facility_03_highRes}
+					/>
 				</div>
 				<div className='img-wrapper'>
-					<img src={facility_04} alt='Facility 04 Background' className='facility-bg' />
-					<img src={facility_04} alt='Facility 04' className='facility-img' />
+					<img src={facility_04_lowRes} alt='Facility 04 Background' className='facility-bg' />
+					{/* <img src={facility_04_highRes} alt='Facility 04' className='facility-img' /> */}
+					<Image
+						styleWrapper={styleWrapper}
+						styleImage={styleImage}
+						lowResSrc={facility_04_lowRes}
+						highResSrc={facility_04_highRes}
+					/>
 				</div>
 				<div className='img-wrapper'>
-					<img src={facility_05} alt='Facility 05 Background' className='facility-bg' />
-					<img src={facility_05} alt='Facility 05' className='facility-img' />
+					<img src={facility_05_lowRes} alt='Facility 05 Background' className='facility-bg' />
+					{/* <img src={facility_05_highRes} alt='Facility 05' className='facility-img' /> */}
+					<Image
+						styleWrapper={styleWrapper}
+						styleImage={styleImage}
+						lowResSrc={facility_05_lowRes}
+						highResSrc={facility_05_highRes}
+					/>
 				</div>
 				<div className='bottom-space' />
 			</div>
@@ -201,6 +300,7 @@ export const MobileDiv = styled.div`
 				opacity: 0.3;
 				position: absolute;
 				z-index: 2;
+				filter: blur(1px);
 			}
 
 			& > .facility-img {

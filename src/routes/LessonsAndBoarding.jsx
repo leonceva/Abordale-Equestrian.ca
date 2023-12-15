@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import DesktopLayout from '../layouts/DesktopLayout';
 import MobileLayout from '../layouts/MobileLayout';
-import lesson_img from '../images/placeholder-lesson-01.jpg';
+import lesson_img_highRes from '../images/placeholder-lesson-01.jpg';
+import lesson_img_lowRes from '../images/placeholder-lesson-01-lazy.jpg';
+import Image from '../components/Image';
 
 const LessonsAndBoarding = () => {
 	return (
@@ -17,9 +19,31 @@ export default LessonsAndBoarding;
 /************************************************************* DESKTOP MODE ****************************************************************************/
 
 export const DesktopContent = () => {
+	const styleWrapper = {
+		aspectRatio: '1/1',
+		width: '50%',
+		position: 'relative',
+		marginTop: '2.5%',
+	};
+
+	const styleImage = {
+		width: '100%',
+		position: 'absolute',
+		left: '50%',
+		top: '50%',
+		transform: 'translate(-50%, -50%)',
+		border: '2px solid black',
+	};
+
 	return (
 		<DesktopDiv>
-			<img src={lesson_img} alt='Lesson 01' />
+			<Image
+				styleWrapper={styleWrapper}
+				styleImage={styleImage}
+				lowResSrc={lesson_img_lowRes}
+				highResSrc={lesson_img_highRes}
+			/>
+			{/* <img src={lesson_img} alt='Lesson 01' /> */}
 			<div className='intro'>
 				<p>
 					Explore equestrian excellence with our tailored lessons and boarding options. Our
@@ -42,21 +66,13 @@ export const DesktopDiv = styled.div`
 	height: fit-content;
 	display: flex;
 	flex-direction: row;
-	justify-content: start;
+	justify-content: space;
 	align-items: center;
 
-	& > img {
-		max-width: 60%;
-		max-height: 50vh;
-		border: 2px solid black;
-		margin-top: 5%;
-	}
-
 	& > .intro {
-		flex: 1;
-		margin: 2.5% 0;
 		text-align: justify;
 		padding: 0 5%;
+		flex: 1;
 
 		& .start {
 		}
@@ -66,6 +82,23 @@ export const DesktopDiv = styled.div`
 /************************************************************* MOBILE MODE ****************************************************************************/
 
 export const MobileContent = () => {
+	const styleWrapper = {
+		aspectRatio: '1/1',
+		width: '90%',
+		height: '60vh',
+		position: 'relative',
+	};
+
+	const styleImage = {
+		width: '100%',
+		maxHeigth: '100%',
+		position: 'absolute',
+		left: '50%',
+		top: '50%',
+		transform: 'translate(-50%, -50%)',
+		border: '2px solid black',
+	};
+
 	return (
 		<MobileDiv>
 			<p className='intro'>
@@ -75,11 +108,17 @@ export const MobileContent = () => {
 				secure and nurturing environment. Join us for a journey into the timeless beauty of horse
 				riding and companionship.
 			</p>
-			<img src={lesson_img} alt='Lesson 01' />
 			<h3 className='start'>
 				Contact us for details regarding boarding or to book your first lesson. We look forward to
 				riding with you!
 			</h3>
+			<Image
+				styleWrapper={styleWrapper}
+				styleImage={styleImage}
+				lowResSrc={lesson_img_lowRes}
+				highResSrc={lesson_img_highRes}
+			/>
+			{/* <img src={lesson_img} alt='Lesson 01' /> */}
 		</MobileDiv>
 	);
 };
@@ -98,13 +137,7 @@ export const MobileDiv = styled.div`
 		line-height: 130%;
 	}
 
-	& > img {
-		max-width: 90vw;
-		max-height: 70vh;
-		border: solid 2px black;
-	}
-
 	& > .start {
-		margin: 5%;
+		margin: 0 5% 5%;
 	}
 `;

@@ -1,8 +1,11 @@
 import DesktopLayout from '../layouts/DesktopLayout';
 import MobileLayout from '../layouts/MobileLayout';
 import styled from 'styled-components';
-import sean_img from '../images/placeholder-sean-01.jpg';
-import brandon_img from '../images/placeholder-brandon-01.jpg';
+import sean_img_highRes from '../images/placeholder-sean-01.jpg';
+import brandon_img_highRes from '../images/placeholder-brandon-01.jpg';
+import sean_img_lowRes from '../images/placeholder-sean-01-lazy.jpg';
+import brandon_img_lowRes from '../images/placeholder-brandon-01-lazy.jpg';
+import Image from '../components/Image';
 
 const About = () => {
 	return (
@@ -18,6 +21,24 @@ export default About;
 /************************************************************* DESKTOP MODE ****************************************************************************/
 
 export const DesktopContent = () => {
+	const styleWrapper = {
+		aspectRatio: '1/1',
+		maxWidth: '50%',
+		height: '100%',
+		position: 'relative',
+	};
+
+	const styleImage = {
+		aspectRatio: '1/1',
+		height: '100%',
+		position: 'absolute',
+		left: '50%',
+		top: '50%',
+		transform: 'translate(-50%, -50%)',
+		border: 'solid black',
+		borderWidth: '2px 2px 2px 0 ',
+	};
+
 	return (
 		<DesktopDiv>
 			<div className='intro-message'>
@@ -29,7 +50,13 @@ export const DesktopContent = () => {
 			</div>
 			<div className='staff'>
 				<div className='staff-container'>
-					<img src={sean_img} alt='Sean Jenkin' />
+					<Image
+						styleWrapper={styleWrapper}
+						styleImage={styleImage}
+						lowResSrc={sean_img_lowRes}
+						highResSrc={sean_img_highRes}
+					/>
+					{/* <img src={sean_img_highRes} alt='Sean Jenkin' /> */}
 					<div className='bio-container'>
 						<h2>Sean Jenkin</h2>
 						<h3>Your Versatile Equestrian Expert</h3>
@@ -50,7 +77,12 @@ export const DesktopContent = () => {
 					</div>
 				</div>
 				<div className='staff-container'>
-					<img src={brandon_img} alt='Brandon Fehér' />
+					<Image
+						styleWrapper={styleWrapper}
+						styleImage={styleImage}
+						lowResSrc={brandon_img_lowRes}
+						highResSrc={brandon_img_highRes}
+					/>
 					<div className='bio-container'>
 						<h2>Brandon Fehér</h2>
 						<h3>Your Guardian of Equine Comfort and Care</h3>
@@ -100,8 +132,7 @@ export const DesktopDiv = styled.div`
 			flex-direction: row;
 			justify-content: start;
 			align-items: center;
-			border: solid black;
-			border-width: 2px 2px 2px 0;
+			border: 2px solid black;
 			background-color: rgba(220, 220, 220, 0.8);
 
 			& > img {
@@ -134,6 +165,24 @@ export const DesktopDiv = styled.div`
 /************************************************************* MOBILE MODE ****************************************************************************/
 
 export const MobileContent = () => {
+	const styleWrapper = {
+		aspectRatio: '1/1',
+		position: 'relative',
+		float: 'left',
+		width: '45vw',
+		margin: '0 2vw 2vw 0',
+	};
+
+	const styleImage = {
+		aspectRatio: '1/1',
+		height: '100%',
+		position: 'absolute',
+		left: '50%',
+		top: '50%',
+		transform: 'translate(-50%, -50%)',
+		border: '2px solid black',
+	};
+
 	return (
 		<MobileDiv>
 			<div className='intro-message'>
@@ -145,9 +194,15 @@ export const MobileContent = () => {
 			</div>
 			<div className='staff'>
 				<div className='staff-container'>
-					<div className='img-container'>
-						<img src={sean_img} alt='Sean Jenkin' />
-					</div>
+					<Image
+						styleWrapper={styleWrapper}
+						styleImage={styleImage}
+						lowResSrc={sean_img_lowRes}
+						highResSrc={sean_img_highRes}
+					/>
+					{/* <div className='img-container'>
+						<img src={sean_img_highRes} alt='Sean Jenkin' />
+					</div> */}
 					<h2>Sean Jenkin</h2>
 					<h3>Your Versatile Equestrian Expert</h3>
 					<p className='bio'>
@@ -164,9 +219,15 @@ export const MobileContent = () => {
 					</p>
 				</div>
 				<div className='staff-container'>
-					<div className='img-container'>
-						<img src={brandon_img} alt='Brandon Fehér' />
-					</div>
+					<Image
+						styleWrapper={styleWrapper}
+						styleImage={styleImage}
+						lowResSrc={brandon_img_lowRes}
+						highResSrc={brandon_img_highRes}
+					/>
+					{/* <div className='img-container'>
+						<img src={brandon_img_highRes} alt='Brandon Fehér' />
+					</div> */}
 					<h2>Brandon Fehér</h2>
 					<h3>Your Guardian of Equine Comfort and Care</h3>
 					<p className='bio'>
