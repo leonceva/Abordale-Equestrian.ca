@@ -3,7 +3,6 @@ import logo_highRes from '../images/logo-custom-transparent.png';
 import logo_lowRes from '../images/logo-custom-transparent-lazy.png';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import Image from '../components/Image';
 
 const MOBILE_MODE_LIMIT = process.env.REACT_APP_MOBILE_MODE;
 
