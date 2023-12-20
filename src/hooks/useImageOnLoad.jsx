@@ -11,7 +11,6 @@ const useImageOnLoad = () => {
 		},
 		highRes: {
 			opacity: isLoaded ? 1 : 0,
-			transition: 'opacity 250ms ease-in 50ms',
 		},
 	};
 
