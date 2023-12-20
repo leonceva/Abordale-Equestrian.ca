@@ -84,7 +84,7 @@ export const DesktopNavDiv = styled.div`
 	flex-direction: row;
 	align-items: center;
 	overflow: hidden;
-	justify-content: start;
+	justify-content: space-between;
 	position: relative;
 
 	@media screen and (max-width: ${MOBILE_MODE_LIMIT}) {
@@ -125,7 +125,7 @@ export const NavLink = styled(Link)`
 	text-decoration: none;
 	font-weight: bold;
 	text-align: center;
-	margin: 0 2.5%;
+	margin-right: 5%;
 
 	&:hover {
 		transition: 200ms;

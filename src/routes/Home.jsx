@@ -2,13 +2,21 @@ import DesktopLayout from '../layouts/DesktopLayout';
 import MobileLayout from '../layouts/MobileLayout';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
-import sean_img from '../images/placeholder-sean-01.jpg';
-import brandon_img from '../images/placeholder-brandon-01.jpg';
-import facility_01 from '../images/placeholder-facility-01.jpg';
-import facility_02 from '../images/placeholder-facility-02.jpg';
-import facility_03 from '../images/placeholder-facility-03.jpg';
-import facility_04 from '../images/placeholder-facility-04.jpg';
-import facility_05 from '../images/placeholder-facility-05.jpg';
+import sean_img_highRes from '../images/placeholder-sean-01.jpg';
+import sean_img_lowRes from '../images/placeholder-sean-01-lazy.jpg';
+import brandon_img_highRes from '../images/placeholder-brandon-01.jpg';
+import brandon_img_lowRes from '../images/placeholder-brandon-01-lazy.jpg';
+import facility_01_highRes from '../images/placeholder-facility-01.jpg';
+import facility_02_highRes from '../images/placeholder-facility-02.jpg';
+import facility_03_highRes from '../images/placeholder-facility-03.jpg';
+import facility_04_highRes from '../images/placeholder-facility-04.jpg';
+import facility_05_highRes from '../images/placeholder-facility-05.jpg';
+import facility_01_lowRes from '../images/placeholder-facility-01-lazy.jpg';
+import facility_02_lowRes from '../images/placeholder-facility-02-lazy.jpg';
+import facility_03_lowRes from '../images/placeholder-facility-03-lazy.jpg';
+import facility_04_lowRes from '../images/placeholder-facility-04-lazy.jpg';
+import facility_05_lowRes from '../images/placeholder-facility-05-lazy.jpg';
+import Image from '../components/Image';
 import SocialMediaLink from '../components/SocialMediaLink';
 import { useRef, useState, useEffect } from 'react';
 
@@ -27,6 +35,24 @@ export default Home;
 
 export const DesktopContent = () => {
 	const navigate = useNavigate();
+
+	const styleWrapperStaff = {
+		position: 'relative',
+		height: '300px',
+		width: '30%',
+		border: '2px solid black',
+		backgroundColor: 'rgb(18, 17, 31)',
+	};
+
+	const styleImageStaff = {
+		position: 'absolute',
+		maxWidth: '100%',
+		maxHeight: '100%',
+		left: '50%',
+		top: '50%',
+		transform: 'translate(-50%, -50%)',
+	};
+
 	return (
 		<DesktopDiv>
 			<h2 className='title'>Welcome To Abordale Equestrian</h2>
@@ -68,7 +94,13 @@ export const DesktopContent = () => {
 			</div>
 			<div className='short-about'>
 				<div className='staff-container'>
-					<img className='staff-img' src={sean_img} alt='Sean Jenkin' />
+					<Image
+						styleWrapper={styleWrapperStaff}
+						styleImage={styleImageStaff}
+						lowResSrc={sean_img_lowRes}
+						highResSrc={sean_img_highRes}
+					/>
+					{/* <img className='staff-img' src={sean_img_highRes} alt='Sean Jenkin' /> */}
 					<div className='staff-bio'>
 						<h3 className='name'>
 							Sean Jenkin - Your Expert in Eventing, Hunter/Jumper, and Dressage
@@ -90,7 +122,13 @@ export const DesktopContent = () => {
 					</div>
 				</div>
 				<div className='staff-container'>
-					<img src={brandon_img} alt='Brandon Fehér' className='staff-img' />
+					<Image
+						styleWrapper={styleWrapperStaff}
+						styleImage={styleImageStaff}
+						lowResSrc={brandon_img_lowRes}
+						highResSrc={brandon_img_highRes}
+					/>
+					{/* <img src={brandon_img_highRes} alt='Brandon Fehér' className='staff-img' /> */}
 					<div className='staff-bio'>
 						<h3 className='name'>Brandon Fehér - Our Steward of Equine Care</h3>
 						<p className='bio'>
@@ -173,6 +211,7 @@ export const DesktopDiv = styled.div`
 				& > .img-div {
 					height: 100%;
 					width: 100%;
+					background-color: white;
 
 					& > img {
 						transition: all 1s;
@@ -192,7 +231,8 @@ export const DesktopDiv = styled.div`
 					& > .img-bg {
 						height: 100%;
 						width: 100%;
-						opacity: 0.2;
+						opacity: 0.4;
+						filter: blur(2px);
 					}
 
 					& > .left {
@@ -200,7 +240,7 @@ export const DesktopDiv = styled.div`
 						height: 100%;
 						width: 25px;
 						left: 0;
-						background-color: black;
+						background-color: rgb(18, 17, 31);
 						color: white;
 						display: flex;
 						align-items: center;
@@ -218,7 +258,7 @@ export const DesktopDiv = styled.div`
 						height: 100%;
 						width: 25px;
 						right: 0;
-						background-color: black;
+						background-color: rgb(18, 17, 31);
 						color: white;
 						display: flex;
 						align-items: center;
@@ -370,6 +410,23 @@ export const DesktopDiv = styled.div`
 
 export const MobileContent = () => {
 	const navigate = useNavigate();
+
+	const styleWrapperStaff = {
+		position: 'relative',
+		height: '100%',
+		width: 'calc(55% - 4px)',
+	};
+
+	const styleImageStaff = {
+		position: 'absolute',
+		maxWidth: '100%',
+		maxHeight: '100%',
+		left: '50%',
+		top: '50%',
+		transform: 'translate(-50%, -50%)',
+		border: '2px solid black',
+	};
+
 	return (
 		<MobileDiv>
 			<h2>Welcome To Abordale Equestrian</h2>
@@ -411,7 +468,13 @@ export const MobileContent = () => {
 			</div>
 			<div className='short-about'>
 				<div className='staff-container'>
-					<img src={sean_img} alt='Sean Jenkin' />
+					{/* <img src={sean_img_highRes} alt='Sean Jenkin' /> */}
+					<Image
+						styleWrapper={styleWrapperStaff}
+						styleImage={styleImageStaff}
+						lowResSrc={sean_img_lowRes}
+						highResSrc={sean_img_highRes}
+					/>
 					<div className='name'>
 						<h3>Sean Jenkin</h3>
 						<h4>Your Expert in Eventing, Hunter/Jumper, and Dressage</h4>
@@ -426,7 +489,13 @@ export const MobileContent = () => {
 					</div>
 				</div>
 				<div className='staff-container'>
-					<img src={brandon_img} alt='Brandon Fehér' />
+					{/* <img src={brandon_img_highRes} alt='Brandon Fehér' /> */}
+					<Image
+						styleWrapper={styleWrapperStaff}
+						styleImage={styleImageStaff}
+						lowResSrc={brandon_img_lowRes}
+						highResSrc={brandon_img_highRes}
+					/>
 					<div className='name'>
 						<h3>Brandon Fehér</h3>
 						<h4>Our Steward of Equine Care</h4>
@@ -510,6 +579,7 @@ export const MobileDiv = styled.div`
 				& > .img-div {
 					height: 100%;
 					width: 100%;
+					background-color: white;
 
 					& > img {
 						transition: all 1s;
@@ -529,7 +599,7 @@ export const MobileDiv = styled.div`
 					& > .img-bg {
 						height: 100%;
 						width: 100%;
-						opacity: 0.2;
+						opacity: 0.4;
 					}
 
 					& > .left {
@@ -537,7 +607,7 @@ export const MobileDiv = styled.div`
 						height: 100%;
 						width: 25px;
 						left: 0;
-						background-color: black;
+						background-color: rgb(18, 17, 31);
 						color: white;
 						display: flex;
 						align-items: center;
@@ -555,7 +625,7 @@ export const MobileDiv = styled.div`
 						height: 100%;
 						width: 25px;
 						right: 0;
-						background-color: black;
+						background-color: rgb(18, 17, 31);
 						color: white;
 						display: flex;
 						align-items: center;
@@ -702,27 +772,32 @@ export const Carousel = () => {
 
 	const NUMBER_IMAGES = 5;
 
-	let img_src, img_alt;
+	let img_src_highRes, img_src_lowRes, img_alt;
 
 	switch (imgNumber) {
 		case 1:
-			img_src = facility_01;
+			img_src_highRes = facility_01_highRes;
+			img_src_lowRes = facility_01_lowRes;
 			img_alt = 'Facility 01';
 			break;
 		case 2:
-			img_src = facility_02;
+			img_src_highRes = facility_02_highRes;
+			img_src_lowRes = facility_02_lowRes;
 			img_alt = 'Facility 02';
 			break;
 		case 3:
-			img_src = facility_03;
+			img_src_highRes = facility_03_highRes;
+			img_src_lowRes = facility_03_lowRes;
 			img_alt = 'Facility 03';
 			break;
 		case 4:
-			img_src = facility_04;
+			img_src_highRes = facility_04_highRes;
+			img_src_lowRes = facility_04_lowRes;
 			img_alt = 'Facility 04';
 			break;
 		case 5:
-			img_src = facility_05;
+			img_src_highRes = facility_05_highRes;
+			img_src_lowRes = facility_05_lowRes;
 			img_alt = 'Facility 05';
 			break;
 
@@ -762,11 +837,34 @@ export const Carousel = () => {
 		return () => clearInterval(timerID.current);
 	}, [imgNumber]);
 
+	const styleWrapperCarousel = {
+		position: 'absolute',
+		width: '100%',
+		height: '100%',
+	};
+
+	const styleImageCarousel = {
+		position: 'absolute',
+		height: 'calc(100% - 4px)',
+		maxWidth: '100%',
+		left: '50%',
+		top: '50%',
+		transform: 'translate(-50%, -50%)',
+		zIndex: '2',
+	};
+
 	return (
 		<>
 			<div className='img-div'>
-				<img loading='lazy' className='img-show' src={img_src} alt={img_alt} />
-				<img src={img_src} alt='Background' className='img-bg' />
+				<Image
+					styleWrapper={styleWrapperCarousel}
+					styleImage={styleImageCarousel}
+					lowResSrc={img_src_lowRes}
+					highResSrc={img_src_highRes}
+					alt={img_alt}
+				/>
+				{/* <img loading='lazy' className='img-show' src={img_src_highRes} alt={img_alt} /> */}
+				<img src={img_src_lowRes} alt='Background' className='img-bg' />
 				<div
 					className='left'
 					onClick={() => {
