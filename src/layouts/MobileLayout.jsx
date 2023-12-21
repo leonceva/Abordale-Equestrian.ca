@@ -26,7 +26,7 @@ export const MobileDiv = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: start;
-	width: 100%;
+	width: 100vw;
 	position: relative;
 
 	@media screen and (min-width: ${MOBILE_MODE_LIMIT}) {
@@ -41,7 +41,7 @@ export const MobileDiv = styled.div`
 	& > .background {
 		position: fixed;
 		top: 0;
-		width: 100%;
+		width: 100vw;
 		height: 100%;
 		z-index: 1;
 
@@ -55,7 +55,7 @@ export const MobileDiv = styled.div`
 	}
 
 	& > .mobile-content {
-		width: 100%;
+		width: 100vw;
 		min-height: calc(100vh - 100px);
 		z-index: 2;
 		top: 0;
