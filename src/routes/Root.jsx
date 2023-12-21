@@ -30,7 +30,7 @@ export const RootDiv = styled.div`
 	position: relative;
 
 	& > .navbar {
-		width: 100%;
+		width: 100vw;
 		position: fixed;
 		z-index: 9;
 		border-bottom: 2px;

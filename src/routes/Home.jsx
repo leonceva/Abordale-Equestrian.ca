@@ -57,13 +57,14 @@ export const DesktopContent = () => {
 		<DesktopDiv>
 			<h2 className='title'>Welcome To Abordale Equestrian</h2>
 			<div className='welcome-message'>
-				Discover the perfect blend of passion and purpose at Abordale Equestrian. Located just south
-				of Stittsville, our premier facility offers top-notch boarding, expert training, and
-				enriching riding lessons. Immerse yourself in a community dedicated to the well-being of
-				horses and the joy of riding. Explore our state-of-the-art facilities, meet our experienced
-				trainers, and embark on an exciting journey where every hoofbeat tells a story. Welcome to
-				Abordale Equestrian, where the love for horses knows no bounds. Saddle up and let the
-				adventure begin!
+				Discover the perfect blend of passion and purpose at Abordale
+				Equestrian. Located just south of Stittsville, our premier facility
+				offers top-notch boarding, expert training, and enriching riding
+				lessons. Immerse yourself in a community dedicated to the well-being of
+				horses and the joy of riding. Explore our state-of-the-art facilities,
+				meet our experienced trainers, and embark on an exciting journey where
+				every hoofbeat tells a story. Welcome to Abordale Equestrian, where the
+				love for horses knows no bounds. Saddle up and let the adventure begin!
 			</div>
 			<div className='facility'>
 				<div className='facility-container'>
@@ -73,13 +74,14 @@ export const DesktopContent = () => {
 					<div className='description-container'>
 						<h2>Discover Our Facilities</h2>
 						<p>
-							The equestrian center boasts a range of well-maintained facilities catering to horse
-							enthusiasts of all levels. The center includes spacious and secure stables, an
-							expansive riding arena, and well-groomed trails for leisurely rides. Riders can make
-							use of basic equipment and grooming areas, while the center also provides a cozy
-							clubhouse for gatherings and events. With a focus on functionality and comfort, the
-							equestrian center offers a welcoming environment for both riders and their equine
-							companions.
+							The equestrian center boasts a range of well-maintained facilities
+							catering to horse enthusiasts of all levels. The center includes
+							spacious and secure stables, an expansive riding arena, and
+							well-groomed trails for leisurely rides. Riders can make use of
+							basic equipment and grooming areas, while the center also provides
+							a cozy clubhouse for gatherings and events. With a focus on
+							functionality and comfort, the equestrian center offers a
+							welcoming environment for both riders and their equine companions.
 						</p>
 						<span
 							className='button link'
@@ -106,9 +108,10 @@ export const DesktopContent = () => {
 							Sean Jenkin - Your Expert in Eventing, Hunter/Jumper, and Dressage
 						</h3>
 						<p className='bio'>
-							Welcome to the world of equestrian excellence with Sean, a seasoned professional
-							specializing in eventing, hunter/jumper, and dressage. With a passion for precision
-							and a commitment to fostering the rider-horse connection, he tailors training programs
+							Welcome to the world of equestrian excellence with Sean, a
+							seasoned professional specializing in eventing, hunter/jumper, and
+							dressage. With a passion for precision and a commitment to
+							fostering the rider-horse connection, he tailors training programs
 							for all levels of riders.
 						</p>
 						<span
@@ -132,10 +135,12 @@ export const DesktopContent = () => {
 					<div className='staff-bio'>
 						<h3 className='name'>Brandon Fehér - Our Steward of Equine Care</h3>
 						<p className='bio'>
-							At the helm of Abordale Equestrian, Brandon serves as our dedicated Barn Manager,
-							ensuring the optimal care and well-being of our equine companions. With a wealth of
-							experience and a passion for horses, he expertly oversees daily operations,
-							guaranteeing that every horse receives the highest standard of care.
+							At the helm of Abordale Equestrian, Brandon serves as our
+							dedicated Barn Manager, ensuring the optimal care and well-being
+							of our equine companions. With a wealth of experience and a
+							passion for horses, he expertly oversees daily operations,
+							guaranteeing that every horse receives the highest standard of
+							care.
 						</p>
 						<span
 							className='link button'
@@ -162,9 +167,18 @@ export const DesktopContent = () => {
 					<div className='contact-info'>
 						<h2>Get In Touch</h2>
 						<div className='social-media'>
-							<SocialMediaLink size='35px' type='instagram' />
-							<SocialMediaLink size='35px' type='facebook' />
-							<SocialMediaLink size='35px' type='email' />
+							<SocialMediaLink
+								size='35px'
+								type='instagram'
+							/>
+							<SocialMediaLink
+								size='35px'
+								type='facebook'
+							/>
+							<SocialMediaLink
+								size='35px'
+								type='email'
+							/>
 						</div>
 						<div className='email'>abordale.equestrian@gmail.com</div>
 					</div>
@@ -431,13 +445,14 @@ export const MobileContent = () => {
 		<MobileDiv>
 			<h2>Welcome To Abordale Equestrian</h2>
 			<div className='welcome-message'>
-				Discover the perfect blend of passion and purpose at Abordale Equestrian. Located just south
-				of Stittsville, our premier facility offers top-notch boarding, expert training, and
-				enriching riding lessons. Immerse yourself in a community dedicated to the well-being of
-				horses and the joy of riding. Explore our state-of-the-art facilities, meet our experienced
-				trainers, and embark on an exciting journey where every hoofbeat tells a story. Welcome to
-				Abordale Equestrian, where the love for horses knows no bounds. Saddle up and let the
-				adventure begin!
+				Discover the perfect blend of passion and purpose at Abordale
+				Equestrian. Located just south of Stittsville, our premier facility
+				offers top-notch boarding, expert training, and enriching riding
+				lessons. Immerse yourself in a community dedicated to the well-being of
+				horses and the joy of riding. Explore our state-of-the-art facilities,
+				meet our experienced trainers, and embark on an exciting journey where
+				every hoofbeat tells a story. Welcome to Abordale Equestrian, where the
+				love for horses knows no bounds. Saddle up and let the adventure begin!
 			</div>
 			<div className='facility'>
 				<div className='facility-container'>
@@ -447,13 +462,14 @@ export const MobileContent = () => {
 					<div className='description-container'>
 						<h2>Discover Our Facilities</h2>
 						<p>
-							The equestrian center boasts a range of well-maintained facilities catering to horse
-							enthusiasts of all levels. The center includes spacious and secure stables, an
-							expansive riding arena, and well-groomed trails for leisurely rides. Riders can make
-							use of basic equipment and grooming areas, while the center also provides a cozy
-							clubhouse for gatherings and events. With a focus on functionality and comfort, the
-							equestrian center offers a welcoming environment for both riders and their equine
-							companions.
+							The equestrian center boasts a range of well-maintained facilities
+							catering to horse enthusiasts of all levels. The center includes
+							spacious and secure stables, an expansive riding arena, and
+							well-groomed trails for leisurely rides. Riders can make use of
+							basic equipment and grooming areas, while the center also provides
+							a cozy clubhouse for gatherings and events. With a focus on
+							functionality and comfort, the equestrian center offers a
+							welcoming environment for both riders and their equine companions.
 						</p>
 						<span
 							className='button link'
@@ -529,9 +545,18 @@ export const MobileContent = () => {
 					<h2>Get In Touch</h2>
 					<div className='right-side'>
 						<div className='social-media'>
-							<SocialMediaLink size='40px' type='instagram' />
-							<SocialMediaLink size='40px' type='facebook' />
-							<SocialMediaLink size='40px' type='email' />
+							<SocialMediaLink
+								size='40px'
+								type='instagram'
+							/>
+							<SocialMediaLink
+								size='40px'
+								type='facebook'
+							/>
+							<SocialMediaLink
+								size='40px'
+								type='email'
+							/>
 						</div>
 					</div>
 				</div>
@@ -541,12 +566,13 @@ export const MobileContent = () => {
 };
 
 export const MobileDiv = styled.div`
-	width: 100%;
+	width: 100vw;
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: start;
+	overflow-x: hidden;
 
 	& > h2 {
 		text-align: center;
@@ -830,7 +856,9 @@ export const Carousel = () => {
 
 	useEffect(() => {
 		timerID.current = setInterval(() => {
-			current_num.current < NUMBER_IMAGES ? current_num.current++ : (current_num.current = 1);
+			current_num.current < NUMBER_IMAGES
+				? current_num.current++
+				: (current_num.current = 1);
 			setImgNumber(current_num.current);
 		}, 5000);
 
@@ -864,14 +892,21 @@ export const Carousel = () => {
 					alt={img_alt}
 				/>
 				{/* <img loading='lazy' className='img-show' src={img_src_highRes} alt={img_alt} /> */}
-				<img src={img_src_lowRes} alt='Background' className='img-bg' />
+				<img
+					src={img_src_lowRes}
+					alt='Background'
+					className='img-bg'
+				/>
 				<div
 					className='left'
 					onClick={() => {
 						handleClick('left');
 					}}
 				>
-					<i className='bi bi-chevron-double-left' style={{ fontSize: '25px' }} />
+					<i
+						className='bi bi-chevron-double-left'
+						style={{ fontSize: '25px' }}
+					/>
 				</div>
 				<div
 					className='right'
@@ -879,7 +914,10 @@ export const Carousel = () => {
 						handleClick('right');
 					}}
 				>
-					<i className='bi bi-chevron-double-right' style={{ fontSize: '25px' }} />
+					<i
+						className='bi bi-chevron-double-right'
+						style={{ fontSize: '25px' }}
+					/>
 				</div>
 			</div>
 		</>
