@@ -23,79 +23,86 @@ export default About;
 export const DesktopContent = () => {
 	const styleWrapper = {
 		aspectRatio: '1/1',
-		maxWidth: '50%',
+		width: '100%',
 		height: '100%',
 		position: 'relative',
 	};
 
 	const styleImage = {
 		aspectRatio: '1/1',
-		height: '100%',
+		width: '100%',
 		position: 'absolute',
 		left: '50%',
 		top: '50%',
 		transform: 'translate(-50%, -50%)',
-		border: 'solid black',
-		borderWidth: '2px 2px 2px 0 ',
+		border: '2px solid black',
 	};
 
 	return (
 		<DesktopDiv>
 			<div className='intro-message'>
-				Curious about what makes us tick? Before we get into the nitty-gritty of our awesome team,
-				let's spill the beans on why we're so crazy about horses. We're all about excellence, making
-				sure our four-legged friends are living their best lives, and building a community that's as
-				tight-knit as a family. So, buckle up and get ready to peek behind the curtain at what makes
-				us who we are, a bunch of folks who just love hanging out with horses.
+				Curious about what makes us tick? Before we get into the nitty-gritty of our awesome
+				team, let's spill the beans on why we're so crazy about horses. We're all about
+				excellence, making sure our four-legged friends are living their best lives, and
+				building a community that's as tight-knit as a family. So, buckle up and get ready
+				to peek behind the curtain at what makes us who we are, a bunch of folks who just
+				love hanging out with horses.
 			</div>
 			<div className='staff'>
 				<div className='staff-container'>
-					<Image
-						styleWrapper={styleWrapper}
-						styleImage={styleImage}
-						lowResSrc={sean_img_lowRes}
-						highResSrc={sean_img_highRes}
-					/>
-					{/* <img src={sean_img_highRes} alt='Sean Jenkin' /> */}
 					<div className='bio-container'>
+						<div className='image'>
+							<Image
+								styleWrapper={styleWrapper}
+								styleImage={styleImage}
+								lowResSrc={sean_img_lowRes}
+								highResSrc={sean_img_highRes}
+							/>
+						</div>
 						<h2>Sean Jenkin</h2>
 						<h3>Your Versatile Equestrian Expert</h3>
 						<p className='bio'>
-							With a deep passion for equine excellence, Sean stands as a versatile equestrian
-							professional specializing in eventing, hunter/jumper, and dressage. He brings years of
-							dedicated experience to the arena, seamlessly blending expertise across disciplines.
-							As a seasoned trainer, Sean has honed a unique approach that not only focuses on
-							technical precision but also nurtures the unique bond between rider and horse. With a
-							commitment to cultivating well-rounded equestrians, he tailors training programs to
-							suit riders of all levels, from aspiring novices to seasoned competitors. Embark on a
-							transformative journey with Sean, where the artistry of dressage, the precision of
-							hunter/jumper, and the exhilaration of eventing converge into a holistic and enriching
-							equestrian experience. Whether you're aiming for the podium or seeking a harmonious
-							connection with your equine partner, Sean is here to guide you every stride of the
-							way.
+							With a deep passion for equine excellence, Sean stands as a versatile
+							equestrian professional specializing in eventing, hunter/jumper, and
+							dressage. He brings years of dedicated experience to the arena,
+							seamlessly blending expertise across disciplines. As a seasoned trainer,
+							Sean has honed a unique approach that not only focuses on technical
+							precision but also nurtures the unique bond between rider and horse.
+							With a commitment to cultivating well-rounded equestrians, he tailors
+							training programs to suit riders of all levels, from aspiring novices to
+							seasoned competitors. Embark on a transformative journey with Sean,
+							where the artistry of dressage, the precision of hunter/jumper, and the
+							exhilaration of eventing converge into a holistic and enriching
+							equestrian experience. Whether you're aiming for the podium or seeking a
+							harmonious connection with your equine partner, Sean is here to guide
+							you every stride of the way.
 						</p>
 					</div>
 				</div>
 				<div className='staff-container'>
-					<Image
-						styleWrapper={styleWrapper}
-						styleImage={styleImage}
-						lowResSrc={brandon_img_lowRes}
-						highResSrc={brandon_img_highRes}
-					/>
 					<div className='bio-container'>
+						<div className='image'>
+							<Image
+								styleWrapper={styleWrapper}
+								styleImage={styleImage}
+								lowResSrc={brandon_img_lowRes}
+								highResSrc={brandon_img_highRes}
+							/>
+						</div>
 						<h2>Brandon Fehér</h2>
 						<h3>Your Guardian of Equine Comfort and Care</h3>
 						<p className='bio'>
-							As the dedicated Barn Manager at Abordale, Brandon brings a wealth of experience and
-							passion to the heart of our facility. With a keen eye for detail and a deep love for
-							horses, he oversees the daily operations of our stables, ensuring the well-being,
-							comfort, and health of every equine resident. Brandon is not only a skilled organizer
-							and caretaker but also a friendly face for our equestrian community. From coordinating
-							feeding schedules to maintaining pristine facilities, he plays a pivotal role in
-							creating a nurturing environment where both horses and their human companions thrive.
-							Trust Brandon to uphold the highest standards of care, making Abordale a home where
-							horses receive the attention and devotion they deserve.
+							As the dedicated Barn Manager at Abordale, Brandon brings a wealth of
+							experience and passion to the heart of our facility. With a keen eye for
+							detail and a deep love for horses, he oversees the daily operations of
+							our stables, ensuring the well-being, comfort, and health of every
+							equine resident. Brandon is not only a skilled organizer and caretaker
+							but also a friendly face for our equestrian community. From coordinating
+							feeding schedules to maintaining pristine facilities, he plays a pivotal
+							role in creating a nurturing environment where both horses and their
+							human companions thrive. Trust Brandon to uphold the highest standards
+							of care, making Abordale a home where horses receive the attention and
+							devotion they deserve.
 						</p>
 					</div>
 				</div>
@@ -127,7 +134,7 @@ export const DesktopDiv = styled.div`
 		& > .staff-container {
 			width: 100%;
 			margin-bottom: 2.5%;
-			height: 50vh;
+			height: fit-content;
 			display: flex;
 			flex-direction: row;
 			justify-content: start;
@@ -135,17 +142,18 @@ export const DesktopDiv = styled.div`
 			border: 2px solid black;
 			background-color: rgba(220, 220, 220, 0.8);
 
-			& > img {
-				max-height: 100%;
-				max-width: 50%;
-				border: 2px solid black;
-			}
-
 			& > .bio-container {
 				padding: 0 2.5%;
 				height: 100%;
 				flex: 1;
 				overflow-y: auto;
+
+				& > .image {
+					aspect-ratio: 1/1;
+					width: calc(min(50%, 50vh));
+					float: left;
+					margin: 1em 1em 1em 0;
+				}
 
 				& > h2,
 				h3 {
@@ -186,11 +194,12 @@ export const MobileContent = () => {
 	return (
 		<MobileDiv>
 			<div className='intro-message'>
-				Curious about what makes us tick? Before we get into the nitty-gritty of our awesome team,
-				let's spill the beans on why we're so crazy about horses. We're all about excellence, making
-				sure our four-legged friends are living their best lives, and building a community that's as
-				tight-knit as a family. So, buckle up and get ready to peek behind the curtain at what makes
-				us who we are, a bunch of folks who just love hanging out with horses.
+				Curious about what makes us tick? Before we get into the nitty-gritty of our awesome
+				team, let's spill the beans on why we're so crazy about horses. We're all about
+				excellence, making sure our four-legged friends are living their best lives, and
+				building a community that's as tight-knit as a family. So, buckle up and get ready
+				to peek behind the curtain at what makes us who we are, a bunch of folks who just
+				love hanging out with horses.
 			</div>
 			<div className='staff'>
 				<div className='staff-container'>
@@ -206,16 +215,17 @@ export const MobileContent = () => {
 					<h2>Sean Jenkin</h2>
 					<h3>Your Versatile Equestrian Expert</h3>
 					<p className='bio'>
-						He brings years of dedicated experience to the arena, seamlessly blending expertise
-						across disciplines. As a seasoned trainer, Sean has honed a unique approach that not
-						only focuses on technical precision but also nurtures the unique bond between rider and
-						horse. With a commitment to cultivating well-rounded equestrians, he tailors training
-						programs to suit riders of all levels, from aspiring novices to seasoned competitors.
-						Embark on a transformative journey with Sean, where the artistry of dressage, the
-						precision of hunter/jumper, and the exhilaration of eventing converge into a holistic
-						and enriching equestrian experience. Whether you're aiming for the podium or seeking a
-						harmonious connection with your equine partner, Sean is here to guide you every stride
-						of the way.
+						He brings years of dedicated experience to the arena, seamlessly blending
+						expertise across disciplines. As a seasoned trainer, Sean has honed a unique
+						approach that not only focuses on technical precision but also nurtures the
+						unique bond between rider and horse. With a commitment to cultivating
+						well-rounded equestrians, he tailors training programs to suit riders of all
+						levels, from aspiring novices to seasoned competitors. Embark on a
+						transformative journey with Sean, where the artistry of dressage, the
+						precision of hunter/jumper, and the exhilaration of eventing converge into a
+						holistic and enriching equestrian experience. Whether you're aiming for the
+						podium or seeking a harmonious connection with your equine partner, Sean is
+						here to guide you every stride of the way.
 					</p>
 				</div>
 				<div className='staff-container'>
@@ -231,15 +241,17 @@ export const MobileContent = () => {
 					<h2>Brandon Fehér</h2>
 					<h3>Your Guardian of Equine Comfort and Care</h3>
 					<p className='bio'>
-						As the dedicated Barn Manager at Abordale, Brandon brings a wealth of experience and
-						passion to the heart of our facility. With a keen eye for detail and a deep love for
-						horses, he oversees the daily operations of our stables, ensuring the well-being,
-						comfort, and health of every equine resident. Brandon is not only a skilled organizer
-						and caretaker but also a friendly face for our equestrian community. From coordinating
-						feeding schedules to maintaining pristine facilities, he plays a pivotal role in
-						creating a nurturing environment where both horses and their human companions thrive.
-						Trust Brandon to uphold the highest standards of care, making Abordale a home where
-						horses receive the attention and devotion they deserve.
+						As the dedicated Barn Manager at Abordale, Brandon brings a wealth of
+						experience and passion to the heart of our facility. With a keen eye for
+						detail and a deep love for horses, he oversees the daily operations of our
+						stables, ensuring the well-being, comfort, and health of every equine
+						resident. Brandon is not only a skilled organizer and caretaker but also a
+						friendly face for our equestrian community. From coordinating feeding
+						schedules to maintaining pristine facilities, he plays a pivotal role in
+						creating a nurturing environment where both horses and their human
+						companions thrive. Trust Brandon to uphold the highest standards of care,
+						making Abordale a home where horses receive the attention and devotion they
+						deserve.
 					</p>
 				</div>
 			</div>
@@ -271,10 +283,9 @@ export const MobileDiv = styled.div`
 
 		& > .staff-container {
 			width: 95%;
-			max-height: 70vh;
+			height: max-content;
 			border: 2px solid black;
 			background-color: rgba(220, 220, 220, 0.8);
-			overflow-y: auto;
 			margin-bottom: 5%;
 
 			& > .img-container {
@@ -297,6 +308,7 @@ export const MobileDiv = styled.div`
 			& > h2,
 			h3 {
 				padding-top: 2.5%;
+				padding-right: 2.5%;
 				text-align: left;
 				margin: 0;
 			}
