@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import DesktopLayout from '../layouts/DesktopLayout';
 import MobileLayout from '../layouts/MobileLayout';
 import styled from 'styled-components';
@@ -56,7 +57,7 @@ export const DesktopContent = () => {
 	return (
 		<DesktopDiv>
 			<h2 className='title'>Welcome To Abordale Equestrian</h2>
-			<div className='welcome-message'>
+			<span className='welcome-message'>
 				Discover the perfect blend of passion and purpose at Abordale Equestrian. Located
 				just south of Stittsville, our premier facility offers top-notch boarding, expert
 				training, and enriching riding lessons. Immerse yourself in a community dedicated to
@@ -64,7 +65,7 @@ export const DesktopContent = () => {
 				facilities, meet our experienced trainers, and embark on an exciting journey where
 				every hoofbeat tells a story. Welcome to Abordale Equestrian, where the love for
 				horses knows no bounds. Saddle up and let the adventure begin!
-			</div>
+			</span>
 			<div className='facility'>
 				<div className='facility-container'>
 					<div className='carousel'>
@@ -92,6 +93,8 @@ export const DesktopContent = () => {
 					</div>
 				</div>
 			</div>
+			<>
+				{/*
 			<div className='short-about'>
 				<div className='staff-container'>
 					<Image
@@ -100,7 +103,6 @@ export const DesktopContent = () => {
 						lowResSrc={sean_img_lowRes}
 						highResSrc={sean_img_highRes}
 					/>
-					{/* <img className='staff-img' src={sean_img_highRes} alt='Sean Jenkin' /> */}
 					<div className='staff-bio'>
 						<h3 className='name'>
 							Sean Jenkin - Your Expert in Eventing, Hunter/Jumper, and Dressage
@@ -127,7 +129,7 @@ export const DesktopContent = () => {
 						lowResSrc={brandon_img_lowRes}
 						highResSrc={brandon_img_highRes}
 					/>
-					{/* <img src={brandon_img_highRes} alt='Brandon Fehér' className='staff-img' /> */}
+					
 					<div className='staff-bio'>
 						<h3 className='name'>Brandon Fehér - Our Steward of Equine Care</h3>
 						<p className='bio'>
@@ -146,7 +148,8 @@ export const DesktopContent = () => {
 						</span>
 					</div>
 				</div>
-			</div>
+			</div>*/}
+			</>
 			<div className='get-started'>
 				<div className='get-started-container'>
 					<h1>Ready To Start?</h1>
@@ -155,7 +158,7 @@ export const DesktopContent = () => {
 						onClick={() => {
 							navigate('/lessons-and-boarding');
 						}}>
-						Lessons and Boarding
+						Explore Lessons and Boarding
 					</span>
 					<div className='contact-info'>
 						<h2>Get In Touch</h2>
@@ -193,8 +196,10 @@ export const DesktopDiv = styled.div`
 	}
 
 	& > .welcome-message {
-		padding-bottom: 25px;
+		margin-bottom: 25px;
 		text-align: justify;
+		background-color: rgba(256, 256, 256, 0.6);
+		padding: 1em;
 	}
 
 	& > .facility {
@@ -290,13 +295,16 @@ export const DesktopDiv = styled.div`
 
 				& > h2 {
 					margin: 0;
-					padding-left: 2.5%;
+					margin-left: 2.5%;
 					width: 100%;
+					padding-left: 0.5em;
 				}
 
 				& > p {
-					padding-left: 2.5%;
+					margin-left: 2.5%;
 					text-align: justify;
+					background-color: rgba(256, 256, 256, 0.6);
+					padding: 0.5em;
 				}
 
 				& > .link {
@@ -478,48 +486,48 @@ export const MobileContent = () => {
 					</div>
 				</div>
 			</div>
-			<div className='short-about'>
-				<div className='staff-container'>
-					{/* <img src={sean_img_highRes} alt='Sean Jenkin' /> */}
-					<Image
-						styleWrapper={styleWrapperStaff}
-						styleImage={styleImageStaff}
-						lowResSrc={sean_img_lowRes}
-						highResSrc={sean_img_highRes}
-					/>
-					<div className='name'>
-						<h3>Sean Jenkin</h3>
-						<h4>Your Expert in Eventing, Hunter/Jumper, and Dressage</h4>
-						<span
-							className='link button'
-							onClick={() => {
-								navigate('/about');
-							}}>
-							Read More
-						</span>
+			<>
+				{/* <div className='short-about'>
+					<div className='staff-container'>
+						<Image
+							styleWrapper={styleWrapperStaff}
+							styleImage={styleImageStaff}
+							lowResSrc={sean_img_lowRes}
+							highResSrc={sean_img_highRes}
+						/>
+						<div className='name'>
+							<h3>Sean Jenkin</h3>
+							<h4>Your Expert in Eventing, Hunter/Jumper, and Dressage</h4>
+							<span
+								className='link button'
+								onClick={() => {
+									navigate('/about');
+								}}>
+								Read More
+							</span>
+						</div>
 					</div>
-				</div>
-				<div className='staff-container'>
-					{/* <img src={brandon_img_highRes} alt='Brandon Fehér' /> */}
-					<Image
-						styleWrapper={styleWrapperStaff}
-						styleImage={styleImageStaff}
-						lowResSrc={brandon_img_lowRes}
-						highResSrc={brandon_img_highRes}
-					/>
-					<div className='name'>
-						<h3>Brandon Fehér</h3>
-						<h4>Our Steward of Equine Care</h4>
-						<span
-							className='link button'
-							onClick={() => {
-								navigate('/about');
-							}}>
-							Read More
-						</span>
+					<div className='staff-container'>
+						<Image
+							styleWrapper={styleWrapperStaff}
+							styleImage={styleImageStaff}
+							lowResSrc={brandon_img_lowRes}
+							highResSrc={brandon_img_highRes}
+						/>
+						<div className='name'>
+							<h3>Brandon Fehér</h3>
+							<h4>Our Steward of Equine Care</h4>
+							<span
+								className='link button'
+								onClick={() => {
+									navigate('/about');
+								}}>
+								Read More
+							</span>
+						</div>
 					</div>
-				</div>
-			</div>
+				</div> */}
+			</>
 			<div className='get-started'>
 				<div className='get-started-container'>
 					<h2>Ready To Start?</h2>
@@ -572,9 +580,11 @@ export const MobileDiv = styled.div`
 	}
 
 	& > .welcome-message {
-		padding: 0 5% 5%;
+		margin: 0 5% 5%;
 		line-height: 125%;
-		text-align: justify;
+		text-align: left;
+		background-color: rgba(256, 256, 256, 0.6);
+		padding: 0.5em;
 	}
 
 	& > .facility {
@@ -662,22 +672,25 @@ export const MobileDiv = styled.div`
 			& > .description-container {
 				flex: 1;
 				height: 100%;
+				width: 100%;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
-				align-items: center;
+				align-items: start;
+				margin-top: 2.5%;
 
 				& > h2 {
 					margin: 0;
-					padding: 2.5% 5% 0;
+					padding: 0 5% 0;
 					width: 100%;
 					text-align: center;
 				}
 
 				& > p {
-					width: 100%;
-					margin: 0 5% 2.5%;
+					margin: 0 0 2.5%;
 					text-align: justify;
+					padding: 0.5em;
+					background-color: rgba(256, 256, 256, 0.6);
 				}
 
 				& > .link {

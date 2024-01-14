@@ -48,16 +48,20 @@ export const DesktopContent = () => {
 			<div className='intro'>
 				Peruse our distinguished equestrian locale, strategically situated just south of
 				Stittsville. This establishment seamlessly merges urban accessibility with serene
-				landscapes, offering an enduring setting for riders and their equine counterparts. Explore
-				our thoughtfully designed amenities, well-appointed stables, and expansive riding arenas,
-				all contributing to an environment committed to the enduring pursuit of equestrian
-				excellence. This is more than a facility; it is a destination where riders and horses forge
-				enduring connections and achievements.
+				landscapes, offering an enduring setting for riders and their equine counterparts.
+				Explore our thoughtfully designed amenities, well-appointed stables, and expansive
+				riding arenas, all contributing to an environment committed to the enduring pursuit
+				of equestrian excellence. This is more than a facility; it is a destination where
+				riders and horses forge enduring connections and achievements.
 			</div>
 
 			<div className='img-container'>
 				<div className='img-wrapper'>
-					<img src={facility_01_lowRes} alt='Facility 01 Background' className='facility-bg' />
+					<img
+						src={facility_01_lowRes}
+						alt='Facility 01 Background'
+						className='facility-bg'
+					/>
 					{/* <img className='facility-img' src={facility_01_highRes} alt='Facility 01' /> */}
 					<Image
 						styleWrapper={styleWrapper}
@@ -67,7 +71,11 @@ export const DesktopContent = () => {
 					/>
 				</div>
 				<div className='img-wrapper'>
-					<img src={facility_02_lowRes} alt='Facility 02 Background' className='facility-bg' />
+					<img
+						src={facility_02_lowRes}
+						alt='Facility 02 Background'
+						className='facility-bg'
+					/>
 					{/* <img className='facility-img' src={facility_02_highRes} alt='Facility 02' /> */}
 					<Image
 						styleWrapper={styleWrapper}
@@ -77,7 +85,11 @@ export const DesktopContent = () => {
 					/>
 				</div>
 				<div className='img-wrapper'>
-					<img src={facility_03_lowRes} alt='Facility 03 Background' className='facility-bg' />
+					<img
+						src={facility_03_lowRes}
+						alt='Facility 03 Background'
+						className='facility-bg'
+					/>
 					{/* <img className='facility-img' src={facility_03_highRes} alt='Facility 03' /> */}
 					<Image
 						styleWrapper={styleWrapper}
@@ -87,7 +99,11 @@ export const DesktopContent = () => {
 					/>
 				</div>
 				<div className='img-wrapper'>
-					<img src={facility_04_lowRes} alt='Facility 04 Background' className='facility-bg' />
+					<img
+						src={facility_04_lowRes}
+						alt='Facility 04 Background'
+						className='facility-bg'
+					/>
 					{/* <img className='facility-img' src={facility_04_highRes} alt='Facility 04' /> */}
 					<Image
 						styleWrapper={styleWrapper}
@@ -97,7 +113,11 @@ export const DesktopContent = () => {
 					/>
 				</div>
 				<div className='img-wrapper'>
-					<img src={facility_05_lowRes} alt='Facility 05 Background' className='facility-bg' />
+					<img
+						src={facility_05_lowRes}
+						alt='Facility 05 Background'
+						className='facility-bg'
+					/>
 					{/* <img className='facility-img' src={facility_05_highRes} alt='Facility 05' /> */}
 					<Image
 						styleWrapper={styleWrapper}
@@ -122,6 +142,8 @@ export const DesktopDiv = styled.div`
 	& > .intro {
 		margin: 2.5% 0;
 		text-align: justify;
+		background-color: rgba(256, 256, 256, 0.6);
+		padding: 1em;
 	}
 
 	& > .img-container {
@@ -199,15 +221,19 @@ export const MobileContent = () => {
 			<div className='intro'>
 				Peruse our distinguished equestrian locale, strategically situated just south of
 				Stittsville. This establishment seamlessly merges urban accessibility with serene
-				landscapes, offering an enduring setting for riders and their equine counterparts. Explore
-				our thoughtfully designed amenities, well-appointed stables, and expansive riding arenas,
-				all contributing to an environment committed to the enduring pursuit of equestrian
-				excellence. This is more than a facility; it is a destination where riders and horses forge
-				enduring connections and achievements.
+				landscapes, offering an enduring setting for riders and their equine counterparts.
+				Explore our thoughtfully designed amenities, well-appointed stables, and expansive
+				riding arenas, all contributing to an environment committed to the enduring pursuit
+				of equestrian excellence. This is more than a facility; it is a destination where
+				riders and horses forge enduring connections and achievements.
 			</div>
 			<div className='img-container'>
 				<div className='img-wrapper'>
-					<img src={facility_01_lowRes} alt='Facility 01 Background' className='facility-bg' />
+					<img
+						src={facility_01_lowRes}
+						alt='Facility 01 Background'
+						className='facility-bg'
+					/>
 					{/* <img src={facility_01_highRes} alt='Facility 01' className='facility-img' /> */}
 					<Image
 						styleWrapper={styleWrapper}
@@ -217,7 +243,11 @@ export const MobileContent = () => {
 					/>
 				</div>
 				<div className='img-wrapper'>
-					<img src={facility_02_lowRes} alt='Facility 02 Background' className='facility-bg' />
+					<img
+						src={facility_02_lowRes}
+						alt='Facility 02 Background'
+						className='facility-bg'
+					/>
 					{/* <img src={facility_02_highRes} alt='Facility 02' className='facility-img' /> */}
 					<Image
 						styleWrapper={styleWrapper}
@@ -227,7 +257,11 @@ export const MobileContent = () => {
 					/>
 				</div>
 				<div className='img-wrapper'>
-					<img src={facility_03_lowRes} alt='Facility 03 Background' className='facility-bg' />
+					<img
+						src={facility_03_lowRes}
+						alt='Facility 03 Background'
+						className='facility-bg'
+					/>
 					{/* <img src={facility_03_highRes} alt='Facility 03' className='facility-img' /> */}
 					<Image
 						styleWrapper={styleWrapper}
@@ -237,7 +271,11 @@ export const MobileContent = () => {
 					/>
 				</div>
 				<div className='img-wrapper'>
-					<img src={facility_04_lowRes} alt='Facility 04 Background' className='facility-bg' />
+					<img
+						src={facility_04_lowRes}
+						alt='Facility 04 Background'
+						className='facility-bg'
+					/>
 					{/* <img src={facility_04_highRes} alt='Facility 04' className='facility-img' /> */}
 					<Image
 						styleWrapper={styleWrapper}
@@ -247,7 +285,11 @@ export const MobileContent = () => {
 					/>
 				</div>
 				<div className='img-wrapper'>
-					<img src={facility_05_lowRes} alt='Facility 05 Background' className='facility-bg' />
+					<img
+						src={facility_05_lowRes}
+						alt='Facility 05 Background'
+						className='facility-bg'
+					/>
 					{/* <img src={facility_05_highRes} alt='Facility 05' className='facility-img' /> */}
 					<Image
 						styleWrapper={styleWrapper}
@@ -274,6 +316,8 @@ export const MobileDiv = styled.div`
 	& > .intro {
 		margin: 5%;
 		text-align: justify;
+		padding: 0.5em;
+		background-color: rgba(256, 256, 256, 0.6);
 	}
 
 	& > .img-container {

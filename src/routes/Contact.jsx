@@ -40,9 +40,9 @@ export const DesktopContent = () => {
 	return (
 		<DesktopDiv>
 			<div className='intro'>
-				Whether you're seeking information about lessons, boarding, or any other inquiry, we're here
-				to help. Reach out to us to explore the world of horses and schedule your next riding
-				experience. We look forward to hearing from you soon!
+				Whether you're seeking information about lessons, boarding, or any other inquiry,
+				we're here to help. Reach out to us to explore the world of horses and schedule your
+				next riding experience. We look forward to hearing from you soon!
 			</div>
 			<div className='container'>
 				<Image
@@ -55,13 +55,25 @@ export const DesktopContent = () => {
 				<div className='info'>
 					<div className='social-media'>
 						<div className='link-wrapper'>
-							<SocialMediaLink type='instagram' size='40px' className='link' />
+							<SocialMediaLink
+								type='instagram'
+								size='40px'
+								className='link'
+							/>
 						</div>
 						<div className='link-wrapper'>
-							<SocialMediaLink type='facebook' size='40px' className='link' />
+							<SocialMediaLink
+								type='facebook'
+								size='40px'
+								className='link'
+							/>
 						</div>
 						<div className='link-wrapper'>
-							<SocialMediaLink type='email' size='40px' className='link' />
+							<SocialMediaLink
+								type='email'
+								size='40px'
+								className='link'
+							/>
 						</div>
 					</div>
 					<p>
@@ -86,6 +98,8 @@ export const DesktopDiv = styled.div`
 	& > .intro {
 		margin: 2.5% 0;
 		text-align: justify;
+		background-color: rgba(256, 256, 256, 0.6);
+		padding: 1em;
 	}
 
 	& > .container {
@@ -146,20 +160,29 @@ export const MobileContent = () => {
 	return (
 		<MobileDiv>
 			<div className='intro'>
-				Whether you're seeking information about lessons, boarding, or any other inquiry, we're here
-				to help. Reach out to us to explore the world of horses and schedule your next riding
-				experience. We look forward to hearing from you soon!
+				Whether you're seeking information about lessons, boarding, or any other inquiry,
+				we're here to help. Reach out to us to explore the world of horses and schedule your
+				next riding experience. We look forward to hearing from you soon!
 			</div>
 			<div className='container'>
 				<div className='social-media'>
 					<div className='link-wrapper'>
-						<SocialMediaLink type='instagram' size='50px' />
+						<SocialMediaLink
+							type='instagram'
+							size='50px'
+						/>
 					</div>
 					<div className='link-wrapper'>
-						<SocialMediaLink type='facebook' size='50px' />
+						<SocialMediaLink
+							type='facebook'
+							size='50px'
+						/>
 					</div>
 					<div className='link-wrapper'>
-						<SocialMediaLink type='email' size='50px' />
+						<SocialMediaLink
+							type='email'
+							size='50px'
+						/>
 					</div>
 				</div>
 				<p>
@@ -184,7 +207,9 @@ export const MobileDiv = styled.div`
 	& > .intro {
 		margin: 5%;
 		text-align: justify;
-		line-height: 130%;
+		line-height: 120%;
+		background-color: rgba(256, 256, 256, 0.6);
+		padding: 0.5em;
 	}
 
 	& > .container {

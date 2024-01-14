@@ -121,6 +121,8 @@ export const DesktopDiv = styled.div`
 
 	& > .intro-message {
 		margin-top: 2.5%;
+		background-color: rgba(256, 256, 256, 0.6);
+		padding: 1em;
 	}
 
 	& > .staff {
@@ -270,7 +272,8 @@ export const MobileDiv = styled.div`
 	& > .intro-message {
 		margin: 5%;
 		text-align: justify;
-		line-height: 130%;
+		background-color: rgba(256, 256, 256, 0.6);
+		padding: 0.5em;
 	}
 
 	& > .staff {
