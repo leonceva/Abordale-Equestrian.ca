@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import DesktopLayout from '../layouts/DesktopLayout';
 import MobileLayout from '../layouts/MobileLayout';
 import styled from 'styled-components';
@@ -56,16 +57,15 @@ export const DesktopContent = () => {
 	return (
 		<DesktopDiv>
 			<h2 className='title'>Welcome To Abordale Equestrian</h2>
-			<div className='welcome-message'>
-				Discover the perfect blend of passion and purpose at Abordale
-				Equestrian. Located just south of Stittsville, our premier facility
-				offers top-notch boarding, expert training, and enriching riding
-				lessons. Immerse yourself in a community dedicated to the well-being of
-				horses and the joy of riding. Explore our state-of-the-art facilities,
-				meet our experienced trainers, and embark on an exciting journey where
-				every hoofbeat tells a story. Welcome to Abordale Equestrian, where the
-				love for horses knows no bounds. Saddle up and let the adventure begin!
-			</div>
+			<span className='welcome-message'>
+				Discover the perfect blend of passion and purpose at Abordale Equestrian. Located
+				just south of Stittsville, our premier facility offers top-notch boarding, expert
+				training, and enriching riding lessons. Immerse yourself in a community dedicated to
+				the well-being of horses and the joy of riding. Explore our state-of-the-art
+				facilities, meet our experienced trainers, and embark on an exciting journey where
+				every hoofbeat tells a story. Welcome to Abordale Equestrian, where the love for
+				horses knows no bounds. Saddle up and let the adventure begin!
+			</span>
 			<div className='facility'>
 				<div className='facility-container'>
 					<div className='carousel'>
@@ -76,24 +76,25 @@ export const DesktopContent = () => {
 						<p>
 							The equestrian center boasts a range of well-maintained facilities
 							catering to horse enthusiasts of all levels. The center includes
-							spacious and secure stables, an expansive riding arena, and
-							well-groomed trails for leisurely rides. Riders can make use of
-							basic equipment and grooming areas, while the center also provides
-							a cozy clubhouse for gatherings and events. With a focus on
-							functionality and comfort, the equestrian center offers a
-							welcoming environment for both riders and their equine companions.
+							spacious and secure stables, an expansive riding arena, and well-groomed
+							trails for leisurely rides. Riders can make use of basic equipment and
+							grooming areas, while the center also provides a cozy clubhouse for
+							gatherings and events. With a focus on functionality and comfort, the
+							equestrian center offers a welcoming environment for both riders and
+							their equine companions.
 						</p>
 						<span
 							className='button link'
 							onClick={() => {
 								navigate('/facilities');
-							}}
-						>
+							}}>
 							Learn More
 						</span>
 					</div>
 				</div>
 			</div>
+			<>
+				{/*
 			<div className='short-about'>
 				<div className='staff-container'>
 					<Image
@@ -102,24 +103,21 @@ export const DesktopContent = () => {
 						lowResSrc={sean_img_lowRes}
 						highResSrc={sean_img_highRes}
 					/>
-					{/* <img className='staff-img' src={sean_img_highRes} alt='Sean Jenkin' /> */}
 					<div className='staff-bio'>
 						<h3 className='name'>
 							Sean Jenkin - Your Expert in Eventing, Hunter/Jumper, and Dressage
 						</h3>
 						<p className='bio'>
-							Welcome to the world of equestrian excellence with Sean, a
-							seasoned professional specializing in eventing, hunter/jumper, and
-							dressage. With a passion for precision and a commitment to
-							fostering the rider-horse connection, he tailors training programs
-							for all levels of riders.
+							Welcome to the world of equestrian excellence with Sean, a seasoned
+							professional specializing in eventing, hunter/jumper, and dressage. With
+							a passion for precision and a commitment to fostering the rider-horse
+							connection, he tailors training programs for all levels of riders.
 						</p>
 						<span
 							className='link button'
 							onClick={() => {
 								navigate('/about');
-							}}
-						>
+							}}>
 							Read More
 						</span>
 					</div>
@@ -131,28 +129,27 @@ export const DesktopContent = () => {
 						lowResSrc={brandon_img_lowRes}
 						highResSrc={brandon_img_highRes}
 					/>
-					{/* <img src={brandon_img_highRes} alt='Brandon Fehér' className='staff-img' /> */}
+					
 					<div className='staff-bio'>
 						<h3 className='name'>Brandon Fehér - Our Steward of Equine Care</h3>
 						<p className='bio'>
-							At the helm of Abordale Equestrian, Brandon serves as our
-							dedicated Barn Manager, ensuring the optimal care and well-being
-							of our equine companions. With a wealth of experience and a
-							passion for horses, he expertly oversees daily operations,
-							guaranteeing that every horse receives the highest standard of
-							care.
+							At the helm of Abordale Equestrian, Brandon serves as our dedicated Barn
+							Manager, ensuring the optimal care and well-being of our equine
+							companions. With a wealth of experience and a passion for horses, he
+							expertly oversees daily operations, guaranteeing that every horse
+							receives the highest standard of care.
 						</p>
 						<span
 							className='link button'
 							onClick={() => {
 								navigate('/about');
-							}}
-						>
+							}}>
 							Read More
 						</span>
 					</div>
 				</div>
-			</div>
+			</div>*/}
+			</>
 			<div className='get-started'>
 				<div className='get-started-container'>
 					<h1>Ready To Start?</h1>
@@ -160,8 +157,7 @@ export const DesktopContent = () => {
 						className='link button'
 						onClick={() => {
 							navigate('/lessons-and-boarding');
-						}}
-					>
+						}}>
 						Explore Lessons and Boarding
 					</span>
 					<div className='contact-info'>
@@ -201,8 +197,10 @@ export const DesktopDiv = styled.div`
 	}
 
 	& > .welcome-message {
-		padding-bottom: 25px;
+		margin-bottom: 25px;
 		text-align: justify;
+		background-color: rgba(256, 256, 256, 0.6);
+		padding: 1em;
 	}
 
 	& > .facility {
@@ -298,13 +296,16 @@ export const DesktopDiv = styled.div`
 
 				& > h2 {
 					margin: 0;
-					padding-left: 2.5%;
+					margin-left: 2.5%;
 					width: 100%;
+					padding-left: 0.5em;
 				}
 
 				& > p {
-					padding-left: 2.5%;
+					margin-left: 2.5%;
 					text-align: justify;
+					background-color: rgba(256, 256, 256, 0.6);
+					padding: 0.5em;
 				}
 
 				& > .link {
@@ -445,14 +446,13 @@ export const MobileContent = () => {
 		<MobileDiv>
 			<h2>Welcome To Abordale Equestrian</h2>
 			<div className='welcome-message'>
-				Discover the perfect blend of passion and purpose at Abordale
-				Equestrian. Located just south of Stittsville, our premier facility
-				offers top-notch boarding, expert training, and enriching riding
-				lessons. Immerse yourself in a community dedicated to the well-being of
-				horses and the joy of riding. Explore our state-of-the-art facilities,
-				meet our experienced trainers, and embark on an exciting journey where
-				every hoofbeat tells a story. Welcome to Abordale Equestrian, where the
-				love for horses knows no bounds. Saddle up and let the adventure begin!
+				Discover the perfect blend of passion and purpose at Abordale Equestrian. Located
+				just south of Stittsville, our premier facility offers top-notch boarding, expert
+				training, and enriching riding lessons. Immerse yourself in a community dedicated to
+				the well-being of horses and the joy of riding. Explore our state-of-the-art
+				facilities, meet our experienced trainers, and embark on an exciting journey where
+				every hoofbeat tells a story. Welcome to Abordale Equestrian, where the love for
+				horses knows no bounds. Saddle up and let the adventure begin!
 			</div>
 			<div className='facility'>
 				<div className='facility-container'>
@@ -464,68 +464,65 @@ export const MobileContent = () => {
 						<p>
 							The equestrian center boasts a range of well-maintained facilities
 							catering to horse enthusiasts of all levels. The center includes
-							spacious and secure stables, an expansive riding arena, and
-							well-groomed trails for leisurely rides. Riders can make use of
-							basic equipment and grooming areas, while the center also provides
-							a cozy clubhouse for gatherings and events. With a focus on
-							functionality and comfort, the equestrian center offers a
-							welcoming environment for both riders and their equine companions.
+							spacious and secure stables, an expansive riding arena, and well-groomed
+							trails for leisurely rides. Riders can make use of basic equipment and
+							grooming areas, while the center also provides a cozy clubhouse for
+							gatherings and events. With a focus on functionality and comfort, the
+							equestrian center offers a welcoming environment for both riders and
+							their equine companions.
 						</p>
 						<span
 							className='button link'
 							onClick={() => {
 								navigate('/facilities');
-							}}
-						>
+							}}>
 							Learn More
 						</span>
 					</div>
 				</div>
 			</div>
-			<div className='short-about'>
-				<div className='staff-container'>
-					{/* <img src={sean_img_highRes} alt='Sean Jenkin' /> */}
-					<Image
-						styleWrapper={styleWrapperStaff}
-						styleImage={styleImageStaff}
-						lowResSrc={sean_img_lowRes}
-						highResSrc={sean_img_highRes}
-					/>
-					<div className='name'>
-						<h3>Sean Jenkin</h3>
-						<h4>Your Expert in Eventing, Hunter/Jumper, and Dressage</h4>
-						<span
-							className='link button'
-							onClick={() => {
-								navigate('/about');
-							}}
-						>
-							Read More
-						</span>
+			<>
+				{/* <div className='short-about'>
+					<div className='staff-container'>
+						<Image
+							styleWrapper={styleWrapperStaff}
+							styleImage={styleImageStaff}
+							lowResSrc={sean_img_lowRes}
+							highResSrc={sean_img_highRes}
+						/>
+						<div className='name'>
+							<h3>Sean Jenkin</h3>
+							<h4>Your Expert in Eventing, Hunter/Jumper, and Dressage</h4>
+							<span
+								className='link button'
+								onClick={() => {
+									navigate('/about');
+								}}>
+								Read More
+							</span>
+						</div>
 					</div>
-				</div>
-				<div className='staff-container'>
-					{/* <img src={brandon_img_highRes} alt='Brandon Fehér' /> */}
-					<Image
-						styleWrapper={styleWrapperStaff}
-						styleImage={styleImageStaff}
-						lowResSrc={brandon_img_lowRes}
-						highResSrc={brandon_img_highRes}
-					/>
-					<div className='name'>
-						<h3>Brandon Fehér</h3>
-						<h4>Our Steward of Equine Care</h4>
-						<span
-							className='link button'
-							onClick={() => {
-								navigate('/about');
-							}}
-						>
-							Read More
-						</span>
+					<div className='staff-container'>
+						<Image
+							styleWrapper={styleWrapperStaff}
+							styleImage={styleImageStaff}
+							lowResSrc={brandon_img_lowRes}
+							highResSrc={brandon_img_highRes}
+						/>
+						<div className='name'>
+							<h3>Brandon Fehér</h3>
+							<h4>Our Steward of Equine Care</h4>
+							<span
+								className='link button'
+								onClick={() => {
+									navigate('/about');
+								}}>
+								Read More
+							</span>
+						</div>
 					</div>
-				</div>
-			</div>
+				</div> */}
+			</>
 			<div className='get-started'>
 				<div className='get-started-container'>
 					<h2>Ready To Start?</h2>
@@ -535,8 +532,7 @@ export const MobileContent = () => {
 							onClick={() => {
 								window.scrollTo(0, 0);
 								navigate('/lessons-and-boarding');
-							}}
-						>
+							}}>
 							Explore Lessons and Boarding
 						</span>
 					</div>
@@ -579,9 +575,11 @@ export const MobileDiv = styled.div`
 	}
 
 	& > .welcome-message {
-		padding: 0 5% 5%;
+		margin: 0 5% 5%;
 		line-height: 125%;
-		text-align: justify;
+		text-align: left;
+		background-color: rgba(256, 256, 256, 0.6);
+		padding: 0.5em;
 	}
 
 	& > .facility {
@@ -669,22 +667,25 @@ export const MobileDiv = styled.div`
 			& > .description-container {
 				flex: 1;
 				height: 100%;
+				width: 100%;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
-				align-items: center;
+				align-items: start;
+				margin-top: 2.5%;
 
 				& > h2 {
 					margin: 0;
-					padding: 2.5% 5% 0;
+					padding: 0 5% 0;
 					width: 100%;
 					text-align: center;
 				}
 
 				& > p {
-					width: 100%;
-					margin: 0 5% 2.5%;
+					margin: 0 0 2.5%;
 					text-align: justify;
+					padding: 0.5em;
+					background-color: rgba(256, 256, 256, 0.6);
 				}
 
 				& > .link {
@@ -856,9 +857,7 @@ export const Carousel = () => {
 
 	useEffect(() => {
 		timerID.current = setInterval(() => {
-			current_num.current < NUMBER_IMAGES
-				? current_num.current++
-				: (current_num.current = 1);
+			current_num.current < NUMBER_IMAGES ? current_num.current++ : (current_num.current = 1);
 			setImgNumber(current_num.current);
 		}, 5000);
 
@@ -901,8 +900,7 @@ export const Carousel = () => {
 					className='left'
 					onClick={() => {
 						handleClick('left');
-					}}
-				>
+					}}>
 					<i
 						className='bi bi-chevron-double-left'
 						style={{ fontSize: '25px' }}
@@ -912,8 +910,7 @@ export const Carousel = () => {
 					className='right'
 					onClick={() => {
 						handleClick('right');
-					}}
-				>
+					}}>
 					<i
 						className='bi bi-chevron-double-right'
 						style={{ fontSize: '25px' }}

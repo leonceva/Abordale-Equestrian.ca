@@ -43,10 +43,10 @@ export const DesktopContent = () => {
 	return (
 		<DesktopDiv>
 			<div className='intro'>
-				Explore past events, witness memorable moments, and experience the dynamic spirit of our
-				equestrian community. Whether you're a passionate enthusiast or a newcomer to the world of
-				horse shows, this page is your window into the captivating world of equestrian sports. Dive
-				in and discover the beauty of horsemanship in action.
+				Explore past events, witness memorable moments, and experience the dynamic spirit of
+				our equestrian community. Whether you're a passionate enthusiast or a newcomer to
+				the world of horse shows, this page is your window into the captivating world of
+				equestrian sports. Dive in and discover the beauty of horsemanship in action.
 			</div>
 			<div className='photo-container'>
 				<div className='wrapper'>
@@ -58,9 +58,9 @@ export const DesktopContent = () => {
 					/>
 					{/* <img src={show_photo_01_highRes} alt='Show 01' /> */}
 					<div className='caption'>
-						Grace in motion, this chestnut mare captures the essence of equestrian elegance as she
-						soars through the air in a captivating jump. A moment frozen in time, where strength,
-						beauty, and skill converge.
+						Grace in motion, this chestnut mare captures the essence of equestrian
+						elegance as she soars through the air in a captivating jump. A moment frozen
+						in time, where strength, beauty, and skill converge.
 					</div>
 				</div>
 				<div className='wrapper'>
@@ -72,8 +72,9 @@ export const DesktopContent = () => {
 					/>
 					{/* <img src={show_photo_02_highRes} alt='Show 02' /> */}
 					<div className='caption'>
-						Armani, showcasing style and finesse in the hunter event arena. A captivating snapshot
-						of this exceptional horse navigating the course with grace.
+						Armani, showcasing style and finesse in the hunter event arena. A
+						captivating snapshot of this exceptional horse navigating the course with
+						grace.
 					</div>
 				</div>
 				<div className='wrapper'>
@@ -105,6 +106,8 @@ export const DesktopDiv = styled.div`
 	& > .intro {
 		margin: 2.5%;
 		text-align: justify;
+		background-color: rgba(256, 256, 256, 0.6);
+		padding: 1em;
 	}
 
 	& > .photo-container {
@@ -167,10 +170,10 @@ export const MobileContent = () => {
 	return (
 		<MobileDiv>
 			<div className='intro'>
-				Explore past events, witness memorable moments, and experience the dynamic spirit of our
-				equestrian community. Whether you're a passionate enthusiast or a newcomer to the world of
-				horse shows, this page is your window into the captivating world of equestrian sports. Dive
-				in and discover the beauty of horsemanship in action.
+				Explore past events, witness memorable moments, and experience the dynamic spirit of
+				our equestrian community. Whether you're a passionate enthusiast or a newcomer to
+				the world of horse shows, this page is your window into the captivating world of
+				equestrian sports. Dive in and discover the beauty of horsemanship in action.
 			</div>
 			<div className='photo-container'>
 				<div className='wrapper'>
@@ -182,20 +185,27 @@ export const MobileContent = () => {
 					/>
 					{/* <img src={show_photo_01_highRes} alt='Show 01' /> */}
 					<div className='caption'>
-						Grace in motion, this chestnut mare captures the essence of equestrian elegance as she
-						soars through the air in a captivating jump. A moment frozen in time, where strength,
-						beauty, and skill converge.
+						Grace in motion, this chestnut mare captures the essence of equestrian
+						elegance as she soars through the air in a captivating jump. A moment frozen
+						in time, where strength, beauty, and skill converge.
 					</div>
 				</div>
 				<div className='wrapper'>
-					<img src={show_photo_02_highRes} alt='Show 01' />
+					<img
+						src={show_photo_02_highRes}
+						alt='Show 01'
+					/>
 					<div className='caption'>
-						Armani, showcasing style and finesse in the hunter event arena. A captivating snapshot
-						of this exceptional horse navigating the course with grace.
+						Armani, showcasing style and finesse in the hunter event arena. A
+						captivating snapshot of this exceptional horse navigating the course with
+						grace.
 					</div>
 				</div>
 				<div className='wrapper'>
-					<img src={show_photo_03_highRes} alt='Show 03' />
+					<img
+						src={show_photo_03_highRes}
+						alt='Show 03'
+					/>
 					<div className='caption'>
 						Rose, the spirited pony, conquering cross country with boundless energy and
 						determination. A picture of courage and agility in the heart of competition.
@@ -218,6 +228,8 @@ export const MobileDiv = styled.div`
 	& > .intro {
 		margin: 5%;
 		text-align: justify;
+		background-color: rgba(256, 256, 256, 0.6);
+		padding: 0.5em;
 	}
 
 	& > .photo-container {

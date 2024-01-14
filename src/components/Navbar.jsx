@@ -43,10 +43,9 @@ export const DesktopNavbar = (props) => {
 		<DesktopNavDiv
 			style={{
 				backgroundColor: `${
-					scrollPosition > 100 ? 'rgba(11, 13, 37, 0.9)' : 'rgba(11, 13, 37, 1)'
+					scrollPosition > 100 ? 'rgba(37, 39, 69, 0.9)' : 'rgba(37, 39, 69, 1)'
 				}`,
-			}}
-		>
+			}}>
 			<img
 				className={`logo ${!isLoaded ? 'show' : 'hide'}`}
 				src={logo_lowRes}
@@ -78,45 +77,46 @@ export const DesktopNavbar = (props) => {
 };
 
 export const DesktopNavDiv = styled.div`
-	width: 100%;
-	height: 100%;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	overflow: hidden;
-	justify-content: space-between;
-	position: relative;
-
-	@media screen and (max-width: ${MOBILE_MODE_LIMIT}) {
-		display: none;
-	}
-
-	& > .logo {
-		cursor: pointer;
-		left: 0;
-	}
-
-	& > .show {
-		max-height: 250px;
-		max-width: 30%;
-		min-width: 350px;
-		opacity: 1;
-		transition: opacity 500ms ease-in 50ms;
-	}
-	& > .hide {
-		height: 0px;
-		opacity: 0;
-		transition: opacity 500ms ease-in 50ms;
-	}
-
-	& > .link-container {
-		min-width: calc(100vw - 350px);
-		max-width: 70%;
+	@media screen and (min-width: ${MOBILE_MODE_LIMIT}) {
+		width: 100%;
 		height: 100%;
 		display: flex;
 		flex-direction: row;
-		justify-content: end;
 		align-items: center;
+		overflow: hidden;
+		justify-content: space-between;
+		position: relative;
+
+		& > .logo {
+			cursor: pointer;
+			left: 0;
+		}
+
+		& > .show {
+			max-height: 250px;
+			max-width: 30%;
+			min-width: 350px;
+			opacity: 1;
+			transition: opacity 500ms ease-in 50ms;
+		}
+		& > .hide {
+			height: 0px;
+			opacity: 0;
+			transition: opacity 500ms ease-in 50ms;
+		}
+
+		& > .link-container {
+			min-width: calc(100vw - 350px);
+			max-width: 70%;
+			height: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: end;
+			align-items: center;
+		}
+	}
+	@media screen and ((max-width: ${MOBILE_MODE_LIMIT} )or (width: ${MOBILE_MODE_LIMIT})) {
+		display: none;
 	}
 `;
 
@@ -156,9 +156,10 @@ export const MobileNavbar = (props) => {
 	return (
 		<MobileNavDiv
 			style={{
-				backgroundColor: `${scrollPosition > 50 ? 'rgba(11, 13, 37, 0.9)' : 'rgba(11, 13, 37, 1)'}`,
-			}}
-		>
+				backgroundColor: `${
+					scrollPosition > 100 ? 'rgba(37, 39, 69, 0.9)' : 'rgba(37, 39, 69, 1)'
+				}`,
+			}}>
 			<img
 				className={`logo ${!isLoaded ? 'show' : 'hide'}`}
 				src={logo_lowRes}
@@ -179,62 +180,61 @@ export const MobileNavbar = (props) => {
 				}}
 			/>
 			<div className='menu'>
-				<NavButton isExpanded={isExpanded} setIsExpanded={setIsExpanded} />
+				<NavButton
+					isExpanded={isExpanded}
+					setIsExpanded={setIsExpanded}
+				/>
 			</div>
 		</MobileNavDiv>
 	);
 };
 
 export const MobileNavDiv = styled.div`
-	width: 100%;
-	height: 100%;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
-	font-size: calc(max(2.5vw, 2.5vh));
-	overflow: hidden;
+	display: none;
 
-	@media screen and (min-width: ${MOBILE_MODE_LIMIT}) {
-		display: none;
-	}
-
-	@media screen and (width: ${MOBILE_MODE_LIMIT}) {
-		display: inherit;
-	}
-
-	& > .logo {
-		margin: 0%;
-
-		&:hover {
-			cursor: pointer;
-		}
-	}
-
-	& > .show {
-		height: 150px;
-		opacity: 1;
-		transition: opacity 500ms ease-in 50ms;
-	}
-	& > .hide {
-		height: 0px;
-		width: 0px;
-		opacity: 0;
-		transition: opacity 500ms ease-in 50ms;
-		position: absolute;
-	}
-
-	& > .menu {
-		max-width: 10%;
+	@media screen and (max-width: ${MOBILE_MODE_LIMIT}) {
+		width: 100%;
 		height: 100%;
-		margin-right: 3%;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		justify-content: end;
-		color: white;
+		justify-content: space-between;
+		font-size: calc(max(2.5vw, 2.5vh));
+		overflow: hidden;
 
-		& > .dropdown {
+		& > .logo {
+			margin: 0%;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		& > .show {
+			height: 150px;
+			opacity: 1;
+			transition: opacity 500ms ease-in 50ms;
+		}
+		& > .hide {
+			height: 0px;
+			width: 0px;
+			opacity: 0;
+			transition: opacity 500ms ease-in 50ms;
+			position: absolute;
+		}
+
+		& > .menu {
+			max-width: 10%;
+			height: 100%;
+			margin-right: 3%;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: end;
+			color: white;
+
+			& > .dropdown {
+			}
 		}
 	}
 `;
@@ -274,8 +274,7 @@ export const NavButton = (props) => {
 							{ once: true }
 						);
 					}
-				}}
-			>
+				}}>
 				<div className={isExpanded ? 'change-bar-1' : 'bar-1'} />
 				<div className={isExpanded ? 'change-bar-2' : 'bar-2'} />
 				<div className={isExpanded ? 'change-bar-3' : 'bar-3'} />
@@ -400,22 +399,34 @@ export const ModalMenu = (props) => {
 			<div className={isExpanded ? 'expanded-menu' : 'expanded-menu-hidden'}>
 				{isExpanded && (
 					<>
-						<Link to='/' className='expanded-link'>
+						<Link
+							to='/'
+							className='expanded-link'>
 							Home
 						</Link>
-						<Link to='/about' className='expanded-link'>
+						<Link
+							to='/about'
+							className='expanded-link'>
 							Meet the Team
 						</Link>
-						<Link to='/facilities' className='expanded-link'>
+						<Link
+							to='/facilities'
+							className='expanded-link'>
 							Facilities
 						</Link>
-						<Link to='/lessons-and-boarding' className='expanded-link'>
+						<Link
+							to='/lessons-and-boarding'
+							className='expanded-link'>
 							Lessons and Boarding
 						</Link>
-						<Link to='/horse-shows' className='expanded-link'>
+						<Link
+							to='/horse-shows'
+							className='expanded-link'>
 							Horse Shows
 						</Link>
-						<Link to='/contact' className='expanded-link'>
+						<Link
+							to='/contact'
+							className='expanded-link'>
 							Contact
 						</Link>
 					</>
