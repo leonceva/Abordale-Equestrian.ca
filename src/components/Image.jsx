@@ -8,8 +8,17 @@ const Image = ({ styleWrapper, styleImage, lowResSrc, highResSrc }) => {
 
 	return (
 		<div style={styleWrapper}>
-			<img src={lowResSrc} style={lowResStyle} alt='Low Res' />
-			<img src={highResSrc} style={highResStyle} alt='High Res' onLoad={handleImageLoad} />
+			<img
+				src={lowResSrc}
+				style={lowResStyle}
+				alt='Low Res'
+			/>
+			<img
+				src={highResSrc}
+				style={highResStyle}
+				alt='High Res'
+				onLoad={handleImageLoad}
+			/>
 		</div>
 	);
 };

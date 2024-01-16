@@ -56,7 +56,6 @@ export const DesktopContent = () => {
 						lowResSrc={show_photo_01_lowRes}
 						highResSrc={show_photo_01_highRes}
 					/>
-					{/* <img src={show_photo_01_highRes} alt='Show 01' /> */}
 					<div className='caption'>
 						Grace in motion, this chestnut mare captures the essence of equestrian
 						elegance as she soars through the air in a captivating jump. A moment frozen
@@ -70,7 +69,6 @@ export const DesktopContent = () => {
 						lowResSrc={show_photo_02_lowRes}
 						highResSrc={show_photo_02_highRes}
 					/>
-					{/* <img src={show_photo_02_highRes} alt='Show 02' /> */}
 					<div className='caption'>
 						Armani, showcasing style and finesse in the hunter event arena. A
 						captivating snapshot of this exceptional horse navigating the course with
@@ -84,7 +82,6 @@ export const DesktopContent = () => {
 						lowResSrc={show_photo_03_lowRes}
 						highResSrc={show_photo_03_highRes}
 					/>
-					{/* <img src={show_photo_03_highRes} alt='Show 03' /> */}
 					<div className='caption'>
 						Rose, the spirited pony, conquering cross country with boundless energy and
 						determination. A picture of courage and agility in the heart of competition.
@@ -120,23 +117,17 @@ export const DesktopDiv = styled.div`
 
 		& > .wrapper {
 			width: 100%;
-			margin-bottom: 3%;
-			height: 55vh;
+			margin-bottom: 1em;
+			height: 65vh;
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
 			align-items: center;
 			position: relative;
 
-			& > img {
-				margin-left: 10%;
-				width: 40%;
-				border: 2px solid black;
-			}
-
 			& > .caption {
 				width: 35%;
-				margin-left: 5%;
+				margin-left: 1em;
 				background-color: rgba(11, 13, 37, 0.9);
 				padding: 10px;
 				color: white;

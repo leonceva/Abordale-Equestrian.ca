@@ -21,28 +21,31 @@ export default LessonsAndBoarding;
 export const DesktopContent = () => {
 	const styleWrapper = {
 		aspectRatio: '1/1',
-		width: '45%',
+		width: '95%',
+		height: '95%',
 		position: 'relative',
 	};
 
 	const styleImage = {
-		width: '100%',
+		maxWidth: '100%',
+		maxHeight: '100%',
 		position: 'absolute',
 		left: '50%',
-		top: '50%',
-		transform: 'translate(-50%, -50%)',
+		top: '0',
+		transform: 'translate(-50%, 1em)',
 		border: '2px solid black',
 	};
 
 	return (
 		<DesktopDiv>
-			<Image
-				styleWrapper={styleWrapper}
-				styleImage={styleImage}
-				lowResSrc={lesson_img_lowRes}
-				highResSrc={lesson_img_highRes}
-			/>
-			{/* <img src={lesson_img} alt='Lesson 01' /> */}
+			<div className='img-div'>
+				<Image
+					styleWrapper={styleWrapper}
+					styleImage={styleImage}
+					lowResSrc={lesson_img_lowRes}
+					highResSrc={lesson_img_highRes}
+				/>
+			</div>
 			<div className='intro'>
 				<p>
 					Explore equestrian excellence with our tailored lessons and boarding options.
@@ -65,12 +68,25 @@ export const DesktopDiv = styled.div`
 	height: 100%;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
-	align-items: center;
+	flex-wrap: wrap-reverse;
+	justify-content: center;
+	margin-top: 2em;
+	align-items: start;
+
+	& > .img-div {
+		min-width: 450px;
+		flex: 1;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
 
 	& > .intro {
+		height: 100%;
 		text-align: justify;
-		width: 40%;
+		min-width: 300px;
+		flex: 1;
 		padding: 0 1em;
 		background-color: rgba(256, 256, 256, 0.6);
 	}
@@ -80,18 +96,18 @@ export const DesktopDiv = styled.div`
 
 export const MobileContent = () => {
 	const styleWrapper = {
-		width: '90%',
-		height: '50vh',
+		width: '100%',
+		height: '100%',
 		position: 'relative',
-		marginTop: '5%',
 	};
 
 	const styleImage = {
-		width: '100%',
+		maxWidth: '100%',
+		maxHeight: '100%',
 		position: 'absolute',
 		left: '50%',
-		top: '50%',
-		transform: 'translate(-50%, -50%)',
+		top: '0%',
+		transform: 'translate(-50%, 0%)',
 		border: '2px solid black',
 	};
 
@@ -108,13 +124,14 @@ export const MobileContent = () => {
 				Contact us for details regarding boarding or to book your first lesson. We look
 				forward to riding with you!
 			</h3>
-			<Image
-				styleWrapper={styleWrapper}
-				styleImage={styleImage}
-				lowResSrc={lesson_img_lowRes}
-				highResSrc={lesson_img_highRes}
-			/>
-			{/* <img src={lesson_img} alt='Lesson 01' /> */}
+			<div className='img-container'>
+				<Image
+					styleWrapper={styleWrapper}
+					styleImage={styleImage}
+					lowResSrc={lesson_img_lowRes}
+					highResSrc={lesson_img_highRes}
+				/>
+			</div>
 		</MobileDiv>
 	);
 };
@@ -126,6 +143,7 @@ export const MobileDiv = styled.div`
 	flex-direction: column;
 	justify-content: start;
 	align-items: center;
+	position: relative;
 
 	& > .intro {
 		width: 90%;
@@ -138,8 +156,13 @@ export const MobileDiv = styled.div`
 
 	& > .start {
 		width: 90%;
-		margin: 2.5% 2.5% 0;
+		margin: 2.5% 2.5%;
 		padding: 0.5em;
 		background-color: rgba(256, 256, 256, 0.6);
+	}
+
+	& > .img-container {
+		width: 80vw;
+		height: calc(min(80vw, 50vh));
 	}
 `;

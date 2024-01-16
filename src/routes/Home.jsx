@@ -83,13 +83,13 @@ export const DesktopContent = () => {
 							equestrian center offers a welcoming environment for both riders and
 							their equine companions.
 						</p>
-						<span
+						<h3
 							className='button link'
 							onClick={() => {
 								navigate('/facilities');
 							}}>
 							Learn More
-						</span>
+						</h3>
 					</div>
 				</div>
 			</div>
@@ -153,13 +153,13 @@ export const DesktopContent = () => {
 			<div className='get-started'>
 				<div className='get-started-container'>
 					<h1>Ready To Start?</h1>
-					<span
-						className='link button'
+					<h3
+						className='link button heading-font'
 						onClick={() => {
 							navigate('/lessons-and-boarding');
 						}}>
 						Explore Lessons and Boarding
-					</span>
+					</h3>
 					<div className='contact-info'>
 						<h2>Get In Touch</h2>
 						<div className='social-media'>
@@ -206,7 +206,8 @@ export const DesktopDiv = styled.div`
 		width: 100%;
 
 		& > .facility-container {
-			width: 100%;
+			flex: 2;
+			min-width: 400px;
 			height: 60vh;
 			display: flex;
 			flex-direction: row;
@@ -214,7 +215,7 @@ export const DesktopDiv = styled.div`
 			align-items: center;
 
 			& > .carousel {
-				flex: 2;
+				width: 50%;
 				height: 100%;
 				border: 2px solid black;
 				position: relative;
@@ -309,10 +310,8 @@ export const DesktopDiv = styled.div`
 
 				& > .link {
 					font-weight: bold;
-					align-self: start;
+					align-self: center;
 					padding: 5px 10px;
-					margin-left: 2.5%;
-					margin-bottom: 2.5%;
 				}
 			}
 		}
@@ -379,6 +378,7 @@ export const DesktopDiv = styled.div`
 			align-items: center;
 			height: max-content;
 			margin-bottom: 5vh;
+			margin-top: 2em;
 
 			& > h1 {
 				height: 100%;
@@ -476,13 +476,13 @@ export const MobileContent = () => {
 							equestrian center offers a welcoming environment for both riders and
 							their equine companions.
 						</p>
-						<span
+						<h3
 							className='button link'
 							onClick={() => {
 								navigate('/facilities');
 							}}>
 							Learn More
-						</span>
+						</h3>
 					</div>
 				</div>
 			</div>
@@ -532,14 +532,14 @@ export const MobileContent = () => {
 				<div className='get-started-container'>
 					<h2>Ready To Start?</h2>
 					<div className='right-side'>
-						<span
+						<h3
 							className='link button'
 							onClick={() => {
 								window.scrollTo(0, 0);
 								navigate('/lessons-and-boarding');
 							}}>
 							Explore Lessons and Boarding
-						</span>
+						</h3>
 					</div>
 				</div>
 				<div className='get-started-container'>
@@ -592,7 +592,7 @@ export const MobileDiv = styled.div`
 
 		& > .facility-container {
 			width: 100%;
-			height: 80vh;
+			height: 100vh;
 			display: flex;
 			flex-direction: column;
 			justify-content: start;
@@ -680,8 +680,7 @@ export const MobileDiv = styled.div`
 				margin-top: 2.5%;
 
 				& > h2 {
-					margin: 0;
-					padding: 0 5% 0;
+					margin: 0.5em 0;
 					width: 100%;
 					text-align: center;
 				}
@@ -697,7 +696,7 @@ export const MobileDiv = styled.div`
 					font-weight: bold;
 					align-self: center;
 					padding: 5px 10px;
-					margin-bottom: 2.5%;
+					margin: 0;
 				}
 			}
 		}
@@ -877,7 +876,8 @@ export const Carousel = () => {
 
 	const styleImageCarousel = {
 		position: 'absolute',
-		height: 'calc(100% - 4px)',
+
+		maxHeight: '100%',
 		maxWidth: '100%',
 		left: '50%',
 		top: '50%',

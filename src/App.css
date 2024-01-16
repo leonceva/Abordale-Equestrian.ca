@@ -1,6 +1,19 @@
 body {
 	overflow-y: scroll;
-	font-family: 'Yeseva One', serif;
+	font-family: 'Cormorant Garamond', serif;
+	font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: 'Yeseva One', serif !important;
+}
+
+.heading-font {
+	font-family: 'Yeseva One', serif !important;
 }
 
 .button {

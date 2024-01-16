@@ -40,7 +40,12 @@ const SocialMediaLink = (props) => {
 			<Img
 				src={type_logo}
 				alt={type_alt}
-				style={{ height: `${size}`, width: `${size}`, borderRadius: `${size}` }}
+				style={{
+					height: `${size}`,
+					width: `${size}`,
+					borderRadius: `${size}`,
+					backgroundColor: 'white',
+				}}
 			/>
 		</a>
 	);

@@ -150,17 +150,20 @@ export const DesktopDiv = styled.div`
 		width: 100%;
 		min-height: 50vh;
 		display: flex;
-		justify-content: space-evenly;
+		flex-direction: row;
+		justify-content: space-around;
 		flex-wrap: wrap;
 
 		& > .img-wrapper {
-			width: 30%;
+			min-width: 300px;
+			flex: 1;
+			max-width: 30%;
 			height: calc(50vh - 4px);
 			border: 2px solid black;
 			position: relative;
-			margin-bottom: 2.5%;
 			background-color: white;
 			z-index: 1;
+			margin: 0.5em 0.5em;
 
 			& > .facility-bg {
 				width: 100%;
@@ -322,7 +325,7 @@ export const MobileDiv = styled.div`
 
 	& > .img-container {
 		width: 80%;
-		height: 35vh;
+		height: 50vh;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-evenly;

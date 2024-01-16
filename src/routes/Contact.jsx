@@ -76,9 +76,7 @@ export const DesktopContent = () => {
 							/>
 						</div>
 					</div>
-					<p>
-						<strong>abordale.equestrian@gmail.com</strong>
-					</p>
+					<h3>abordale.equestrian@gmail.com</h3>
 					<div className='map-container'>
 						<Map />
 					</div>
@@ -185,7 +183,7 @@ export const MobileContent = () => {
 						/>
 					</div>
 				</div>
-				<p>
+				<p className='heading-font'>
 					<strong>abordale.equestrian@gmail.com</strong>
 				</p>
 				<div className='map-container'>

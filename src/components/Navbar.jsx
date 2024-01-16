@@ -66,11 +66,31 @@ export const DesktopNavbar = (props) => {
 				}}
 			/>
 			<div className='link-container'>
-				<NavLink to='/about'>Meet the Team</NavLink>
-				<NavLink to='/facilities'>Facilities</NavLink>
-				<NavLink to='/lessons-and-boarding'>Lessons & Boarding</NavLink>
-				<NavLink to='/horse-shows'>Horse Shows</NavLink>
-				<NavLink to='/contact'>Contact</NavLink>
+				<NavLink
+					className='heading-font'
+					to='/about'>
+					Meet the Team
+				</NavLink>
+				<NavLink
+					className='heading-font'
+					to='/facilities'>
+					Facilities
+				</NavLink>
+				<NavLink
+					className='heading-font'
+					to='/lessons-and-boarding'>
+					Lessons & Boarding
+				</NavLink>
+				<NavLink
+					className='heading-font'
+					to='/horse-shows'>
+					Horse Shows
+				</NavLink>
+				<NavLink
+					className='heading-font'
+					to='/contact'>
+					Contact
+				</NavLink>
 			</div>
 		</DesktopNavDiv>
 	);
@@ -93,11 +113,20 @@ export const DesktopNavDiv = styled.div`
 		}
 
 		& > .show {
-			max-height: 250px;
-			max-width: 30%;
-			min-width: 350px;
 			opacity: 1;
 			transition: opacity 500ms ease-in 50ms;
+
+			@media screen and (max-width: 940px) {
+				position: absolute;
+				max-height: 175px;
+				min-width: 250px;
+			}
+
+			@media screen and ((min-width: 941px) or (width: 941px)) {
+				max-height: 250px;
+				max-width: 30%;
+				min-width: 350px;
+			}
 		}
 		& > .hide {
 			height: 0px;
@@ -107,7 +136,7 @@ export const DesktopNavDiv = styled.div`
 
 		& > .link-container {
 			min-width: calc(100vw - 350px);
-			max-width: 70%;
+			max-width: 65%;
 			height: 100%;
 			display: flex;
 			flex-direction: row;
