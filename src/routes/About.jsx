@@ -40,14 +40,14 @@ export const DesktopContent = () => {
 
 	return (
 		<DesktopDiv>
-			<div className='intro-message'>
+			{/* <div className='intro-message'>
 				Curious about what makes us tick? Before we get into the nitty-gritty of our awesome
 				team, let's spill the beans on why we're so crazy about horses. We're all about
 				excellence, making sure our four-legged friends are living their best lives, and
 				building a community that's as tight-knit as a family. So, buckle up and get ready
 				to peek behind the curtain at what makes us who we are, a bunch of folks who just
 				love hanging out with horses.
-			</div>
+			</div> */}
 			<div className='staff'>
 				<div className='staff-container'>
 					<div className='bio-container'>

@@ -9,10 +9,10 @@ const DesktopLayout = (props) => {
 	return (
 		<DesktopDiv>
 			<div className='background'>
-				<img
+				{/* <img
 					src={background_img_lowRes}
 					alt='Low Res Background'
-				/>
+				/> */}
 			</div>
 			<div className='desktop-content'>{content}</div>
 		</DesktopDiv>

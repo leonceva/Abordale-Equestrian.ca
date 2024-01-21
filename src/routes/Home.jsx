@@ -57,7 +57,7 @@ export const DesktopContent = () => {
 	return (
 		<DesktopDiv>
 			<h2 className='title'>Welcome To Abordale Equestrian</h2>
-			<span className='welcome-message'>
+			{/* <span className='welcome-message'>
 				Discover the perfect blend of passion and purpose at Abordale Equestrian. Located
 				just south of Stittsville, our premier facility offers top-notch boarding, expert
 				training, and enriching riding lessons. Immerse yourself in a community dedicated to
@@ -65,7 +65,7 @@ export const DesktopContent = () => {
 				facilities, meet our experienced trainers, and embark on an exciting journey where
 				every hoofbeat tells a story. Welcome to Abordale Equestrian, where the love for
 				horses knows no bounds. Saddle up and let the adventure begin!
-			</span>
+			</span> */}
 			<div className='facility'>
 				<div className='facility-container'>
 					<div className='carousel'>
@@ -83,13 +83,13 @@ export const DesktopContent = () => {
 							equestrian center offers a welcoming environment for both riders and
 							their equine companions.
 						</p>
-						<h3
+						<span
 							className='button link'
 							onClick={() => {
 								navigate('/facilities');
 							}}>
 							Learn More
-						</h3>
+						</span>
 					</div>
 				</div>
 			</div>
@@ -153,13 +153,13 @@ export const DesktopContent = () => {
 			<div className='get-started'>
 				<div className='get-started-container'>
 					<h1>Ready To Start?</h1>
-					<h3
-						className='link button heading-font'
+					<span
+						className='link button'
 						onClick={() => {
 							navigate('/lessons-and-boarding');
 						}}>
 						Explore Lessons and Boarding
-					</h3>
+					</span>
 					<div className='contact-info'>
 						<h2>Get In Touch</h2>
 						<div className='social-media'>
@@ -176,6 +176,7 @@ export const DesktopContent = () => {
 								type='email'
 							/>
 						</div>
+						<div className='email'>abordale.equestrian@gmail.com</div>
 					</div>
 				</div>
 			</div>
@@ -206,8 +207,7 @@ export const DesktopDiv = styled.div`
 		width: 100%;
 
 		& > .facility-container {
-			flex: 2;
-			min-width: 400px;
+			width: 100%;
 			height: 60vh;
 			display: flex;
 			flex-direction: row;
@@ -215,7 +215,7 @@ export const DesktopDiv = styled.div`
 			align-items: center;
 
 			& > .carousel {
-				width: 50%;
+				flex: 2;
 				height: 100%;
 				border: 2px solid black;
 				position: relative;
@@ -223,7 +223,7 @@ export const DesktopDiv = styled.div`
 				& > .img-div {
 					height: 100%;
 					width: 100%;
-					background-color: white;
+					background-color: red;
 
 					& > img {
 						transition: all 1s;
@@ -310,8 +310,10 @@ export const DesktopDiv = styled.div`
 
 				& > .link {
 					font-weight: bold;
-					align-self: center;
+					align-self: start;
 					padding: 5px 10px;
+					margin-left: 2.5%;
+					margin-bottom: 2.5%;
 				}
 			}
 		}
@@ -374,16 +376,14 @@ export const DesktopDiv = styled.div`
 			width: 100%;
 			display: flex;
 			flex-direction: row;
-			justify-content: space-between;
+			justify-content: space-around;
 			align-items: center;
-			height: max-content;
 			margin-bottom: 5vh;
-			margin-top: 2em;
 
 			& > h1 {
 				height: 100%;
 				text-align: center;
-				max-width: 30%;
+				width: 30%;
 			}
 
 			& > .link {
@@ -399,11 +399,6 @@ export const DesktopDiv = styled.div`
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
-				max-width: 30%;
-
-				& > h2 {
-					text-align: center;
-				}
 
 				& > .social-media {
 					display: flex;
@@ -476,13 +471,13 @@ export const MobileContent = () => {
 							equestrian center offers a welcoming environment for both riders and
 							their equine companions.
 						</p>
-						<h3
+						<span
 							className='button link'
 							onClick={() => {
 								navigate('/facilities');
 							}}>
 							Learn More
-						</h3>
+						</span>
 					</div>
 				</div>
 			</div>
@@ -532,14 +527,14 @@ export const MobileContent = () => {
 				<div className='get-started-container'>
 					<h2>Ready To Start?</h2>
 					<div className='right-side'>
-						<h3
+						<span
 							className='link button'
 							onClick={() => {
 								window.scrollTo(0, 0);
 								navigate('/lessons-and-boarding');
 							}}>
 							Explore Lessons and Boarding
-						</h3>
+						</span>
 					</div>
 				</div>
 				<div className='get-started-container'>
@@ -592,7 +587,7 @@ export const MobileDiv = styled.div`
 
 		& > .facility-container {
 			width: 100%;
-			height: 100vh;
+			height: 80vh;
 			display: flex;
 			flex-direction: column;
 			justify-content: start;
@@ -680,7 +675,8 @@ export const MobileDiv = styled.div`
 				margin-top: 2.5%;
 
 				& > h2 {
-					margin: 0.5em 0;
+					margin: 0;
+					padding: 0 5% 0;
 					width: 100%;
 					text-align: center;
 				}
@@ -696,7 +692,7 @@ export const MobileDiv = styled.div`
 					font-weight: bold;
 					align-self: center;
 					padding: 5px 10px;
-					margin: 0;
+					margin-bottom: 2.5%;
 				}
 			}
 		}
@@ -876,8 +872,7 @@ export const Carousel = () => {
 
 	const styleImageCarousel = {
 		position: 'absolute',
-
-		maxHeight: '100%',
+		height: 'calc(100% - 4px)',
 		maxWidth: '100%',
 		left: '50%',
 		top: '50%',
@@ -896,11 +891,11 @@ export const Carousel = () => {
 					alt={img_alt}
 				/>
 				{/* <img loading='lazy' className='img-show' src={img_src_highRes} alt={img_alt} /> */}
-				<img
+				{/* <img
 					src={img_src_lowRes}
 					alt='Background'
 					className='img-bg'
-				/>
+				/> */}
 				<div
 					className='left'
 					onClick={() => {
