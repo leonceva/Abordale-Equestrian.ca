@@ -38,7 +38,6 @@ export const MobileDiv = styled.div`
 		width: 100vw;
 		height: 100%;
 		z-index: 1;
-
 		background-color: #f5f5f5;
 
 		& > img {
