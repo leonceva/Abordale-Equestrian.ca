@@ -1,8 +1,6 @@
-/* eslint-disable no-unused-vars */
 import DesktopLayout from '../layouts/DesktopLayout';
 import MobileLayout from '../layouts/MobileLayout';
 import styled from 'styled-components';
-import { useNavigate } from 'react-router-dom';
 import homepage_01_highRes from '../images/home/homepage_1_high_res.jpg';
 import homepage_02_highRes from '../images/home/homepage_2_high_res.jpg';
 import homepage_03_highRes from '../images/home/homepage_3_high_res.jpg';
@@ -31,25 +29,6 @@ export default Home;
 /************************************************************* DESKTOP MODE ****************************************************************************/
 
 export const DesktopContent = () => {
-	const navigate = useNavigate();
-
-	const styleWrapperStaff = {
-		position: 'relative',
-		height: '300px',
-		width: '30%',
-		border: '2px solid black',
-		backgroundColor: 'rgb(18, 17, 31)',
-	};
-
-	const styleImageStaff = {
-		position: 'absolute',
-		maxWidth: '100%',
-		maxHeight: '100%',
-		left: '50%',
-		top: '50%',
-		transform: 'translate(-50%, -50%)',
-	};
-
 	return (
 		<DesktopDiv>
 			<h2 className='title'>Welcome To Abordale Equestrian</h2>
@@ -229,24 +208,6 @@ export const DesktopDiv = styled.div`
 /************************************************************* MOBILE MODE ****************************************************************************/
 
 export const MobileContent = () => {
-	const navigate = useNavigate();
-
-	const styleWrapperStaff = {
-		position: 'relative',
-		height: '100%',
-		width: 'calc(55% - 4px)',
-	};
-
-	const styleImageStaff = {
-		position: 'absolute',
-		maxWidth: '100%',
-		maxHeight: '100%',
-		left: '50%',
-		top: '50%',
-		transform: 'translate(-50%, -50%)',
-		border: '2px solid black',
-	};
-
 	return (
 		<MobileDiv>
 			<h2>Welcome To Abordale Equestrian</h2>
