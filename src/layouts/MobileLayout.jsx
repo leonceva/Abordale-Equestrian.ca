@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import background_img_lowRes from '../images/stock-01-lazy.jpg';
 
 const MOBILE_MODE_LIMIT = process.env.REACT_APP_MOBILE_MODE;
 
@@ -8,12 +7,7 @@ const MobileLayout = (props) => {
 
 	return (
 		<MobileDiv>
-			<div className='background'>
-				<img
-					src={background_img_lowRes}
-					alt='Low Res Background'
-				/>
-			</div>
+			<div className='background'></div>
 			<div className='mobile-content'>{content}</div>
 		</MobileDiv>
 	);
@@ -44,6 +38,8 @@ export const MobileDiv = styled.div`
 		width: 100vw;
 		height: 100%;
 		z-index: 1;
+
+		background-color: #f5f5f5;
 
 		& > img {
 			object-fit: cover;

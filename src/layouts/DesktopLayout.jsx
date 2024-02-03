@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import background_img_lowRes from '../images/stock-01-lazy.jpg';
+// import background_img_lowRes from '../images/stock-01-lazy.jpg';
 
 const MOBILE_MODE_LIMIT = process.env.REACT_APP_MOBILE_MODE;
 
@@ -59,6 +59,7 @@ export const DesktopDiv = styled.div`
 		width: 100%;
 		height: 100%;
 		z-index: 1;
+		background-color: #f5f5f5;
 
 		& > img {
 			object-fit: cover;
