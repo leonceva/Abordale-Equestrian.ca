@@ -2,6 +2,7 @@ import DesktopLayout from '../layouts/DesktopLayout';
 import MobileLayout from '../layouts/MobileLayout';
 import styled from 'styled-components';
 import Carousel from '../components/Carousel';
+import Image from '../components/Image';
 import homepage_01_highRes from '../images/home/homepage_1_high_res.jpg';
 import homepage_02_highRes from '../images/home/homepage_2_high_res.jpg';
 import homepage_03_highRes from '../images/home/homepage_3_high_res.jpg';
@@ -208,6 +209,26 @@ export const DesktopDiv = styled.div`
 /************************************************************* MOBILE MODE ****************************************************************************/
 
 export const MobileContent = () => {
+	const styleWrapper = {
+		position: 'absolute',
+		width: '100%',
+		height: '100%',
+		zIndex: '3',
+		overflow: 'hidden',
+	};
+
+	const styleImage = {
+		position: 'absolute',
+		width: 'auto',
+		height: 'auto',
+		maxHeight: '100%',
+		maxWidth: '200%',
+		left: '50%',
+		top: '50%',
+		transform: 'translate(-50%, -50%)',
+		zIndex: '2',
+	};
+
 	return (
 		<MobileDiv>
 			<h2>Welcome To Abordale Equestrian</h2>
@@ -242,28 +263,48 @@ export const MobileContent = () => {
 				</div>
 				<div className='email'>abordale.equestrian@gmail.com</div>
 			</div>
-			<div className='content'>
-				<div className='content-container'>
-					<div className='carousel'>
-						<Carousel
-							lowRes={[
-								homepage_01_lowRes,
-								homepage_02_lowRes,
-								homepage_03_lowRes,
-								homepage_04_lowRes,
-								homepage_05_lowRes,
-							]}
-							highRes={[
-								homepage_01_highRes,
-								homepage_02_highRes,
-								homepage_03_highRes,
-								homepage_04_highRes,
-								homepage_05_highRes,
-							]}
-							length={5}
-						/>
-					</div>
+			<div className='img-container'>
+				<div className='img-wrapper'>
+					<Image
+						styleWrapper={styleWrapper}
+						styleImage={styleImage}
+						lowResSrc={homepage_01_lowRes}
+						highResSrc={homepage_01_highRes}
+					/>
 				</div>
+				<div className='img-wrapper'>
+					<Image
+						styleWrapper={styleWrapper}
+						styleImage={styleImage}
+						lowResSrc={homepage_02_lowRes}
+						highResSrc={homepage_02_highRes}
+					/>
+				</div>
+				<div className='img-wrapper'>
+					<Image
+						styleWrapper={styleWrapper}
+						styleImage={styleImage}
+						lowResSrc={homepage_03_lowRes}
+						highResSrc={homepage_03_highRes}
+					/>
+				</div>
+				<div className='img-wrapper'>
+					<Image
+						styleWrapper={styleWrapper}
+						styleImage={styleImage}
+						lowResSrc={homepage_04_lowRes}
+						highResSrc={homepage_04_highRes}
+					/>
+				</div>
+				<div className='img-wrapper'>
+					<Image
+						styleWrapper={styleWrapper}
+						styleImage={styleImage}
+						lowResSrc={homepage_05_lowRes}
+						highResSrc={homepage_05_highRes}
+					/>
+				</div>
+				<div className='bottom-space' />
 			</div>
 		</MobileDiv>
 	);
@@ -330,82 +371,26 @@ export const MobileDiv = styled.div`
 		}
 	}
 
-	& > .content {
+	& > .img-container {
 		width: 95%;
+		height: 50vh;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		align-items: center;
+		flex-wrap: wrap;
 
-		& > .content-container {
+		& > .img-wrapper {
 			width: 100%;
-			height: 80vh;
-			display: flex;
-			flex-direction: column;
-			justify-content: start;
-			align-items: center;
+			height: 50vh;
+			z-index: 1;
+			position: relative;
+			margin: 0.5em 0;
+		}
 
-			& > .carousel {
-				flex: 4;
-				height: 100%;
-				width: 100%;
-				border: 2px solid black;
-				position: relative;
-
-				& > .img-div {
-					height: 100%;
-					width: 100%;
-					background-color: rgb(18, 17, 31);
-
-					& > img {
-						transition: all 1s;
-						position: absolute;
-					}
-
-					& > .img-show {
-						max-width: 100%;
-						max-height: 100%;
-						left: 50%;
-						top: 50%;
-						transform: translate(-50%, -50%);
-						z-index: 2;
-						opacity: 1;
-					}
-
-					& > .left {
-						position: absolute;
-						height: 100%;
-						width: 25px;
-						left: 0;
-						background-color: rgb(18, 17, 31);
-						color: white;
-						display: flex;
-						align-items: center;
-						justify-content: center;
-						cursor: pointer;
-						z-index: 3;
-
-						&:active {
-							transition: all 100ms;
-							width: 20px;
-						}
-					}
-					& > .right {
-						position: absolute;
-						height: 100%;
-						width: 25px;
-						right: 0;
-						background-color: rgb(18, 17, 31);
-						color: white;
-						display: flex;
-						align-items: center;
-						justify-content: center;
-						cursor: pointer;
-						z-index: 3;
-
-						&:active {
-							transition: all 100ms;
-							width: 20px;
-						}
-					}
-				}
-			}
+		& > .bottom-space {
+			height: 5%;
+			width: 100%;
 		}
 	}
 `;

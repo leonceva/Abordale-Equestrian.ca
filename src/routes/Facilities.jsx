@@ -81,6 +81,7 @@ export const DesktopDiv = styled.div`
 		text-align: justify;
 		padding: 1em;
 	}
+
 	& > .carousel {
 		width: 60%;
 		height: 100%;
