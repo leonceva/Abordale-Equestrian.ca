@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import DesktopLayout from '../layouts/DesktopLayout';
 import MobileLayout from '../layouts/MobileLayout';
-import group_photo_highRes from '../images/placeholder-lesson-02.png';
-import group_photo_lowRes from '../images/placeholder-lesson-02-lazy.png';
+import contact_01_highRes from '../images/contact/contact_1_high_res.png';
+import contact_01_lowRes from '../images/contact/contact_1_low_res.png';
 import SocialMediaLink from '../components/SocialMediaLink';
 import Map from '../components/Map';
 import Image from '../components/Image';
@@ -22,36 +22,33 @@ export default Contact;
 
 export const DesktopContent = () => {
 	const styleWrapper = {
-		aspectRatio: '1/1',
-		position: 'relative',
-		maxWidth: '100%',
-		height: '90%',
+		position: 'absolute',
+		width: '100%',
+		height: '100%',
 	};
 
 	const styleImage = {
-		height: '100%',
+		maxHeight: 'calc(100% - 4px)',
+		maxWidth: 'calc(100% - 4px)',
 		position: 'absolute',
-		right: '5%',
-		top: '50%',
-		transform: 'translate(0%, -50%)',
-		border: '2px solid black',
+		left: '50%',
+		bottom: '0%',
+		transform: 'translate(-50%, 0)',
+		border: '2px solid #333',
 	};
 
 	return (
 		<DesktopDiv>
-			<div className='intro'>
-				Whether you're seeking information about lessons, boarding, or any other inquiry,
-				we're here to help. Reach out to us to explore the world of horses and schedule your
-				next riding experience. We look forward to hearing from you soon!
-			</div>
+			<div className='top-space'>Placeholder</div>
 			<div className='container'>
-				<Image
-					styleWrapper={styleWrapper}
-					styleImage={styleImage}
-					lowResSrc={group_photo_lowRes}
-					highResSrc={group_photo_highRes}
-				/>
-				{/* <img src={group_photo_highRes} alt='Group' /> */}
+				<div className='img-wrapper'>
+					<Image
+						styleWrapper={styleWrapper}
+						styleImage={styleImage}
+						lowResSrc={contact_01_lowRes}
+						highResSrc={contact_01_highRes}
+					/>
+				</div>
 				<div className='info'>
 					<div className='social-media'>
 						<div className='link-wrapper'>
@@ -76,7 +73,7 @@ export const DesktopContent = () => {
 							/>
 						</div>
 					</div>
-					<h3>abordale.equestrian@gmail.com</h3>
+					<div className='email'>abordale.equestrian@gmail.com</div>
 					<div className='map-container'>
 						<Map />
 					</div>
@@ -87,36 +84,38 @@ export const DesktopContent = () => {
 };
 
 export const DesktopDiv = styled.div`
-	width: 100%;
+	width: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: start;
-	align-items: center;
+	align-items: end;
 
-	& > .intro {
-		margin: 2.5% 0;
+	& > .top-space {
+		margin: 2.5% 0 0;
 		text-align: justify;
-		background-color: rgba(256, 256, 256, 0.6);
-		padding: 1em;
+		width: 70vw;
+		max-width: 2000px;
+		color: transparent;
 	}
 
 	& > .container {
 		width: 100%;
-		height: 60vh;
+		height: 100%;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		align-items: end;
 
-		& > img {
-			max-height: 100%;
-			max-width: 50%;
-			border: 2px solid black;
-			margin-right: 2%;
+		& > .img-wrapper {
+			width: 50%;
+			height: 60vh;
+			z-index: 1;
+			position: relative;
+			align-self: end;
 		}
 
 		& > .info {
-			height: 100%;
+			height: 60vh;
 			display: flex;
 			width: 50%;
 			flex-direction: column;
@@ -125,13 +124,12 @@ export const DesktopDiv = styled.div`
 
 			& > .map-container {
 				position: relative;
-				height: 70%;
-				max-width: 100%;
+				height: 40vh;
+				width: 95%;
 				display: flex;
 				flex-direction: column;
 				justify-content: end;
 				align-items: center;
-				aspect-ratio: 1/1;
 				border: 2px solid black;
 				background-color: lightgray;
 			}
@@ -147,6 +145,12 @@ export const DesktopDiv = styled.div`
 					width: fit-content;
 					padding: 0 20%;
 				}
+			}
+
+			& > .email {
+				margin-bottom: 1em;
+				font-weight: bold;
+				font-size: 1.2em;
 			}
 		}
 	}
@@ -196,17 +200,16 @@ export const MobileContent = () => {
 
 export const MobileDiv = styled.div`
 	width: 100%;
-	min-height: 100%;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	justify-content: start;
+	align-items: center;
 
 	& > .intro {
-		margin: 5%;
+		margin: 5% 5% 2.5%;
 		text-align: justify;
 		line-height: 120%;
-		background-color: rgba(256, 256, 256, 0.6);
 		padding: 0.5em;
 	}
 

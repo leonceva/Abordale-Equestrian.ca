@@ -58,7 +58,7 @@ const Carousel = (props) => {
 		height: '100%',
 		overflowX: 'hidden',
 		backgroundImage:
-			'linear-gradient(to right, rgb(18, 17, 31) ,  #f5f5f5 50%,  rgb(18, 17, 31))',
+			'linear-gradient(to right, rgb(18, 17, 31) ,  #999999 50%,  rgb(18, 17, 31))',
 	};
 
 	const styleImageCarousel = {
