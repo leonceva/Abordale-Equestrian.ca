@@ -1,6 +1,7 @@
 import DesktopLayout from '../layouts/DesktopLayout';
 import MobileLayout from '../layouts/MobileLayout';
 import styled from 'styled-components';
+import Carousel from '../components/Carousel';
 import homepage_01_highRes from '../images/home/homepage_1_high_res.jpg';
 import homepage_02_highRes from '../images/home/homepage_2_high_res.jpg';
 import homepage_03_highRes from '../images/home/homepage_3_high_res.jpg';
@@ -11,9 +12,7 @@ import homepage_02_lowRes from '../images/home/homepage_2_low_res.jpg';
 import homepage_03_lowRes from '../images/home/homepage_3_low_res.jpg';
 import homepage_04_lowRes from '../images/home/homepage_4_low_res.jpg';
 import homepage_05_lowRes from '../images/home/homepage_5_low_res.jpg';
-import Image from '../components/Image';
 import SocialMediaLink from '../components/SocialMediaLink';
-import { useRef, useState, useEffect } from 'react';
 
 const Home = () => {
 	return (
@@ -35,7 +34,23 @@ export const DesktopContent = () => {
 			<div className='content'>
 				<div className='content-container'>
 					<div className='carousel'>
-						<Carousel />
+						<Carousel
+							lowRes={[
+								homepage_01_lowRes,
+								homepage_02_lowRes,
+								homepage_03_lowRes,
+								homepage_04_lowRes,
+								homepage_05_lowRes,
+							]}
+							highRes={[
+								homepage_01_highRes,
+								homepage_02_highRes,
+								homepage_03_highRes,
+								homepage_04_highRes,
+								homepage_05_highRes,
+							]}
+							length={5}
+						/>
 					</div>
 					<div className='description-container'>
 						<p>
@@ -104,21 +119,6 @@ export const DesktopDiv = styled.div`
 					height: 100%;
 					width: 100%;
 					background-color: rgb(18, 17, 31);
-
-					& > img {
-						transition: all 1s;
-						position: absolute;
-					}
-
-					& > .img-show {
-						max-width: 100%;
-						max-height: 100%;
-						left: 50%;
-						top: 50%;
-						transform: translate(-50%, -50%);
-						z-index: 2;
-						opacity: 1;
-					}
 
 					& > .left {
 						position: absolute;
@@ -240,11 +240,28 @@ export const MobileContent = () => {
 						</div>
 					</div>
 				</div>
+				<div className='email'>abordale.equestrian@gmail.com</div>
 			</div>
 			<div className='content'>
 				<div className='content-container'>
 					<div className='carousel'>
-						<Carousel />
+						<Carousel
+							lowRes={[
+								homepage_01_lowRes,
+								homepage_02_lowRes,
+								homepage_03_lowRes,
+								homepage_04_lowRes,
+								homepage_05_lowRes,
+							]}
+							highRes={[
+								homepage_01_highRes,
+								homepage_02_highRes,
+								homepage_03_highRes,
+								homepage_04_highRes,
+								homepage_05_highRes,
+							]}
+							length={5}
+						/>
 					</div>
 				</div>
 			</div>
@@ -263,13 +280,54 @@ export const MobileDiv = styled.div`
 
 	& > h2 {
 		text-align: center;
+		margin: 2.5% 2.5%;
 	}
 
 	& > .welcome-message {
-		margin: 0 5% 5%;
+		margin: 0 5% 0;
 		line-height: 125%;
 		text-align: left;
 		padding: 0.5em;
+	}
+
+	& > .get-started {
+		width: 95%;
+		display: flex;
+		flex-direction: column;
+
+		& > .get-started-container {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			position: relative;
+			margin: 2.5% 0 0;
+
+			& > h2 {
+				width: 50%;
+				text-align: center;
+			}
+
+			& > .right-side {
+				width: 50%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+
+				& > .social-media {
+					width: 100%;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					justify-content: space-evenly;
+				}
+			}
+		}
+		& > .email {
+			width: 95%;
+			text-align: right;
+			margin: 0 2.5% 2.5% 2.5%;
+		}
 	}
 
 	& > .content {
@@ -350,168 +408,4 @@ export const MobileDiv = styled.div`
 			}
 		}
 	}
-
-	& > .get-started {
-		width: 95%;
-		display: flex;
-		flex-direction: column;
-		margin-top: 5%;
-
-		& > .get-started-container {
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			position: relative;
-			margin: 2.5% 0;
-
-			& > h2 {
-				width: 50%;
-				text-align: center;
-			}
-
-			& > .right-side {
-				width: 50%;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-
-				& > .social-media {
-					width: 100%;
-					display: flex;
-					flex-direction: row;
-					align-items: center;
-					justify-content: space-evenly;
-				}
-			}
-		}
-	}
 `;
-
-/************************************************************* Component ****************************************************************************/
-
-export const Carousel = () => {
-	const [imgNumber, setImgNumber] = useState(1);
-	let current_num = useRef(imgNumber);
-	let timerID = useRef(null);
-
-	const NUMBER_IMAGES = 5;
-
-	let img_src_highRes, img_src_lowRes, img_alt;
-
-	switch (imgNumber) {
-		case 1:
-			img_src_highRes = homepage_01_highRes;
-			img_src_lowRes = homepage_01_lowRes;
-			img_alt = 'Facility 01';
-			break;
-		case 2:
-			img_src_highRes = homepage_02_highRes;
-			img_src_lowRes = homepage_02_lowRes;
-			img_alt = 'Facility 02';
-			break;
-		case 3:
-			img_src_highRes = homepage_03_highRes;
-			img_src_lowRes = homepage_03_lowRes;
-			img_alt = 'Facility 03';
-			break;
-		case 4:
-			img_src_highRes = homepage_04_highRes;
-			img_src_lowRes = homepage_04_lowRes;
-			img_alt = 'Facility 04';
-			break;
-		case 5:
-			img_src_highRes = homepage_05_highRes;
-			img_src_lowRes = homepage_05_lowRes;
-			img_alt = 'Facility 05';
-			break;
-
-		default:
-			break;
-	}
-
-	const handleClick = (side) => {
-		if (side === 'left') {
-			if (imgNumber > 1) {
-				setImgNumber(imgNumber - 1);
-				current_num.current--;
-			} else {
-				setImgNumber(NUMBER_IMAGES);
-				current_num.current = NUMBER_IMAGES;
-			}
-			clearInterval(timerID.current);
-		}
-		if (side === 'right') {
-			if (imgNumber < NUMBER_IMAGES) {
-				setImgNumber(imgNumber + 1);
-				current_num.current++;
-			} else {
-				setImgNumber(1);
-				current_num.current = 1;
-			}
-		}
-		clearInterval(timerID.current);
-	};
-
-	useEffect(() => {
-		timerID.current = setInterval(() => {
-			current_num.current < NUMBER_IMAGES ? current_num.current++ : (current_num.current = 1);
-			setImgNumber(current_num.current);
-		}, 5000);
-
-		return () => clearInterval(timerID.current);
-	}, [imgNumber]);
-
-	const styleWrapperCarousel = {
-		position: 'absolute',
-		width: '100%',
-		height: '100%',
-		overflowX: 'hidden',
-	};
-
-	const styleImageCarousel = {
-		position: 'absolute',
-		width: 'auto',
-		height: 'auto',
-		maxHeight: '100%',
-		maxWidth: '120%',
-		left: '50%',
-		top: '50%',
-		transform: 'translate(-50%, -50%)',
-		zIndex: '2',
-	};
-
-	return (
-		<>
-			<div className='img-div'>
-				<Image
-					styleWrapper={styleWrapperCarousel}
-					styleImage={styleImageCarousel}
-					lowResSrc={img_src_lowRes}
-					highResSrc={img_src_highRes}
-					alt={img_alt}
-				/>
-				<div
-					className='left'
-					onClick={() => {
-						handleClick('left');
-					}}>
-					<i
-						className='bi bi-chevron-double-left'
-						style={{ fontSize: '25px' }}
-					/>
-				</div>
-				<div
-					className='right'
-					onClick={() => {
-						handleClick('right');
-					}}>
-					<i
-						className='bi bi-chevron-double-right'
-						style={{ fontSize: '25px' }}
-					/>
-				</div>
-			</div>
-		</>
-	);
-};
