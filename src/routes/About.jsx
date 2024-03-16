@@ -53,22 +53,18 @@ export const DesktopContent = () => {
 							/>
 						</div>
 						<h2>Sean Jenkin</h2>
-						<h3>Your Versatile Equestrian Expert</h3>
+						<h3>Owner and Head Coach</h3>
 						<p className='bio'>
-							With a deep passion for equine excellence, Sean stands as a versatile
-							equestrian professional specializing in eventing, hunter/jumper, and
-							dressage. He brings years of dedicated experience to the arena,
-							seamlessly blending expertise across disciplines. As a seasoned trainer,
-							Sean has honed a unique approach that not only focuses on technical
-							precision but also nurtures the unique bond between rider and horse.
-							With a commitment to cultivating well-rounded equestrians, he tailors
-							training programs to suit riders of all levels, from aspiring novices to
-							seasoned competitors. Embark on a transformative journey with Sean,
-							where the artistry of dressage, the precision of hunter/jumper, and the
-							exhilaration of eventing converge into a holistic and enriching
-							equestrian experience. Whether you're aiming for the podium or seeking a
-							harmonious connection with your equine partner, Sean is here to guide
-							you every stride of the way.
+							Sean has been an equestrian coach for 25 years in Ontario and Florida.
+							He has coached children and adults up to 1.25m in jumpers, 4-foot
+							working hunters (gold), intermediate (3-star) in eventing, Prix St
+							Georges in dressage, and Level 4 in para-dressage. His coaching
+							philosophy is centered around creating a safe, inclusive, and supportive
+							environment for all riders, aiming to nurture their passion for horses
+							and the equestrian sport. He is committed to guiding each rider in
+							achieving their personal goals, whether they are pursuing riding for
+							competitive success or as a leisure activity, ensuring a balanced
+							approach that caters to individual aspirations and skill levels.
 						</p>
 					</div>
 				</div>
@@ -83,19 +79,18 @@ export const DesktopContent = () => {
 							/>
 						</div>
 						<h2>Brandon Fehér</h2>
-						<h3>Your Guardian of Equine Comfort and Care</h3>
+						<h3>Owner and Barn Manager</h3>
 						<p className='bio'>
-							As the dedicated Barn Manager at Abordale, Brandon brings a wealth of
-							experience and passion to the heart of our facility. With a keen eye for
-							detail and a deep love for horses, he oversees the daily operations of
-							our stables, ensuring the well-being, comfort, and health of every
-							equine resident. Brandon is not only a skilled organizer and caretaker
-							but also a friendly face for our equestrian community. From coordinating
-							feeding schedules to maintaining pristine facilities, he plays a pivotal
-							role in creating a nurturing environment where both horses and their
-							human companions thrive. Trust Brandon to uphold the highest standards
-							of care, making Abordale a home where horses receive the attention and
-							devotion they deserve.
+							Brandon is a seasoned horse-care professional with nearly 20 years of
+							experience, including leadership roles as a barn manager at Dewmont
+							Farms and Prestige Woods in the Ottawa area. His approach to horse care
+							is grounded in the philosophy that horses thrive when allowed to spend
+							as much time as possible outdoors, conditions permitting. Brandon is
+							dedicated to ensuring the health and happiness of every horse, crafting
+							specialized feed plans that cater to the unique requirements of each
+							animal. He believes that the essence of a great riding experience is
+							rooted in the welfare of the horse, with a focus on maintaining their
+							contentment and health.
 						</p>
 					</div>
 				</div>
@@ -152,6 +147,7 @@ export const DesktopDiv = styled.div`
 				}
 
 				& > .bio {
+					font-size: 1.1em;
 					line-height: 125%;
 				}
 			}
@@ -187,7 +183,7 @@ export const MobileContent = () => {
 			<div className='staff'>
 				<div className='staff-container'>
 					<h2>Sean Jenkin</h2>
-					<h3>Your Versatile Equestrian Expert</h3>
+					<h3>Owner and Head Coach</h3>
 					<div className='image'>
 						<Image
 							styleWrapper={styleWrapper}
@@ -197,22 +193,21 @@ export const MobileContent = () => {
 						/>
 					</div>
 					<p className='bio'>
-						He brings years of dedicated experience to the arena, seamlessly blending
-						expertise across disciplines. As a seasoned trainer, Sean has honed a unique
-						approach that not only focuses on technical precision but also nurtures the
-						unique bond between rider and horse. With a commitment to cultivating
-						well-rounded equestrians, he tailors training programs to suit riders of all
-						levels, from aspiring novices to seasoned competitors. Embark on a
-						transformative journey with Sean, where the artistry of dressage, the
-						precision of hunter/jumper, and the exhilaration of eventing converge into a
-						holistic and enriching equestrian experience. Whether you're aiming for the
-						podium or seeking a harmonious connection with your equine partner, Sean is
-						here to guide you every stride of the way.
+						Sean has been an equestrian coach for 25 years in Ontario and Florida. He
+						has coached children and adults up to 1.25m in jumpers, 4-foot working
+						hunters (gold), intermediate (3-star) in eventing, Prix St Georges in
+						dressage, and Level 4 in para-dressage. His coaching philosophy is centered
+						around creating a safe, inclusive, and supportive environment for all
+						riders, aiming to nurture their passion for horses and the equestrian sport.
+						He is committed to guiding each rider in achieving their personal goals,
+						whether they are pursuing riding for competitive success or as a leisure
+						activity, ensuring a balanced approach that caters to individual aspirations
+						and skill levels.
 					</p>
 				</div>
 				<div className='staff-container'>
 					<h2>Brandon Fehér</h2>
-					<h3>Your Guardian of Equine Comfort and Care</h3>
+					<h3>Owner and Barn Manager</h3>
 					<div className='image'>
 						<Image
 							styleWrapper={styleWrapper}
@@ -222,17 +217,15 @@ export const MobileContent = () => {
 						/>
 					</div>
 					<p className='bio'>
-						As the dedicated Barn Manager at Abordale, Brandon brings a wealth of
-						experience and passion to the heart of our facility. With a keen eye for
-						detail and a deep love for horses, he oversees the daily operations of our
-						stables, ensuring the well-being, comfort, and health of every equine
-						resident. Brandon is not only a skilled organizer and caretaker but also a
-						friendly face for our equestrian community. From coordinating feeding
-						schedules to maintaining pristine facilities, he plays a pivotal role in
-						creating a nurturing environment where both horses and their human
-						companions thrive. Trust Brandon to uphold the highest standards of care,
-						making Abordale a home where horses receive the attention and devotion they
-						deserve.
+						Brandon is a seasoned horse-care professional with nearly 20 years of
+						experience, including leadership roles as a barn manager at Dewmont Farms
+						and Prestige Woods in the Ottawa area. His approach to horse care is
+						grounded in the philosophy that horses thrive when allowed to spend as much
+						time as possible outdoors, conditions permitting. Brandon is dedicated to
+						ensuring the health and happiness of every horse, crafting specialized feed
+						plans that cater to the unique requirements of each animal. He believes that
+						the essence of a great riding experience is rooted in the welfare of the
+						horse, with a focus on maintaining their contentment and health.
 					</p>
 				</div>
 			</div>

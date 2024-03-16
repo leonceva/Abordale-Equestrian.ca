@@ -55,14 +55,19 @@ export const DesktopContent = () => {
 					</div>
 					<div className='description-container'>
 						<p>
-							The equestrian center boasts a range of well-maintained facilities
-							catering to horse enthusiasts of all levels. The center includes
-							spacious and secure stables, an expansive riding arena, and well-groomed
-							trails for leisurely rides. Riders can make use of basic equipment and
-							grooming areas, while the center also provides a cozy clubhouse for
-							gatherings and events. With a focus on functionality and comfort, the
-							equestrian center offers a welcoming environment for both riders and
-							their equine companions.
+							Abordale Equestrian, nestled in the scenic west of Ottawa in
+							Stittsville, just a 20-minute drive from Wesley Clover Parks, offers a
+							quality equestrian experience on a sprawling 100-acre property. The farm
+							boasts a heated indoor arena and two outdoor sand rings, providing ample
+							space for year-round riding and training. Riders can also explore the
+							many hacking trails that wind through the property, offering a relaxing
+							escape into nature. The facility ensures rider comfort with a heated
+							lounge and a heated tack room equipped with lockers for boarders. With
+							four tack-up bays, as well as two indoor and two outdoor wash stalls,
+							the facility caters to all equestrian needs. Abordale Equestrian
+							provides riding lessons for all skill levels, from beginners to
+							competitive riders, ensuring personalized attention and growth for each
+							individual.
 						</p>
 						<div className='button-container'>
 							<h2>Get In Touch</h2>
@@ -79,6 +84,7 @@ export const DesktopContent = () => {
 								type='email'
 							/>
 						</div>
+						<div className='address'>6575 Flewellyn Road, Stittsville, ON K2S 1B6</div>
 						<div className='email'>abordale.equestrian@gmail.com</div>
 					</div>
 				</div>
@@ -196,7 +202,8 @@ export const DesktopDiv = styled.div`
 					align-items: center;
 				}
 
-				& > .email {
+				& > .address,
+				.email {
 					text-align: center;
 					font-size: 1.3em;
 					width: 100%;
@@ -233,13 +240,17 @@ export const MobileContent = () => {
 		<MobileDiv>
 			<h2>Welcome To Abordale Equestrian</h2>
 			<div className='welcome-message'>
-				Discover the perfect blend of passion and purpose at Abordale Equestrian. Located
-				just south of Stittsville, our premier facility offers top-notch boarding, expert
-				training, and enriching riding lessons. Immerse yourself in a community dedicated to
-				the well-being of horses and the joy of riding. Explore our state-of-the-art
-				facilities, meet our experienced trainers, and embark on an exciting journey where
-				every hoofbeat tells a story. Welcome to Abordale Equestrian, where the love for
-				horses knows no bounds. Saddle up and let the adventure begin!
+				Abordale Equestrian, nestled in the scenic west of Ottawa in Stittsville, just a
+				20-minute drive from Wesley Clover Parks, offers a quality equestrian experience on
+				a sprawling 100-acre property. The farm boasts a heated indoor arena and two outdoor
+				sand rings, providing ample space for year-round riding and training. Riders can
+				also explore the many hacking trails that wind through the property, offering a
+				relaxing escape into nature. The facility ensures rider comfort with a heated lounge
+				and a heated tack room equipped with lockers for boarders. With four tack-up bays,
+				as well as two indoor and two outdoor wash stalls, the facility caters to all
+				equestrian needs. Abordale Equestrian provides riding lessons for all skill levels,
+				from beginners to competitive riders, ensuring personalized attention and growth for
+				each individual.
 			</div>
 			<div className='get-started'>
 				<div className='get-started-container'>
@@ -261,6 +272,7 @@ export const MobileContent = () => {
 						</div>
 					</div>
 				</div>
+				<div className='address'>6575 Flewellyn Road, Stittsville, ON K2S 1B6</div>
 				<div className='email'>abordale.equestrian@gmail.com</div>
 			</div>
 			<div className='img-container'>
@@ -364,7 +376,8 @@ export const MobileDiv = styled.div`
 				}
 			}
 		}
-		& > .email {
+		& > .address,
+		.email {
 			width: 95%;
 			text-align: right;
 			margin: 0 2.5% 2.5% 2.5%;

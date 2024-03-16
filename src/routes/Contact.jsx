@@ -73,6 +73,7 @@ export const DesktopContent = () => {
 							/>
 						</div>
 					</div>
+					<div className='address'>6575 Flewellyn Road, Stittsville, ON K2S 1B6</div>
 					<div className='email'>abordale.equestrian@gmail.com</div>
 					<div className='map-container'>
 						<Map />
@@ -147,8 +148,9 @@ export const DesktopDiv = styled.div`
 				}
 			}
 
-			& > .email {
-				margin-bottom: 1em;
+			& > .address,
+			.email {
+				margin-bottom: 0.5em;
 				font-weight: bold;
 				font-size: 1.2em;
 			}
@@ -187,7 +189,14 @@ export const MobileContent = () => {
 						/>
 					</div>
 				</div>
-				<p className='heading-font'>
+				<p
+					className='heading-font'
+					style={{ margin: '1em 0 0.5em' }}>
+					<strong>6575 Flewellyn Road, Stittsville, ON K2S 1B6</strong>
+				</p>
+				<p
+					className='heading-font'
+					style={{ margin: '0.5em 0' }}>
 					<strong>abordale.equestrian@gmail.com</strong>
 				</p>
 				<div className='map-container'>

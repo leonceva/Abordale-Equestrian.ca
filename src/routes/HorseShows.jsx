@@ -50,10 +50,14 @@ export const DesktopContent = () => {
 				/>
 			</div>
 			<div className='intro'>
-				Explore past events, witness memorable moments, and experience the dynamic spirit of
-				our equestrian community. Whether you're a passionate enthusiast or a newcomer to
-				the world of horse shows, this page is your window into the captivating world of
-				equestrian sports. Dive in and discover the beauty of horsemanship in action.
+				Abordale Equestrian actively participates in hunter/jumper, eventing, and dressage
+				horse shows at the Gold, Silver, and Bronze levels, primarily focusing on horse
+				shows in the Ottawa area but also extending to competitions in Quebec and other
+				venues in Ontario. Our commitment to you and your horse extends far beyond our farm;
+				at each show, we ensure your horse receives the utmost care, handling all aspects of
+				their needs to ensure they are show-ready and comfortable. Additionally, you will
+				benefit from comprehensive coaching for the entire duration of the show, providing
+				you with the guidance, support, and expertise needed to perform at your best.
 			</div>
 		</DesktopDiv>
 	);
@@ -165,10 +169,14 @@ export const MobileContent = () => {
 	return (
 		<MobileDiv>
 			<div className='intro'>
-				Explore past events, witness memorable moments, and experience the dynamic spirit of
-				our equestrian community. Whether you're a passionate enthusiast or a newcomer to
-				the world of horse shows, this page is your window into the captivating world of
-				equestrian sports. Dive in and discover the beauty of horsemanship in action.
+				Abordale Equestrian actively participates in hunter/jumper, eventing, and dressage
+				horse shows at the Gold, Silver, and Bronze levels, primarily focusing on horse
+				shows in the Ottawa area but also extending to competitions in Quebec and other
+				venues in Ontario. Our commitment to you and your horse extends far beyond our farm;
+				at each show, we ensure your horse receives the utmost care, handling all aspects of
+				their needs to ensure they are show-ready and comfortable. Additionally, you will
+				benefit from comprehensive coaching for the entire duration of the show, providing
+				you with the guidance, support, and expertise needed to perform at your best.
 			</div>
 			<div className='img-container'>
 				<div className='img-wrapper'>

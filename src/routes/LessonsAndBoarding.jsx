@@ -49,37 +49,86 @@ export const DesktopContent = () => {
 					length={5}
 				/>
 			</div>
-			<div className='intro'>
+			<div className='lessons'>
+				<h4>Lessons</h4>
 				<p>
-					Explore equestrian excellence with our tailored lessons and boarding options.
-					Our instructors cater to all levels, forging a meaningful connection between
-					riders and horses. Our boarding facilities prioritize the well-being of your
-					equine companions, providing a secure and nurturing environment. Join us for a
-					journey into the timeless beauty of horse riding and companionship.
+					Abordale Equestrian provides a comprehensive lesson program catering to a wide
+					range of riders, from beginners to those at an advanced competitive level, under
+					the guidance of Sean Jenkin, an Equestrian Canada Licensed Coach with 25 years
+					of experience. Each lesson is structured to last 45 minutes, ensuring ample time
+					for personalized instruction and skill development. To maximize the learning
+					experience, lessons are offered either privately or as semi-private sessions,
+					paired with another rider of a comparable skill level, fostering a supportive
+					and conducive learning environment.
 				</p>
-				<h3 className='start'>
-					Contact us for details regarding boarding or to book your first lesson. We look
-					forward to riding with you!
-				</h3>
+			</div>
+			<div className='boarding'>
+				<h4>Boarding</h4>
+				<p>
+					Abordale Equestrian is dedicated to providing top-notch care for your horses,
+					offering both full- service indoor and outdoor boarding options to meet a
+					variety of needs.
+				</p>
+				<p>
+					<span style={{ fontWeight: '900', textDecoration: 'underline' }}>
+						Our full-service indoor board
+					</span>{' '}
+					includes daily water, hay, and grain feedings twice a day, along with blanketing
+					and booting services as needed. Each horse enjoys regular turnout to ensure
+					their well-being, and an individualized feed plan is crafted to meet their
+					specific nutritional requirements. We also take care of administering any
+					supplements and medications provided by the owner and will bring in your horse
+					for veterinary, farrier, and other scheduled appointments, ensuring they receive
+					all necessary care without any inconvenience to you.
+				</p>
+				<p>
+					For those opting for our outdoor{' '}
+					<span style={{ fontWeight: '900', textDecoration: 'underline' }}>
+						boarding option,
+					</span>{' '}
+					we provide comprehensive care that includes daily access to water, hay, and a
+					grain feeding once a day. Each horse benefits from a personalized feed plan
+					designed to meet their unique nutritional needs, and we ensure the
+					administration of any supplements and medications provided by the owner. When it
+					comes to veterinary, farrier, or other scheduled appointments, we offer the
+					convenience of bringing your horse in from the paddock to prepare them for their
+					appointment.
+				</p>
+				<p>
+					Please be aware that although we gladly assist with vet and farrier appointments
+					by bringing your horse in, should there be a need for us to hold your horse
+					during these appointments, this service is offered at an additional cost. This
+					ensures that your horse receives the attentive care it requires, while also
+					providing you with the flexibility you seek.
+				</p>
 			</div>
 		</DesktopDiv>
 	);
 };
 
 export const DesktopDiv = styled.div`
+	min-width: 70vw;
 	width: 100%;
-	height: fit-content;
+	height: min-content;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
 	align-items: center;
 	margin-top: 2em;
+	flex-wrap: wrap;
 
-	& > .intro {
+	& > .lessons {
 		width: 35%;
 		margin: 2.5% 0;
 		text-align: justify;
 		padding: 1em;
+	}
+
+	& > .boarding {
+		width: 100%;
+		text-align: justify;
+		padding: 1em;
+		margin-bottom: 2.5%;
 	}
 
 	& > .carousel {
@@ -172,17 +221,55 @@ export const MobileContent = () => {
 	return (
 		<MobileDiv>
 			<div className='intro'>
+				<h4>Lessons</h4>
 				<p>
-					Explore equestrian excellence with our tailored lessons and boarding options.
-					Our instructors cater to all levels, forging a meaningful connection between
-					riders and horses. Our boarding facilities prioritize the well-being of your
-					equine companions, providing a secure and nurturing environment. Join us for a
-					journey into the timeless beauty of horse riding and companionship.
+					Abordale Equestrian provides a comprehensive lesson program catering to a wide
+					range of riders, from beginners to those at an advanced competitive level, under
+					the guidance of Sean Jenkin, an Equestrian Canada Licensed Coach with 25 years
+					of experience. Each lesson is structured to last 45 minutes, ensuring ample time
+					for personalized instruction and skill development. To maximize the learning
+					experience, lessons are offered either privately or as semi-private sessions,
+					paired with another rider of a comparable skill level, fostering a supportive
+					and conducive learning environment.
 				</p>
-				<h3 className='start'>
-					Contact us for details regarding boarding or to book your first lesson. We look
-					forward to riding with you!
-				</h3>
+				<h4>Boarding</h4>
+				<p>
+					Abordale Equestrian is dedicated to providing top-notch care for your horses,
+					offering both full- service indoor and outdoor boarding options to meet a
+					variety of needs.
+				</p>
+				<p>
+					<span style={{ fontWeight: '900', textDecoration: 'underline' }}>
+						Our full-service indoor board
+					</span>{' '}
+					includes daily water, hay, and grain feedings twice a day, along with blanketing
+					and booting services as needed. Each horse enjoys regular turnout to ensure
+					their well-being, and an individualized feed plan is crafted to meet their
+					specific nutritional requirements. We also take care of administering any
+					supplements and medications provided by the owner and will bring in your horse
+					for veterinary, farrier, and other scheduled appointments, ensuring they receive
+					all necessary care without any inconvenience to you.
+				</p>
+				<p>
+					For those opting for our outdoor{' '}
+					<span style={{ fontWeight: '900', textDecoration: 'underline' }}>
+						boarding option,
+					</span>{' '}
+					we provide comprehensive care that includes daily access to water, hay, and a
+					grain feeding once a day. Each horse benefits from a personalized feed plan
+					designed to meet their unique nutritional needs, and we ensure the
+					administration of any supplements and medications provided by the owner. When it
+					comes to veterinary, farrier, or other scheduled appointments, we offer the
+					convenience of bringing your horse in from the paddock to prepare them for their
+					appointment.
+				</p>
+				<p>
+					Please be aware that although we gladly assist with vet and farrier appointments
+					by bringing your horse in, should there be a need for us to hold your horse
+					during these appointments, this service is offered at an additional cost. This
+					ensures that your horse receives the attentive care it requires, while also
+					providing you with the flexibility you seek.
+				</p>
 			</div>
 			<div className='img-container'>
 				<div className='img-wrapper'>

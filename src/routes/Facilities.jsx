@@ -54,19 +54,26 @@ export const DesktopContent = () => {
 				/>
 			</div>
 			<div className='intro'>
-				Peruse our distinguished equestrian locale, strategically situated just south of
-				Stittsville. This establishment seamlessly merges urban accessibility with serene
-				landscapes, offering an enduring setting for riders and their equine counterparts.
-				Explore our thoughtfully designed amenities, well-appointed stables, and expansive
-				riding arenas, all contributing to an environment committed to the enduring pursuit
-				of equestrian excellence. This is more than a facility; it is a destination where
-				riders and horses forge enduring connections and achievements.
+				Our farm offers extensive facilities, including:
+				<ul>
+					<li>Heated indoor arena (120x60ft)</li>
+					<li>Heated lounge</li>
+					<li>Heated tack room with individual lockers for boarders</li>
+					<li>Two outdoor sand rings</li>
+					<li>Spacious, matted stalls for horse comfort</li>
+					<li>Four tack-up bays</li>
+					<li>Two indoor and two outdoor wash stalls</li>
+					<li>Large paddocks for ample turnout</li>
+					<li>Hackin trails</li>
+					<li>Cross-country jumps in riding fields</li>
+				</ul>
 			</div>
 		</DesktopDiv>
 	);
 };
 
 export const DesktopDiv = styled.div`
+	min-width: 70vw;
 	width: 100%;
 	height: fit-content;
 	display: flex;
@@ -172,13 +179,19 @@ export const MobileContent = () => {
 	return (
 		<MobileDiv>
 			<div className='intro'>
-				Peruse our distinguished equestrian locale, strategically situated just south of
-				Stittsville. This establishment seamlessly merges urban accessibility with serene
-				landscapes, offering an enduring setting for riders and their equine counterparts.
-				Explore our thoughtfully designed amenities, well-appointed stables, and expansive
-				riding arenas, all contributing to an environment committed to the enduring pursuit
-				of equestrian excellence. This is more than a facility; it is a destination where
-				riders and horses forge enduring connections and achievements.
+				Our farm offers extensive facilities, including:
+				<ul>
+					<li>Heated indoor arena (120x60ft)</li>
+					<li>Heated lounge</li>
+					<li>Heated tack room with individual lockers for boarders</li>
+					<li>Two outdoor sand rings</li>
+					<li>Spacious, matted stalls for horse comfort</li>
+					<li>Four tack-up bays</li>
+					<li>Two indoor and two outdoor wash stalls</li>
+					<li>Large paddocks for ample turnout</li>
+					<li>Hackin trails</li>
+					<li>Cross-country jumps in riding fields</li>
+				</ul>
 			</div>
 			<div className='img-container'>
 				<div className='img-wrapper'>
