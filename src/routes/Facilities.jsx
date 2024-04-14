@@ -32,6 +32,21 @@ export default Facilities;
 export const DesktopContent = () => {
 	return (
 		<DesktopDiv>
+			<div className='intro'>
+				Our farm offers extensive facilities, including:
+				<ul>
+					<li>Heated indoor arena (120x60ft)</li>
+					<li>Heated lounge</li>
+					<li>Heated tack room with individual lockers for boarders</li>
+					<li>Two outdoor sand rings</li>
+					<li>Spacious, matted stalls for horse comfort</li>
+					<li>Four tack-up bays</li>
+					<li>Two indoor and two outdoor wash stalls</li>
+					<li>Large paddocks for ample turnout</li>
+					<li>Hackin trails</li>
+					<li>Cross-country jumps in riding fields</li>
+				</ul>
+			</div>
 			<div className='carousel'>
 				<Carousel
 					lowRes={[
@@ -53,21 +68,6 @@ export const DesktopContent = () => {
 					length={6}
 				/>
 			</div>
-			<div className='intro'>
-				Our farm offers extensive facilities, including:
-				<ul>
-					<li>Heated indoor arena (120x60ft)</li>
-					<li>Heated lounge</li>
-					<li>Heated tack room with individual lockers for boarders</li>
-					<li>Two outdoor sand rings</li>
-					<li>Spacious, matted stalls for horse comfort</li>
-					<li>Four tack-up bays</li>
-					<li>Two indoor and two outdoor wash stalls</li>
-					<li>Large paddocks for ample turnout</li>
-					<li>Hackin trails</li>
-					<li>Cross-country jumps in riding fields</li>
-				</ul>
-			</div>
 		</DesktopDiv>
 	);
 };
@@ -79,24 +79,39 @@ export const DesktopDiv = styled.div`
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
-	align-items: center;
+	flex-wrap: wrap;
+	align-items: top;
 	margin-top: 2em;
 
 	& > .intro {
 		width: 35%;
-		margin: 2.5% 0;
-		text-align: justify;
+		@media screen and (max-width: 1100px) {
+			width: 100%;
+		}
+		margin-top: 1em;
+		text-align: left;
 		padding: 1em;
 	}
 
 	& > .carousel {
-		width: 60%;
-		height: 100%;
+		width: calc(max(300px, 60%));
+		height: 70vh;
+		@media screen and (max-width: 1100px) {
+			width: 80%;
+			height: 50vh;
+			margin-top: 1em;
+			margin-bottom: 1em;
+		}
 		border: 2px solid black;
 		position: relative;
 
 		& > .img-div {
 			height: 70vh;
+			@media screen and (max-width: 1100px) {
+				width: 80%;
+				height: 50vh;
+			}
+
 			width: 100%;
 			background-color: rgb(18, 17, 31);
 

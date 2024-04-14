@@ -109,7 +109,7 @@ export const DesktopContent = () => {
 export const DesktopDiv = styled.div`
 	min-width: 70vw;
 	width: 100%;
-	height: min-content;
+	height: fit-content;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
@@ -118,8 +118,8 @@ export const DesktopDiv = styled.div`
 	flex-wrap: wrap;
 
 	& > .lessons {
-		width: 35%;
-		margin: 2.5% 0;
+		width: 30%;
+		margin: 2% 0;
 		text-align: justify;
 		padding: 1em;
 	}

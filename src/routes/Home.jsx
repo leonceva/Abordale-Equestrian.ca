@@ -69,6 +69,8 @@ export const DesktopContent = () => {
 							competitive riders, ensuring personalized attention and growth for each
 							individual.
 						</p>
+					</div>
+					<div className='contact-info'>
 						<div className='button-container'>
 							<h2>Get In Touch</h2>
 							<SocialMediaLink
@@ -103,6 +105,11 @@ export const DesktopDiv = styled.div`
 
 	& > .title {
 		margin: 15px 0;
+		width: 100%;
+		height: 2em;
+		align-items: center;
+		justify-content: center;
+		display: flex;
 	}
 
 	& > .content {
@@ -113,11 +120,12 @@ export const DesktopDiv = styled.div`
 			height: 60vh;
 			display: flex;
 			flex-direction: row;
-			justify-content: start;
+			justify-content: center;
 			align-items: center;
+			flex-wrap: wrap;
 
 			& > .carousel {
-				flex: 3;
+				width: 700px;
 				height: 100%;
 				border: 2px solid black;
 				position: relative;
@@ -180,21 +188,29 @@ export const DesktopDiv = styled.div`
 			}
 
 			& > .description-container {
-				flex: 3;
-				height: 100%;
+				height: fit-content;
 				display: flex;
+				flex: 1;
 				flex-direction: column;
-				justify-content: center;
+				justify-content: start;
 				align-items: center;
-				padding-left: 2em;
+				padding-left: 0.5em;
 
 				& > p {
 					text-align: justify;
-					padding: 0.5em;
+					padding: 0.5em 0.5em 0;
 				}
+			}
+
+			& > .contact-info {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding-bottom: 1em;
 
 				& > .button-container {
-					width: 100%;
+					width: 400px;
 					display: flex;
 					flex-direction: row;
 					justify-content: space-evenly;

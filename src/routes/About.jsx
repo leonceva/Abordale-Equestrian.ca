@@ -82,15 +82,15 @@ export const DesktopContent = () => {
 						<h3>Owner and Barn Manager</h3>
 						<p className='bio'>
 							Brandon is a seasoned horse-care professional with nearly 20 years of
-							experience, including leadership roles as a barn manager at Dewmont
-							Farms and Prestige Woods in the Ottawa area. His approach to horse care
-							is grounded in the philosophy that horses thrive when allowed to spend
-							as much time as possible outdoors, conditions permitting. Brandon is
-							dedicated to ensuring the health and happiness of every horse, crafting
-							specialized feed plans that cater to the unique requirements of each
-							animal. He believes that the essence of a great riding experience is
-							rooted in the welfare of the horse, with a focus on maintaining their
-							contentment and health.
+							experience, including leadership roles as a barn manager for 10 years at
+							Dewmont Farms in the Ottawa area. His approach to horse care is grounded
+							in the philosophy that horses thrive when allowed to spend as much time
+							as possible outdoors, conditions permitting. Brandon is dedicated to
+							ensuring the health and happiness of every horse, crafting specialized
+							feed plans that cater to the unique requirements of each animal. He
+							believes that the essence of a great riding experience is rooted in the
+							welfare of the horse, with a focus on maintaining their contentment and
+							health.
 						</p>
 					</div>
 				</div>
@@ -218,14 +218,14 @@ export const MobileContent = () => {
 					</div>
 					<p className='bio'>
 						Brandon is a seasoned horse-care professional with nearly 20 years of
-						experience, including leadership roles as a barn manager at Dewmont Farms
-						and Prestige Woods in the Ottawa area. His approach to horse care is
-						grounded in the philosophy that horses thrive when allowed to spend as much
-						time as possible outdoors, conditions permitting. Brandon is dedicated to
-						ensuring the health and happiness of every horse, crafting specialized feed
-						plans that cater to the unique requirements of each animal. He believes that
-						the essence of a great riding experience is rooted in the welfare of the
-						horse, with a focus on maintaining their contentment and health.
+						experience, including leadership roles as a barn manager for 10 years at
+						Dewmont Farms in the Ottawa area. His approach to horse care is grounded in
+						the philosophy that horses thrive when allowed to spend as much time as
+						possible outdoors, conditions permitting. Brandon is dedicated to ensuring
+						the health and happiness of every horse, crafting specialized feed plans
+						that cater to the unique requirements of each animal. He believes that the
+						essence of a great riding experience is rooted in the welfare of the horse,
+						with a focus on maintaining their contentment and health.
 					</p>
 				</div>
 			</div>

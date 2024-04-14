@@ -1,11 +1,21 @@
 import styled from 'styled-components';
 import DesktopLayout from '../layouts/DesktopLayout';
 import MobileLayout from '../layouts/MobileLayout';
-import contact_01_highRes from '../images/contact/contact_1_high_res.png';
-import contact_01_lowRes from '../images/contact/contact_1_low_res.png';
 import SocialMediaLink from '../components/SocialMediaLink';
 import Map from '../components/Map';
-import Image from '../components/Image';
+import Carousel from '../components/Carousel';
+import contact_01_highRes from '../images/contact/contact_high_res_01.jpg';
+import contact_02_highRes from '../images/contact/contact_high_res_02.jpg';
+import contact_03_highRes from '../images/contact/contact_high_res_03.jpg';
+import contact_04_highRes from '../images/contact/contact_high_res_04.jpg';
+import contact_05_highRes from '../images/contact/contact_high_res_05.jpg';
+import contact_06_highRes from '../images/contact/contact_high_res_06.jpg';
+import contact_01_lowRes from '../images/contact/contact_low_res_01.jpg';
+import contact_02_lowRes from '../images/contact/contact_low_res_02.jpg';
+import contact_03_lowRes from '../images/contact/contact_low_res_03.jpg';
+import contact_04_lowRes from '../images/contact/contact_low_res_04.jpg';
+import contact_05_lowRes from '../images/contact/contact_low_res_05.jpg';
+import contact_06_lowRes from '../images/contact/contact_low_res_06.jpg';
 
 const Contact = () => {
 	return (
@@ -21,63 +31,57 @@ export default Contact;
 /************************************************************* DESKTOP MODE ****************************************************************************/
 
 export const DesktopContent = () => {
-	const styleWrapper = {
-		position: 'absolute',
-		width: '100%',
-		height: '100%',
-	};
-
-	const styleImage = {
-		maxHeight: 'calc(100% - 4px)',
-		maxWidth: 'calc(100% - 4px)',
-		position: 'absolute',
-		left: '50%',
-		bottom: '0%',
-		transform: 'translate(-50%, 0)',
-		border: '2px solid #333',
-	};
-
 	return (
 		<DesktopDiv>
-			<div className='top-space'>Placeholder</div>
-			<div className='container'>
-				<div className='img-wrapper'>
-					<Image
-						styleWrapper={styleWrapper}
-						styleImage={styleImage}
-						lowResSrc={contact_01_lowRes}
-						highResSrc={contact_01_highRes}
-					/>
+			<div className='carousel'>
+				<Carousel
+					lowRes={[
+						contact_01_lowRes,
+						contact_02_lowRes,
+						contact_03_lowRes,
+						contact_04_lowRes,
+						contact_05_lowRes,
+						contact_06_lowRes,
+					]}
+					highRes={[
+						contact_01_highRes,
+						contact_02_highRes,
+						contact_03_highRes,
+						contact_04_highRes,
+						contact_05_highRes,
+						contact_06_highRes,
+					]}
+					length={6}
+				/>
+			</div>
+			<div className='info'>
+				<div className='social-media'>
+					<div className='link-wrapper'>
+						<SocialMediaLink
+							type='instagram'
+							size='40px'
+							className='link'
+						/>
+					</div>
+					<div className='link-wrapper'>
+						<SocialMediaLink
+							type='facebook'
+							size='40px'
+							className='link'
+						/>
+					</div>
+					<div className='link-wrapper'>
+						<SocialMediaLink
+							type='email'
+							size='40px'
+							className='link'
+						/>
+					</div>
 				</div>
-				<div className='info'>
-					<div className='social-media'>
-						<div className='link-wrapper'>
-							<SocialMediaLink
-								type='instagram'
-								size='40px'
-								className='link'
-							/>
-						</div>
-						<div className='link-wrapper'>
-							<SocialMediaLink
-								type='facebook'
-								size='40px'
-								className='link'
-							/>
-						</div>
-						<div className='link-wrapper'>
-							<SocialMediaLink
-								type='email'
-								size='40px'
-								className='link'
-							/>
-						</div>
-					</div>
-					<div className='address'>6575 Flewellyn Road, Stittsville, ON K2S 1B6</div>
-					<div className='email'>abordale.equestrian@gmail.com</div>
-					<div className='map-container'>
-						<Map />
-					</div>
+				<div className='address'>6575 Flewellyn Road, Stittsville, ON K2S 1B6</div>
+				<div className='email'>abordale.equestrian@gmail.com</div>
+				<div className='map-container'>
+					<Map />
 				</div>
 			</div>
 		</DesktopDiv>
@@ -85,75 +89,131 @@ export const DesktopContent = () => {
 };
 
 export const DesktopDiv = styled.div`
-	width: auto;
+	min-width: 75vw;
+	width: fit-content;
+	height: fit-content;
 	display: flex;
-	flex-direction: column;
-	justify-content: start;
-	align-items: end;
+	flex-direction: row;
+	flex-wrap: wrap-reverse;
+	justify-content: space-evenly;
+	align-items: center;
+	margin-top: 2em;
 
-	& > .top-space {
-		margin: 2.5% 0 0;
-		text-align: justify;
-		width: 70vw;
-		max-width: 2000px;
-		color: transparent;
-	}
-
-	& > .container {
-		width: 100%;
-		height: 100%;
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: end;
-
-		& > .img-wrapper {
-			width: 50%;
-			height: 60vh;
-			z-index: 1;
-			position: relative;
-			align-self: end;
+	& > .carousel {
+		width: calc(max(300px, 40%));
+		height: 70vh;
+		@media screen and (max-width: 1100px) {
+			width: 80%;
+			height: 50vh;
+			margin-top: 1em;
+			margin-bottom: 1em;
 		}
+		border: 2px solid black;
+		position: relative;
 
-		& > .info {
-			height: 60vh;
-			display: flex;
-			width: 50%;
-			flex-direction: column;
-			justify-content: start;
-			align-items: center;
-
-			& > .map-container {
-				position: relative;
-				height: 40vh;
-				width: 95%;
-				display: flex;
-				flex-direction: column;
-				justify-content: end;
-				align-items: center;
-				border: 2px solid black;
-				background-color: lightgray;
+		& > .img-div {
+			height: 70vh;
+			@media screen and (max-width: 1100px) {
+				width: 80%;
+				height: 50vh;
 			}
 
-			& > .social-media {
-				display: flex;
-				flex: 1;
-				flex-direction: row;
-				align-items: center;
-				justify-content: space-around;
+			width: 100%;
+			background-color: rgb(18, 17, 31);
 
-				& > .link-wrapper {
-					width: fit-content;
-					padding: 0 20%;
+			& > .left {
+				position: absolute;
+				height: 100%;
+				width: 25px;
+				left: 0;
+				background-color: rgb(18, 17, 31);
+				color: white;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				cursor: pointer;
+				z-index: 3;
+				transition: all 500ms;
+
+				&:hover {
+					width: 40px;
+					background-color: rgb(37, 39, 69);
+					transition: all 200ms;
+				}
+				&:active {
+					transition: all 100ms;
+					width: 20px;
 				}
 			}
+			& > .right {
+				position: absolute;
+				height: 100%;
+				width: 25px;
+				right: 0;
+				background-color: rgb(18, 17, 31);
+				color: white;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				cursor: pointer;
+				z-index: 3;
+				transition: all 500ms;
 
-			& > .address,
-			.email {
-				margin-bottom: 0.5em;
-				font-weight: bold;
-				font-size: 1.2em;
+				&:hover {
+					width: 40px;
+					background-color: rgb(37, 39, 69);
+					transition: all 200ms;
+				}
+
+				&:active {
+					transition: all 100ms;
+					width: 20px;
+				}
 			}
+		}
+	}
+
+	& > .info {
+		height: 70vh;
+		display: flex;
+		width: calc(100% - max(325px, 45%));
+		@media screen and (max-width: 1100px) {
+			width: 100%;
+		}
+		flex-direction: column;
+		justify-content: start;
+		align-items: center;
+
+		& > .map-container {
+			position: relative;
+			flex: 1;
+			width: 95%;
+			display: flex;
+			flex-direction: column;
+			justify-content: end;
+			align-items: center;
+			border: 2px solid black;
+			background-color: lightgray;
+		}
+
+		& > .social-media {
+			width: 300px;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-evenly;
+			margin-bottom: 1em;
+
+			& > .link-wrapper {
+				width: fit-content;
+			}
+		}
+
+		& > .address,
+		.email {
+			margin-bottom: 0.5em;
+			font-weight: bold;
+			font-size: 1.2em;
 		}
 	}
 `;
