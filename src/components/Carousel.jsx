@@ -65,7 +65,7 @@ const Carousel = (props) => {
 		position: 'absolute',
 		width: 'auto',
 		height: 'auto',
-		maxHeight: '100%',
+		maxHeight: '120%',
 		maxWidth: '125%',
 		left: '50%',
 		top: '50%',

@@ -14,6 +14,7 @@ import homepage_03_lowRes from '../images/home/homepage_3_low_res.jpg';
 import homepage_04_lowRes from '../images/home/homepage_4_low_res.jpg';
 import homepage_05_lowRes from '../images/home/homepage_5_low_res.jpg';
 import SocialMediaLink from '../components/SocialMediaLink';
+import devocoux_logo from '../images/devocoux-logo.png';
 
 const Home = () => {
 	return (
@@ -71,23 +72,34 @@ export const DesktopContent = () => {
 						</p>
 					</div>
 					<div className='contact-info'>
-						<div className='button-container'>
-							<h2>Get In Touch</h2>
-							<SocialMediaLink
-								size='35px'
-								type='instagram'
-							/>
-							<SocialMediaLink
-								size='35px'
-								type='facebook'
-							/>
-							<SocialMediaLink
-								size='35px'
-								type='email'
+						<div className='info'>
+							<div className='button-container'>
+								<h2>Get In Touch</h2>
+								<SocialMediaLink
+									size='35px'
+									type='instagram'
+								/>
+								<SocialMediaLink
+									size='35px'
+									type='facebook'
+								/>
+								<SocialMediaLink
+									size='35px'
+									type='email'
+								/>
+							</div>
+							<div className='address'>
+								6575 Flewellyn Road, Stittsville, ON K2S 1B6
+							</div>
+							<div className='email'>abordale.equestrian@gmail.com</div>
+						</div>
+						<div className='info'>
+							<h2>Proudly Sponsored By</h2>
+							<img
+								src={devocoux_logo}
+								alt='Devocoux'
 							/>
 						</div>
-						<div className='address'>6575 Flewellyn Road, Stittsville, ON K2S 1B6</div>
-						<div className='email'>abordale.equestrian@gmail.com</div>
 					</div>
 				</div>
 			</div>
@@ -125,7 +137,7 @@ export const DesktopDiv = styled.div`
 			flex-wrap: wrap;
 
 			& > .carousel {
-				width: 700px;
+				width: calc(min(77vw, 700px));
 				height: 100%;
 				border: 2px solid black;
 				position: relative;
@@ -191,6 +203,7 @@ export const DesktopDiv = styled.div`
 				height: fit-content;
 				display: flex;
 				flex: 1;
+				min-width: 400px;
 				flex-direction: column;
 				justify-content: start;
 				align-items: center;
@@ -205,24 +218,37 @@ export const DesktopDiv = styled.div`
 			& > .contact-info {
 				width: 100%;
 				display: flex;
-				flex-direction: column;
+				flex-direction: row;
 				align-items: center;
-				padding-bottom: 1em;
+				max-height: 200px;
 
-				& > .button-container {
-					width: 400px;
+				& .info {
+					width: 50%;
 					display: flex;
-					flex-direction: row;
-					justify-content: space-evenly;
-					flex-wrap: wrap;
+					flex-direction: column;
 					align-items: center;
-				}
+					padding-bottom: 1em;
+					height: 50%;
 
-				& > .address,
-				.email {
-					text-align: center;
-					font-size: 1.3em;
-					width: 100%;
+					& > .button-container {
+						width: 100%;
+						display: flex;
+						flex-direction: row;
+						justify-content: space-evenly;
+						flex-wrap: wrap;
+						align-items: center;
+					}
+
+					& > .address,
+					.email {
+						text-align: center;
+						font-size: 1.3em;
+						width: 100%;
+					}
+
+					& > img {
+						height: 125px;
+					}
 				}
 			}
 		}
@@ -290,6 +316,13 @@ export const MobileContent = () => {
 				</div>
 				<div className='address'>6575 Flewellyn Road, Stittsville, ON K2S 1B6</div>
 				<div className='email'>abordale.equestrian@gmail.com</div>
+			</div>
+			<div className='sponsors'>
+				<h2>Proudly Sponsored By</h2>
+				<img
+					src={devocoux_logo}
+					alt='Devocoux'
+				/>
 			</div>
 			<div className='img-container'>
 				<div className='img-wrapper'>
@@ -397,6 +430,25 @@ export const MobileDiv = styled.div`
 			width: 95%;
 			text-align: right;
 			margin: 0 2.5% 2.5% 2.5%;
+		}
+	}
+
+	& > .sponsors {
+		width: 100%;
+		height: fit-content;
+		max-height: 40vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		align-items: center;
+
+		& > h2 {
+			width: 100%;
+			text-align: center;
+		}
+
+		& > img {
+			max-width: calc(min(90vw, 250px));
 		}
 	}
 
