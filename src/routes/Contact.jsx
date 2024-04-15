@@ -103,10 +103,11 @@ export const DesktopDiv = styled.div`
 		width: calc(max(300px, 40%));
 		height: 70vh;
 		@media screen and (max-width: 1100px) {
-			width: 80%;
-			height: 50vh;
+			width: 0%;
+			height: 0vh;
 			margin-top: 1em;
 			margin-bottom: 1em;
+			display: none;
 		}
 		border: 2px solid black;
 		position: relative;

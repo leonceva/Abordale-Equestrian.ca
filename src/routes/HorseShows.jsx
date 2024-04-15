@@ -13,6 +13,7 @@ import show_04_lowRes from '../images/shows/shows_4_low_res.jpg';
 import show_05_lowRes from '../images/shows/shows_5_low_res.jpg';
 import Image from '../components/Image';
 import Carousel from '../components/Carousel';
+import devocoux_logo from '../images/devocoux-logo.png';
 
 const HorseShows = () => {
 	return (
@@ -59,34 +60,57 @@ export const DesktopContent = () => {
 				benefit from comprehensive coaching for the entire duration of the show, providing
 				you with the guidance, support, and expertise needed to perform at your best.
 			</div>
+			<div className='sponsors'>
+				<img
+					src={devocoux_logo}
+					alt='Devocoux'
+				/>
+			</div>
 		</DesktopDiv>
 	);
 };
 
 export const DesktopDiv = styled.div`
+	min-width: 70vw;
 	width: 100%;
 	height: fit-content;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
-	align-items: center;
+	flex-wrap: wrap;
+	align-items: top;
 	margin-top: 2em;
 
 	& > .intro {
 		width: 35%;
-		margin: 2.5% 0;
-		text-align: justify;
+		@media screen and (max-width: 1100px) {
+			width: 100%;
+		}
+		margin-top: 1em;
+		text-align: left;
 		padding: 1em;
+		align-self: center;
 	}
 
 	& > .carousel {
-		width: 60%;
-		height: 100%;
+		width: calc(max(300px, 60%));
+		height: 70vh;
+		@media screen and (max-width: 1100px) {
+			width: 80%;
+			height: 50vh;
+			margin-top: 1em;
+		}
 		border: 2px solid black;
 		position: relative;
+		margin-bottom: 1em;
 
 		& > .img-div {
 			height: 70vh;
+			@media screen and (max-width: 1100px) {
+				width: 80%;
+				height: 50vh;
+			}
+
 			width: 100%;
 			background-color: rgb(18, 17, 31);
 
@@ -141,6 +165,23 @@ export const DesktopDiv = styled.div`
 			}
 		}
 	}
+
+	& > .sponsors {
+		width: 100%;
+		padding-bottom: 1em;
+		display: flex;
+		height: fit-content;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: center;
+
+		& > img {
+			max-width: 50vw;
+			max-height: 125px;
+		}
+	}
 `;
 
 /************************************************************* MOBILE MODE ****************************************************************************/
@@ -177,6 +218,12 @@ export const MobileContent = () => {
 				their needs to ensure they are show-ready and comfortable. Additionally, you will
 				benefit from comprehensive coaching for the entire duration of the show, providing
 				you with the guidance, support, and expertise needed to perform at your best.
+			</div>
+			<div className='sponsors'>
+				<img
+					src={devocoux_logo}
+					alt='Devocoux'
+				/>
 			</div>
 			<div className='img-container'>
 				<div className='img-wrapper'>
@@ -238,6 +285,21 @@ export const MobileDiv = styled.div`
 		margin: 5% 5% 0;
 		text-align: justify;
 		padding: 0.5em;
+	}
+
+	& > .sponsors {
+		width: 100%;
+		height: fit-content;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		flex-wrap: wrap;
+
+		& > img {
+			max-width: calc(min(90vw, 250px));
+			max-height: 100px;
+		}
 	}
 
 	& > .img-container {

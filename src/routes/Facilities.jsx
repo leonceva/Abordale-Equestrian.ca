@@ -8,12 +8,14 @@ import facility_03_highRes from '../images/facilities/facilities_3_high_res.jpg'
 import facility_04_highRes from '../images/facilities/facilities_4_high_res.jpg';
 import facility_05_highRes from '../images/facilities/facilities_5_high_res.jpg';
 import facility_06_highRes from '../images/facilities/facilities_6_high_res.jpg';
+import facility_07_highRes from '../images/facilities/facilities_7_high_res.jpg';
 import facility_01_lowRes from '../images/facilities/facilities_1_low_res.jpg';
 import facility_02_lowRes from '../images/facilities/facilities_2_low_res.jpg';
 import facility_03_lowRes from '../images/facilities/facilities_3_low_res.jpg';
 import facility_04_lowRes from '../images/facilities/facilities_4_low_res.jpg';
 import facility_05_lowRes from '../images/facilities/facilities_5_low_res.jpg';
 import facility_06_lowRes from '../images/facilities/facilities_6_low_res.jpg';
+import facility_07_lowRes from '../images/facilities/facilities_7_low_res.jpg';
 import Image from '../components/Image';
 
 const Facilities = () => {
@@ -32,6 +34,29 @@ export default Facilities;
 export const DesktopContent = () => {
 	return (
 		<DesktopDiv>
+			<div className='carousel'>
+				<Carousel
+					lowRes={[
+						facility_01_lowRes,
+						facility_02_lowRes,
+						facility_03_lowRes,
+						facility_04_lowRes,
+						facility_05_lowRes,
+						facility_06_lowRes,
+						facility_07_lowRes,
+					]}
+					highRes={[
+						facility_01_highRes,
+						facility_02_highRes,
+						facility_03_highRes,
+						facility_04_highRes,
+						facility_05_highRes,
+						facility_06_highRes,
+						facility_07_highRes,
+					]}
+					length={7}
+				/>
+			</div>
 			<div className='intro'>
 				Our farm offers extensive facilities, including:
 				<ul>
@@ -46,27 +71,6 @@ export const DesktopContent = () => {
 					<li>Hackin trails</li>
 					<li>Cross-country jumps in riding fields</li>
 				</ul>
-			</div>
-			<div className='carousel'>
-				<Carousel
-					lowRes={[
-						facility_01_lowRes,
-						facility_02_lowRes,
-						facility_03_lowRes,
-						facility_04_lowRes,
-						facility_05_lowRes,
-						facility_06_lowRes,
-					]}
-					highRes={[
-						facility_01_highRes,
-						facility_02_highRes,
-						facility_03_highRes,
-						facility_04_highRes,
-						facility_05_highRes,
-						facility_06_highRes,
-					]}
-					length={6}
-				/>
 			</div>
 		</DesktopDiv>
 	);
@@ -91,6 +95,7 @@ export const DesktopDiv = styled.div`
 		margin-top: 1em;
 		text-align: left;
 		padding: 1em;
+		align-self: center;
 	}
 
 	& > .carousel {
@@ -100,10 +105,10 @@ export const DesktopDiv = styled.div`
 			width: 80%;
 			height: 50vh;
 			margin-top: 1em;
-			margin-bottom: 1em;
 		}
 		border: 2px solid black;
 		position: relative;
+		margin-bottom: 1em;
 
 		& > .img-div {
 			height: 70vh;
@@ -164,6 +169,23 @@ export const DesktopDiv = styled.div`
 					width: 20px;
 				}
 			}
+		}
+	}
+
+	& > .sponsors {
+		width: 100%;
+		padding-bottom: 1em;
+		display: flex;
+		height: fit-content;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: center;
+
+		& > img {
+			max-width: 50vw;
+			max-height: 125px;
 		}
 	}
 `;

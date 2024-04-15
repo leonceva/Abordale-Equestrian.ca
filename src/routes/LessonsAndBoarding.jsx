@@ -30,6 +30,19 @@ export default LessonsAndBoarding;
 export const DesktopContent = () => {
 	return (
 		<DesktopDiv>
+			<div className='lessons'>
+				<h4>Lessons</h4>
+				<p>
+					Abordale Equestrian provides a comprehensive lesson program catering to a wide
+					range of riders, from beginners to those at an advanced competitive level, under
+					the guidance of Sean Jenkin, an Equestrian Canada Licensed Coach with 25 years
+					of experience. Each lesson is structured to last 45 minutes, ensuring ample time
+					for personalized instruction and skill development. To maximize the learning
+					experience, lessons are offered either privately or as semi-private sessions,
+					paired with another rider of a comparable skill level, fostering a supportive
+					and conducive learning environment.
+				</p>
+			</div>
 			<div className='carousel'>
 				<Carousel
 					lowRes={[
@@ -48,19 +61,6 @@ export const DesktopContent = () => {
 					]}
 					length={5}
 				/>
-			</div>
-			<div className='lessons'>
-				<h4>Lessons</h4>
-				<p>
-					Abordale Equestrian provides a comprehensive lesson program catering to a wide
-					range of riders, from beginners to those at an advanced competitive level, under
-					the guidance of Sean Jenkin, an Equestrian Canada Licensed Coach with 25 years
-					of experience. Each lesson is structured to last 45 minutes, ensuring ample time
-					for personalized instruction and skill development. To maximize the learning
-					experience, lessons are offered either privately or as semi-private sessions,
-					paired with another rider of a comparable skill level, fostering a supportive
-					and conducive learning environment.
-				</p>
 			</div>
 			<div className='boarding'>
 				<h4>Boarding</h4>
@@ -111,34 +111,47 @@ export const DesktopDiv = styled.div`
 	width: 100%;
 	height: fit-content;
 	display: flex;
-	flex-direction: row;
+	flex-direction: row-reverse;
 	justify-content: space-evenly;
-	align-items: center;
-	margin-top: 2em;
 	flex-wrap: wrap;
+	align-items: top;
+	margin-top: 2em;
 
 	& > .lessons {
-		width: 30%;
-		margin: 2% 0;
-		text-align: justify;
+		width: 35%;
+		@media screen and (max-width: 1100px) {
+			width: 100%;
+		}
+		margin-top: 1em;
+		text-align: left;
 		padding: 1em;
+		align-self: center;
 	}
 
 	& > .boarding {
 		width: 100%;
 		text-align: justify;
-		padding: 1em;
-		margin-bottom: 2.5%;
 	}
 
 	& > .carousel {
-		width: 60%;
-		height: 100%;
+		width: calc(max(300px, 60%));
+		height: 70vh;
+		@media screen and (max-width: 1100px) {
+			width: 80%;
+			height: 50vh;
+			margin-top: 1em;
+			margin-bottom: 1em;
+		}
 		border: 2px solid black;
 		position: relative;
 
 		& > .img-div {
 			height: 70vh;
+			@media screen and (max-width: 1100px) {
+				width: 80%;
+				height: 50vh;
+			}
+
 			width: 100%;
 			background-color: rgb(18, 17, 31);
 

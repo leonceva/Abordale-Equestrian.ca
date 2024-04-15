@@ -55,51 +55,47 @@ export const DesktopContent = () => {
 						/>
 					</div>
 					<div className='description-container'>
-						<p>
-							Abordale Equestrian, nestled in the scenic west of Ottawa in
-							Stittsville, just a 20-minute drive from Wesley Clover Parks, offers a
-							quality equestrian experience on a sprawling 100-acre property. The farm
-							boasts a heated indoor arena and two outdoor sand rings, providing ample
-							space for year-round riding and training. Riders can also explore the
-							many hacking trails that wind through the property, offering a relaxing
-							escape into nature. The facility ensures rider comfort with a heated
-							lounge and a heated tack room equipped with lockers for boarders. With
-							four tack-up bays, as well as two indoor and two outdoor wash stalls,
-							the facility caters to all equestrian needs. Abordale Equestrian
-							provides riding lessons for all skill levels, from beginners to
-							competitive riders, ensuring personalized attention and growth for each
-							individual.
-						</p>
+						Abordale Equestrian, nestled in the scenic west of Ottawa in Stittsville,
+						just a 20-minute drive from Wesley Clover Parks, offers a quality equestrian
+						experience on a sprawling 100-acre property. The farm boasts a heated indoor
+						arena and two outdoor sand rings, providing ample space for year-round
+						riding and training. Riders can also explore the many hacking trails that
+						wind through the property, offering a relaxing escape into nature. The
+						facility ensures rider comfort with a heated lounge and a heated tack room
+						equipped with lockers for boarders. With four tack-up bays, as well as two
+						indoor and two outdoor wash stalls, the facility caters to all equestrian
+						needs. Abordale Equestrian provides riding lessons for all skill levels,
+						from beginners to competitive riders, ensuring personalized attention and
+						growth for each individual.
+						<div className='contact-info'>
+							<div className='info'>
+								<div className='button-container'>
+									<h2>Get In Touch</h2>
+									<SocialMediaLink
+										size='35px'
+										type='instagram'
+									/>
+									<SocialMediaLink
+										size='35px'
+										type='facebook'
+									/>
+									<SocialMediaLink
+										size='35px'
+										type='email'
+									/>
+								</div>
+								<div className='address'>
+									6575 Flewellyn Road, Stittsville, ON K2S 1B6
+								</div>
+								<div className='email'>abordale.equestrian@gmail.com</div>
+							</div>
+						</div>
 					</div>
-					<div className='contact-info'>
-						<div className='info'>
-							<div className='button-container'>
-								<h2>Get In Touch</h2>
-								<SocialMediaLink
-									size='35px'
-									type='instagram'
-								/>
-								<SocialMediaLink
-									size='35px'
-									type='facebook'
-								/>
-								<SocialMediaLink
-									size='35px'
-									type='email'
-								/>
-							</div>
-							<div className='address'>
-								6575 Flewellyn Road, Stittsville, ON K2S 1B6
-							</div>
-							<div className='email'>abordale.equestrian@gmail.com</div>
-						</div>
-						<div className='info'>
-							<h2>Proudly Sponsored By</h2>
-							<img
-								src={devocoux_logo}
-								alt='Devocoux'
-							/>
-						</div>
+					<div className='sponsors'>
+						<img
+							src={devocoux_logo}
+							alt='Devocoux'
+						/>
 					</div>
 				</div>
 			</div>
@@ -141,6 +137,7 @@ export const DesktopDiv = styled.div`
 				height: 100%;
 				border: 2px solid black;
 				position: relative;
+				margin-bottom: 1em;
 
 				& > .img-div {
 					height: 100%;
@@ -207,48 +204,55 @@ export const DesktopDiv = styled.div`
 				flex-direction: column;
 				justify-content: start;
 				align-items: center;
-				padding-left: 0.5em;
+				text-align: justify;
+				padding: 2px 0 2px 1em;
 
-				& > p {
-					text-align: justify;
-					padding: 0.5em 0.5em 0;
+				& > .contact-info {
+					width: 100%;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+
+					& .info {
+						width: 100%;
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						padding-bottom: 1em;
+
+						& > .button-container {
+							width: 100%;
+							display: flex;
+							flex-direction: row;
+							justify-content: space-evenly;
+							flex-wrap: wrap;
+							align-items: center;
+						}
+
+						& > .address,
+						.email {
+							text-align: center;
+							font-size: 1.3em;
+							width: 100%;
+						}
+					}
 				}
 			}
 
-			& > .contact-info {
+			& > .sponsors {
 				width: 100%;
+				padding-bottom: 1em;
+				display: flex;
+				height: fit-content;
 				display: flex;
 				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: space-around;
 				align-items: center;
-				max-height: 200px;
 
-				& .info {
-					width: 50%;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					padding-bottom: 1em;
-					height: 50%;
-
-					& > .button-container {
-						width: 100%;
-						display: flex;
-						flex-direction: row;
-						justify-content: space-evenly;
-						flex-wrap: wrap;
-						align-items: center;
-					}
-
-					& > .address,
-					.email {
-						text-align: center;
-						font-size: 1.3em;
-						width: 100%;
-					}
-
-					& > img {
-						height: 125px;
-					}
+				& > img {
+					max-width: 50vw;
+					max-height: 125px;
 				}
 			}
 		}
@@ -318,7 +322,6 @@ export const MobileContent = () => {
 				<div className='email'>abordale.equestrian@gmail.com</div>
 			</div>
 			<div className='sponsors'>
-				<h2>Proudly Sponsored By</h2>
 				<img
 					src={devocoux_logo}
 					alt='Devocoux'
@@ -436,19 +439,15 @@ export const MobileDiv = styled.div`
 	& > .sponsors {
 		width: 100%;
 		height: fit-content;
-		max-height: 40vh;
 		display: flex;
-		flex-direction: column;
-		justify-content: start;
+		flex-direction: row;
+		justify-content: space-around;
 		align-items: center;
-
-		& > h2 {
-			width: 100%;
-			text-align: center;
-		}
+		flex-wrap: wrap;
 
 		& > img {
 			max-width: calc(min(90vw, 250px));
+			max-height: 100px;
 		}
 	}
 
