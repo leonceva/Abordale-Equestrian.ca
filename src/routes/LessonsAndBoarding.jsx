@@ -82,9 +82,9 @@ export const DesktopContent = () => {
 					all necessary care without any inconvenience to you.
 				</p>
 				<p>
-					For those opting for our outdoor{' '}
+					For those opting for our{' '}
 					<span style={{ fontWeight: '900', textDecoration: 'underline' }}>
-						boarding option,
+						outdoor boarding option,
 					</span>{' '}
 					we provide comprehensive care that includes daily access to water, hay, and a
 					grain feeding once a day. Each horse benefits from a personalized feed plan
@@ -264,9 +264,9 @@ export const MobileContent = () => {
 					all necessary care without any inconvenience to you.
 				</p>
 				<p>
-					For those opting for our outdoor{' '}
+					For those opting for our{' '}
 					<span style={{ fontWeight: '900', textDecoration: 'underline' }}>
-						boarding option,
+						outdoor boarding option,
 					</span>{' '}
 					we provide comprehensive care that includes daily access to water, hay, and a
 					grain feeding once a day. Each horse benefits from a personalized feed plan
