@@ -68,7 +68,7 @@ export const DesktopContent = () => {
 					<li>Four tack-up bays</li>
 					<li>Two indoor and two outdoor wash stalls</li>
 					<li>Large paddocks for ample turnout</li>
-					<li>Hackin trails</li>
+					<li>Hacking trails</li>
 					<li>Cross-country jumps in riding fields</li>
 				</ul>
 			</div>
@@ -226,7 +226,7 @@ export const MobileContent = () => {
 					<li>Four tack-up bays</li>
 					<li>Two indoor and two outdoor wash stalls</li>
 					<li>Large paddocks for ample turnout</li>
-					<li>Hackin trails</li>
+					<li>Hacking trails</li>
 					<li>Cross-country jumps in riding fields</li>
 				</ul>
 			</div>
