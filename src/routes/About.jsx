@@ -144,11 +144,13 @@ export const DesktopDiv = styled.div`
 					width: 100%;
 					text-align: left;
 					margin: 0.5em 0 0;
+					font-size: x-large;
 				}
 
 				& > .bio {
 					font-size: 1.1em;
 					line-height: 125%;
+					font-size: large;
 				}
 			}
 		}
@@ -271,11 +273,13 @@ export const MobileDiv = styled.div`
 				padding: 0.5em;
 				text-align: center;
 				margin: 0;
+				font-size: x-large;
 			}
 
 			& > .bio {
 				padding: 0 2.5%;
 				text-align: justify;
+				font-size: large;
 			}
 		}
 	}
