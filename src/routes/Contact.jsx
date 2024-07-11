@@ -214,7 +214,7 @@ export const DesktopDiv = styled.div`
 		.email {
 			margin-bottom: 0.5em;
 			font-weight: bold;
-			font-size: 1.2em;
+			font-size: large;
 		}
 	}
 `;
@@ -257,7 +257,7 @@ export const MobileContent = () => {
 				</p>
 				<p
 					className='heading-font'
-					style={{ margin: '0.5em 0' }}>
+					style={{ margin: '0.5em 0', fontSize: 'large' }}>
 					<strong>abordale.equestrian@gmail.com</strong>
 				</p>
 				<div className='map-container'>
@@ -281,6 +281,7 @@ export const MobileDiv = styled.div`
 		text-align: justify;
 		line-height: 120%;
 		padding: 0.5em;
+		font-size: large;
 	}
 
 	& > .container {

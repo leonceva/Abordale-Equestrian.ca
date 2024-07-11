@@ -118,6 +118,7 @@ export const DesktopDiv = styled.div`
 		align-items: center;
 		justify-content: center;
 		display: flex;
+		font-size: x-large;
 	}
 
 	& > .content {
@@ -206,6 +207,7 @@ export const DesktopDiv = styled.div`
 				align-items: center;
 				text-align: justify;
 				padding: 2px 0 2px 1em;
+				font-size: large;
 
 				& > .contact-info {
 					width: 100%;
@@ -227,12 +229,16 @@ export const DesktopDiv = styled.div`
 							justify-content: space-evenly;
 							flex-wrap: wrap;
 							align-items: center;
+
+							& > h2 {
+								font-size: x-large;
+							}
 						}
 
 						& > .address,
 						.email {
 							text-align: center;
-							font-size: 1.3em;
+							font-size: x-large;
 							width: 100%;
 						}
 					}
@@ -386,6 +392,7 @@ export const MobileDiv = styled.div`
 	& > h2 {
 		text-align: center;
 		margin: 2.5% 2.5%;
+		font-size: x-large;
 	}
 
 	& > .welcome-message {
@@ -393,6 +400,7 @@ export const MobileDiv = styled.div`
 		line-height: 125%;
 		text-align: left;
 		padding: 0.5em;
+		font-size: large;
 	}
 
 	& > .get-started {
@@ -410,6 +418,7 @@ export const MobileDiv = styled.div`
 			& > h2 {
 				width: 50%;
 				text-align: center;
+				font-size: x-large;
 			}
 
 			& > .right-side {
@@ -433,6 +442,7 @@ export const MobileDiv = styled.div`
 			width: 95%;
 			text-align: right;
 			margin: 0 2.5% 2.5% 2.5%;
+			font-size: large;
 		}
 	}
 
