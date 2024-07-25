@@ -94,6 +94,7 @@ export const DesktopDiv = styled.div`
 		text-align: left;
 		padding: 1em;
 		align-self: center;
+		font-size: large;
 	}
 
 	& > .carousel {
@@ -297,6 +298,7 @@ export const MobileDiv = styled.div`
 		margin: 5% 5% 0;
 		text-align: justify;
 		padding: 0.5em;
+		font-size: large;
 	}
 
 	& > .sponsors {

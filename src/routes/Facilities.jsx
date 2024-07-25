@@ -100,6 +100,7 @@ export const DesktopDiv = styled.div`
 		text-align: left;
 		padding: 1em;
 		align-self: center;
+		font-size: large;
 	}
 
 	& > .carousel {
@@ -173,23 +174,6 @@ export const DesktopDiv = styled.div`
 					width: 20px;
 				}
 			}
-		}
-	}
-
-	& > .sponsors {
-		width: 100%;
-		padding-bottom: 1em;
-		display: flex;
-		height: fit-content;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-around;
-		align-items: center;
-
-		& > img {
-			max-width: 50vw;
-			max-height: 125px;
 		}
 	}
 `;
@@ -319,6 +303,7 @@ export const MobileDiv = styled.div`
 		margin: 5% 5% 0;
 		text-align: justify;
 		padding: 0.5em;
+		font-size: large;
 	}
 
 	& > .img-container {

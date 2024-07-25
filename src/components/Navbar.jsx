@@ -116,13 +116,13 @@ export const DesktopNavDiv = styled.div`
 			opacity: 1;
 			transition: opacity 500ms ease-in 50ms;
 
-			@media screen and (max-width: 940px) {
+			@media screen and (max-width: 900px) {
 				position: absolute;
-				max-height: 175px;
-				min-width: 250px;
+				max-height: 155px;
+				min-width: 200px;
 			}
 
-			@media screen and ((min-width: 941px) or (width: 941px)) {
+			@media screen and ((min-width: 900px) or (width: 900px)) {
 				max-height: 250px;
 				max-width: 30%;
 				min-width: 350px;
@@ -162,14 +162,14 @@ export const NavLink = styled(Link)`
 	}
 
 	@media screen and (min-width: ${MOBILE_MODE_LIMIT}) {
-		font-size: calc(min(1.8vw, 1.8vh));
+		font-size: medium;
 	}
 
 	@media screen and (min-width: ${'1000px'}) {
-		font-size: calc(min(2.2vw, 2.2vh));
+		font-size: large;
 	}
 	@media screen and (min-width: ${'1400px'}) {
-		font-size: calc(min(2.5vw, 2.5vh));
+		font-size: large;
 	}
 `;
 
@@ -228,7 +228,6 @@ export const MobileNavDiv = styled.div`
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
-		font-size: calc(max(2.5vw, 2.5vh));
 		overflow: hidden;
 
 		& > .logo {
@@ -399,7 +398,7 @@ export const NavButtonDiv = styled.div`
 		width: 220px;
 		right: 5.5%;
 		top: calc(100% - 20px);
-		font-size: calc(max(2.2vh, 2.2vw));
+		font-size: large;
 		overflow: hidden;
 
 		& > .expanded-link {
