@@ -9,6 +9,7 @@ import facility_04_highRes from '../images/facilities/facilities_4_high_res.jpg'
 import facility_05_highRes from '../images/facilities/facilities_5_high_res.jpg';
 import facility_06_highRes from '../images/facilities/facilities_6_high_res.jpg';
 import facility_07_highRes from '../images/facilities/facilities_7_high_res.jpg';
+import facility_08_highRes from '../images/facilities/facilities_8_high_res.jpg';
 import facility_01_lowRes from '../images/facilities/facilities_1_low_res.jpg';
 import facility_02_lowRes from '../images/facilities/facilities_2_low_res.jpg';
 import facility_03_lowRes from '../images/facilities/facilities_3_low_res.jpg';
@@ -16,6 +17,7 @@ import facility_04_lowRes from '../images/facilities/facilities_4_low_res.jpg';
 import facility_05_lowRes from '../images/facilities/facilities_5_low_res.jpg';
 import facility_06_lowRes from '../images/facilities/facilities_6_low_res.jpg';
 import facility_07_lowRes from '../images/facilities/facilities_7_low_res.jpg';
+import facility_08_lowRes from '../images/facilities/facilities_8_low_res.jpg';
 import Image from '../components/Image';
 
 const Facilities = () => {
@@ -43,6 +45,7 @@ export const DesktopContent = () => {
 						facility_04_lowRes,
 						facility_05_lowRes,
 						facility_06_lowRes,
+						facility_08_lowRes,
 						facility_07_lowRes,
 					]}
 					highRes={[
@@ -52,9 +55,10 @@ export const DesktopContent = () => {
 						facility_04_highRes,
 						facility_05_highRes,
 						facility_06_highRes,
+						facility_08_highRes,
 						facility_07_highRes,
 					]}
-					length={7}
+					length={8}
 				/>
 			</div>
 			<div className='intro'>
@@ -279,6 +283,23 @@ export const MobileContent = () => {
 						highResSrc={facility_06_highRes}
 					/>
 				</div>
+				<div className='img-wrapper'>
+					<Image
+						styleWrapper={styleWrapper}
+						styleImage={styleImage}
+						lowResSrc={facility_08_lowRes}
+						highResSrc={facility_08_highRes}
+					/>
+				</div>
+				<div className='img-wrapper'>
+					<Image
+						styleWrapper={styleWrapper}
+						styleImage={styleImage}
+						lowResSrc={facility_07_lowRes}
+						highResSrc={facility_07_highRes}
+					/>
+				</div>
+
 				<div className='bottom-space' />
 			</div>
 		</MobileDiv>

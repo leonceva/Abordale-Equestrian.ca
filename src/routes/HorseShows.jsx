@@ -6,11 +6,13 @@ import show_02_highRes from '../images/shows/shows_2_high_res.jpg';
 import show_03_highRes from '../images/shows/shows_3_high_res.jpg';
 import show_04_highRes from '../images/shows/shows_4_high_res.jpg';
 import show_05_highRes from '../images/shows/shows_5_high_res.jpg';
+import show_06_highRes from '../images/shows/shows_6_high_res.jpg';
 import show_01_lowRes from '../images/shows/shows_1_low_res.jpg';
 import show_02_lowRes from '../images/shows/shows_2_low_res.jpg';
 import show_03_lowRes from '../images/shows/shows_3_low_res.jpg';
 import show_04_lowRes from '../images/shows/shows_4_low_res.jpg';
 import show_05_lowRes from '../images/shows/shows_5_low_res.jpg';
+import show_06_lowRes from '../images/shows/shows_6_low_res.jpg';
 import Image from '../components/Image';
 import Carousel from '../components/Carousel';
 import devocoux_logo from '../images/devocoux-logo.png';
@@ -34,6 +36,7 @@ export const DesktopContent = () => {
 			<div className='carousel'>
 				<Carousel
 					lowRes={[
+						show_06_lowRes,
 						show_01_lowRes,
 						show_02_lowRes,
 						show_03_lowRes,
@@ -41,13 +44,14 @@ export const DesktopContent = () => {
 						show_05_lowRes,
 					]}
 					highRes={[
+						show_06_highRes,
 						show_01_highRes,
 						show_02_highRes,
 						show_03_highRes,
 						show_04_highRes,
 						show_05_highRes,
 					]}
-					length={5}
+					length={6}
 				/>
 			</div>
 			<div className='intro'>
@@ -226,6 +230,14 @@ export const MobileContent = () => {
 				/>
 			</div>
 			<div className='img-container'>
+				<div className='img-wrapper'>
+					<Image
+						styleWrapper={styleWrapper}
+						styleImage={styleImage}
+						lowResSrc={show_06_lowRes}
+						highResSrc={show_06_highRes}
+					/>
+				</div>
 				<div className='img-wrapper'>
 					<Image
 						styleWrapper={styleWrapper}
