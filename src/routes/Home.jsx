@@ -14,7 +14,7 @@ import homepage_03_lowRes from '../images/home/homepage_3_low_res.jpg';
 import homepage_04_lowRes from '../images/home/homepage_4_low_res.jpg';
 import homepage_05_lowRes from '../images/home/homepage_5_low_res.jpg';
 import SocialMediaLink from '../components/SocialMediaLink';
-import devocoux_logo from '../images/devocoux-logo.png';
+import voltaire_logo from '../images/voltaire-logo.jpeg';
 
 const Home = () => {
 	return (
@@ -93,7 +93,7 @@ export const DesktopContent = () => {
 					</div>
 					<div className='sponsors'>
 						<img
-							src={devocoux_logo}
+							src={voltaire_logo}
 							alt='Devocoux'
 						/>
 					</div>
@@ -329,7 +329,7 @@ export const MobileContent = () => {
 			</div>
 			<div className='sponsors'>
 				<img
-					src={devocoux_logo}
+					src={voltaire_logo}
 					alt='Devocoux'
 				/>
 			</div>
