@@ -14,7 +14,7 @@ import homepage_03_lowRes from '../images/home/homepage_3_low_res.jpg';
 import homepage_04_lowRes from '../images/home/homepage_4_low_res.jpg';
 import homepage_05_lowRes from '../images/home/homepage_5_low_res.jpg';
 import SocialMediaLink from '../components/SocialMediaLink';
-import voltaire_logo from '../images/voltaire-logo.jpeg';
+import voltaire_logo from '../images/voltaire-logo.png';
 
 const Home = () => {
 	return (
