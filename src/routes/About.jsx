@@ -3,6 +3,8 @@ import MobileLayout from '../layouts/MobileLayout';
 import styled from 'styled-components';
 import sean_img_highRes from '../images/about/about_sean_high_res.jpg';
 import sean_img_lowRes from '../images/about/about_sean_low_res.jpg';
+import brandon_img_highRes from '../images/about/about_brandon_high_res.jpg';
+import brandon_img_lowRes from '../images/about/about_brandon_low_res.jpg';
 import Image from '../components/Image';
 
 const About = () => {
@@ -63,6 +65,32 @@ export const DesktopContent = () => {
 							achieving their personal goals, whether they are pursuing riding for
 							competitive success or as a leisure activity, ensuring a balanced
 							approach that caters to individual aspirations and skill levels.
+						</p>
+					</div>
+				</div>
+				<div className='staff-container'>
+					<div className='bio-container'>
+						<div className='image'>
+							<Image
+								styleWrapper={styleWrapper}
+								styleImage={styleImage}
+								lowResSrc={brandon_img_lowRes}
+								highResSrc={brandon_img_highRes}
+							/>
+						</div>
+						<h2>Brandon Fehér</h2>
+						<h3>Owner and Barn Manager</h3>
+						<p className='bio'>
+							Brandon is a seasoned horse-care professional with nearly 20 years of
+							experience, including leadership roles as a barn manager for 10 years at
+							Dewmont Farms in the Ottawa area. His approach to horse care is grounded
+							in the philosophy that horses thrive when allowed to spend as much time
+							as possible outdoors, conditions permitting. Brandon is dedicated to
+							ensuring the health and happiness of every horse, crafting specialized
+							feed plans that cater to the unique requirements of each animal. He
+							believes that the essence of a great riding experience is rooted in the
+							welfare of the horse, with a focus on maintaining their contentment and
+							health.
 						</p>
 					</div>
 				</div>
@@ -177,6 +205,29 @@ export const MobileContent = () => {
 						whether they are pursuing riding for competitive success or as a leisure
 						activity, ensuring a balanced approach that caters to individual aspirations
 						and skill levels.
+					</p>
+				</div>
+				<div className='staff-container'>
+					<h2>Brandon Fehér</h2>
+					<h3>Owner and Barn Manager</h3>
+					<div className='image'>
+						<Image
+							styleWrapper={styleWrapper}
+							styleImage={styleImage}
+							lowResSrc={brandon_img_lowRes}
+							highResSrc={brandon_img_highRes}
+						/>
+					</div>
+					<p className='bio'>
+						Brandon is a seasoned horse-care professional with nearly 20 years of
+						experience, including leadership roles as a barn manager for 10 years at
+						Dewmont Farms in the Ottawa area. His approach to horse care is grounded in
+						the philosophy that horses thrive when allowed to spend as much time as
+						possible outdoors, conditions permitting. Brandon is dedicated to ensuring
+						the health and happiness of every horse, crafting specialized feed plans
+						that cater to the unique requirements of each animal. He believes that the
+						essence of a great riding experience is rooted in the welfare of the horse,
+						with a focus on maintaining their contentment and health.
 					</p>
 				</div>
 			</div>

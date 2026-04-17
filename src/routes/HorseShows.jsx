@@ -2,15 +2,15 @@ import styled from 'styled-components';
 import DesktopLayout from '../layouts/DesktopLayout';
 import MobileLayout from '../layouts/MobileLayout';
 import show_01_highRes from '../images/shows/shows_1_high_res.jpg';
-import show_02_highRes from '../images/shows/shows_2_high_res.jpg';
+//import show_02_highRes from '../images/shows/shows_2_high_res.jpg';
 import show_03_highRes from '../images/shows/shows_3_high_res.jpg';
-import show_04_highRes from '../images/shows/shows_4_high_res.jpg';
+//import show_04_highRes from '../images/shows/shows_4_high_res.jpg';
 import show_05_highRes from '../images/shows/shows_5_high_res.jpg';
 import show_06_highRes from '../images/shows/shows_6_high_res.jpg';
 import show_01_lowRes from '../images/shows/shows_1_low_res.jpg';
-import show_02_lowRes from '../images/shows/shows_2_low_res.jpg';
+//import show_02_lowRes from '../images/shows/shows_2_low_res.jpg';
 import show_03_lowRes from '../images/shows/shows_3_low_res.jpg';
-import show_04_lowRes from '../images/shows/shows_4_low_res.jpg';
+//import show_04_lowRes from '../images/shows/shows_4_low_res.jpg';
 import show_05_lowRes from '../images/shows/shows_5_low_res.jpg';
 import show_06_lowRes from '../images/shows/shows_6_low_res.jpg';
 import Image from '../components/Image';
@@ -38,20 +38,20 @@ export const DesktopContent = () => {
 					lowRes={[
 						show_06_lowRes,
 						show_01_lowRes,
-						show_02_lowRes,
+						//show_02_lowRes,
 						show_03_lowRes,
-						show_04_lowRes,
+						//show_04_lowRes,
 						show_05_lowRes,
 					]}
 					highRes={[
 						show_06_highRes,
 						show_01_highRes,
-						show_02_highRes,
+						//show_02_highRes,
 						show_03_highRes,
-						show_04_highRes,
+						//show_04_highRes,
 						show_05_highRes,
 					]}
-					length={6}
+					length={4}
 				/>
 			</div>
 			<div className='intro'>
@@ -247,14 +247,14 @@ export const MobileContent = () => {
 						highResSrc={show_01_highRes}
 					/>
 				</div>
-				<div className='img-wrapper'>
+				{/* <div className='img-wrapper'>
 					<Image
 						styleWrapper={styleWrapper}
 						styleImage={styleImage}
 						lowResSrc={show_02_lowRes}
 						highResSrc={show_02_highRes}
 					/>
-				</div>
+				</div> */}
 				<div className='img-wrapper'>
 					<Image
 						styleWrapper={styleWrapper}
@@ -263,14 +263,14 @@ export const MobileContent = () => {
 						highResSrc={show_03_highRes}
 					/>
 				</div>
-				<div className='img-wrapper'>
+				{/* <div className='img-wrapper'>
 					<Image
 						styleWrapper={styleWrapper}
 						styleImage={styleImage}
 						lowResSrc={show_04_lowRes}
 						highResSrc={show_04_highRes}
 					/>
-				</div>
+				</div> */}
 				<div className='img-wrapper'>
 					<Image
 						styleWrapper={styleWrapper}

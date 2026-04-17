@@ -69,7 +69,7 @@ export const DesktopNavbar = (props) => {
 				<NavLink
 					className='heading-font'
 					to='/about'>
-					Meet Sean Jenkin
+					Meet the Team
 				</NavLink>
 				<NavLink
 					className='heading-font'
@@ -279,7 +279,7 @@ export const NavButton = (props) => {
 				e.stopPropagation();
 				setIsExpanded(false);
 			},
-			{ once: true }
+			{ once: true },
 		);
 	};
 
@@ -299,7 +299,7 @@ export const NavButton = (props) => {
 								e.stopPropagation();
 								handleClick();
 							},
-							{ once: true }
+							{ once: true },
 						);
 					}
 				}}>
@@ -435,7 +435,7 @@ export const ModalMenu = (props) => {
 						<Link
 							to='/about'
 							className='expanded-link'>
-							Meet Sean Jenkin
+							Meet the Team
 						</Link>
 						<Link
 							to='/facilities'

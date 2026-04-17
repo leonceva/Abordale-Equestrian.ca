@@ -3,14 +3,14 @@ import DesktopLayout from '../layouts/DesktopLayout';
 import MobileLayout from '../layouts/MobileLayout';
 import Image from '../components/Image';
 import Carousel from '../components/Carousel';
-import lessons_01_highRes from '../images/lessons/lessons_1_high_res.jpg';
+//import lessons_01_highRes from '../images/lessons/lessons_1_high_res.jpg';
 import lessons_02_highRes from '../images/lessons/lessons_2_high_res.jpg';
-import lessons_03_highRes from '../images/lessons/lessons_3_high_res.jpg';
+//import lessons_03_highRes from '../images/lessons/lessons_3_high_res.jpg';
 import lessons_04_highRes from '../images/lessons/lessons_4_high_res.jpg';
 import lessons_05_highRes from '../images/lessons/lessons_5_high_res.jpg';
-import lessons_01_lowRes from '../images/lessons/lessons_1_low_res.jpg';
+//import lessons_01_lowRes from '../images/lessons/lessons_1_low_res.jpg';
 import lessons_02_lowRes from '../images/lessons/lessons_2_low_res.jpg';
-import lessons_03_lowRes from '../images/lessons/lessons_3_low_res.jpg';
+//import lessons_03_lowRes from '../images/lessons/lessons_3_low_res.jpg';
 import lessons_04_lowRes from '../images/lessons/lessons_4_low_res.jpg';
 import lessons_05_lowRes from '../images/lessons/lessons_5_low_res.jpg';
 
@@ -46,20 +46,20 @@ export const DesktopContent = () => {
 			<div className='carousel'>
 				<Carousel
 					lowRes={[
-						lessons_01_lowRes,
+						//lessons_01_lowRes,
 						lessons_02_lowRes,
-						lessons_03_lowRes,
+						//lessons_03_lowRes,
 						lessons_04_lowRes,
 						lessons_05_lowRes,
 					]}
 					highRes={[
-						lessons_01_highRes,
+						//lessons_01_highRes,
 						lessons_02_highRes,
-						lessons_03_highRes,
+						//lessons_03_highRes,
 						lessons_04_highRes,
 						lessons_05_highRes,
 					]}
-					length={5}
+					length={3}
 				/>
 			</div>
 			<div className='boarding'>
@@ -302,14 +302,14 @@ export const MobileContent = () => {
 				</p>
 			</div>
 			<div className='img-container'>
-				<div className='img-wrapper'>
+				{/* <div className='img-wrapper'>
 					<Image
 						styleWrapper={styleWrapper}
 						styleImage={styleImage}
 						lowResSrc={lessons_01_lowRes}
 						highResSrc={lessons_01_highRes}
 					/>
-				</div>
+				</div> */}
 				<div className='img-wrapper'>
 					<Image
 						styleWrapper={styleWrapper}
@@ -318,14 +318,14 @@ export const MobileContent = () => {
 						highResSrc={lessons_02_highRes}
 					/>
 				</div>
-				<div className='img-wrapper'>
+				{/* <div className='img-wrapper'>
 					<Image
 						styleWrapper={styleWrapper}
 						styleImage={styleImage}
 						lowResSrc={lessons_03_lowRes}
 						highResSrc={lessons_03_highRes}
 					/>
-				</div>
+				</div> */}
 				<div className='img-wrapper'>
 					<Image
 						styleWrapper={styleWrapper}

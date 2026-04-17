@@ -8,13 +8,13 @@ import contact_01_highRes from '../images/contact/contact_high_res_01.jpg';
 import contact_02_highRes from '../images/contact/contact_high_res_02.jpg';
 import contact_03_highRes from '../images/contact/contact_high_res_03.jpg';
 import contact_04_highRes from '../images/contact/contact_high_res_04.jpg';
-import contact_05_highRes from '../images/contact/contact_high_res_05.jpg';
+//import contact_05_highRes from '../images/contact/contact_high_res_05.jpg';
 import contact_06_highRes from '../images/contact/contact_high_res_06.jpg';
 import contact_01_lowRes from '../images/contact/contact_low_res_01.jpg';
 import contact_02_lowRes from '../images/contact/contact_low_res_02.jpg';
 import contact_03_lowRes from '../images/contact/contact_low_res_03.jpg';
 import contact_04_lowRes from '../images/contact/contact_low_res_04.jpg';
-import contact_05_lowRes from '../images/contact/contact_low_res_05.jpg';
+//import contact_05_lowRes from '../images/contact/contact_low_res_05.jpg';
 import contact_06_lowRes from '../images/contact/contact_low_res_06.jpg';
 
 const Contact = () => {
@@ -40,7 +40,7 @@ export const DesktopContent = () => {
 						contact_02_lowRes,
 						contact_03_lowRes,
 						contact_04_lowRes,
-						contact_05_lowRes,
+						//contact_05_lowRes,
 						contact_06_lowRes,
 					]}
 					highRes={[
@@ -48,10 +48,10 @@ export const DesktopContent = () => {
 						contact_02_highRes,
 						contact_03_highRes,
 						contact_04_highRes,
-						contact_05_highRes,
+						//contact_05_highRes,
 						contact_06_highRes,
 					]}
-					length={6}
+					length={5}
 				/>
 			</div>
 			<div className='info'>
