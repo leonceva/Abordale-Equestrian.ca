@@ -30,6 +30,7 @@ export default LessonsAndBoarding;
 export const DesktopContent = () => {
 	return (
 		<DesktopDiv>
+			{/*
 			<div className='lessons'>
 				<h4>Lessons</h4>
 				<p>
@@ -43,6 +44,7 @@ export const DesktopContent = () => {
 					and conducive learning environment.
 				</p>
 			</div>
+			*/}
 			<div className='carousel'>
 				<Carousel
 					lowRes={[
@@ -62,7 +64,7 @@ export const DesktopContent = () => {
 					length={3}
 				/>
 			</div>
-			<div className='boarding'>
+			<div className='lessons'>
 				<h4>Boarding</h4>
 				<p>
 					Abordale Equestrian is dedicated to providing top-notch care for your horses,
@@ -251,6 +253,7 @@ export const MobileContent = () => {
 	return (
 		<MobileDiv>
 			<div className='intro'>
+				{/*
 				<h4>Lessons</h4>
 				<p>
 					Abordale Equestrian provides a comprehensive lesson program catering to a wide
@@ -262,6 +265,7 @@ export const MobileContent = () => {
 					paired with another rider of a comparable skill level, fostering a supportive
 					and conducive learning environment.
 				</p>
+				*/}
 				<h4>Boarding</h4>
 				<p>
 					Abordale Equestrian is dedicated to providing top-notch care for your horses,

@@ -1,8 +1,8 @@
 import DesktopLayout from '../layouts/DesktopLayout';
 import MobileLayout from '../layouts/MobileLayout';
 import styled from 'styled-components';
-import sean_img_highRes from '../images/about/about_sean_high_res.jpg';
-import sean_img_lowRes from '../images/about/about_sean_low_res.jpg';
+//import sean_img_highRes from '../images/about/about_sean_high_res.jpg';
+//import sean_img_lowRes from '../images/about/about_sean_low_res.jpg';
 import brandon_img_highRes from '../images/about/about_brandon_high_res.jpg';
 import brandon_img_lowRes from '../images/about/about_brandon_low_res.jpg';
 import Image from '../components/Image';
@@ -42,7 +42,8 @@ export const DesktopContent = () => {
 	return (
 		<DesktopDiv>
 			<div className='staff'>
-				<div className='staff-container'>
+				{/* 
+					<div className='staff-container'>
 					<div className='bio-container'>
 						<div className='image'>
 							<Image
@@ -68,6 +69,7 @@ export const DesktopContent = () => {
 						</p>
 					</div>
 				</div>
+				*/}
 				<div className='staff-container'>
 					<div className='bio-container'>
 						<div className='image'>
@@ -183,7 +185,8 @@ export const MobileContent = () => {
 	return (
 		<MobileDiv>
 			<div className='staff'>
-				<div className='staff-container'>
+				{/*
+					<div className='staff-container'>
 					<h2>Sean Jenkin</h2>
 					<h3>Owner and Head Coach</h3>
 					<div className='image'>
@@ -207,6 +210,7 @@ export const MobileContent = () => {
 						and skill levels.
 					</p>
 				</div>
+				*/}
 				<div className='staff-container'>
 					<h2>Brandon Fehér</h2>
 					<h3>Owner and Barn Manager</h3>

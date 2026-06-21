@@ -78,8 +78,8 @@ export const DesktopNavbar = (props) => {
 				</NavLink>
 				<NavLink
 					className='heading-font'
-					to='/lessons-and-boarding'>
-					Lessons & Boarding
+					to='/boarding'>
+					Boarding
 				</NavLink>
 				<NavLink
 					className='heading-font'
@@ -443,9 +443,9 @@ export const ModalMenu = (props) => {
 							Facilities
 						</Link>
 						<Link
-							to='/lessons-and-boarding'
+							to='/boarding'
 							className='expanded-link'>
-							Lessons and Boarding
+							Boarding
 						</Link>
 						<Link
 							to='/horse-shows'

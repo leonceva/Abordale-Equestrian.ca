@@ -7,12 +7,12 @@ import homepage_01_highRes from '../images/home/homepage_1_high_res.jpg';
 import homepage_02_highRes from '../images/home/homepage_2_high_res.jpg';
 import homepage_03_highRes from '../images/home/homepage_3_high_res.jpg';
 import homepage_04_highRes from '../images/home/homepage_4_high_res.jpg';
-import homepage_05_highRes from '../images/home/homepage_5_high_res.jpg';
+// import homepage_05_highRes from '../images/home/homepage_5_high_res.jpg';
 import homepage_01_lowRes from '../images/home/homepage_1_low_res.jpg';
 import homepage_02_lowRes from '../images/home/homepage_2_low_res.jpg';
 import homepage_03_lowRes from '../images/home/homepage_3_low_res.jpg';
 import homepage_04_lowRes from '../images/home/homepage_4_low_res.jpg';
-import homepage_05_lowRes from '../images/home/homepage_5_low_res.jpg';
+// import homepage_05_lowRes from '../images/home/homepage_5_low_res.jpg';
 import SocialMediaLink from '../components/SocialMediaLink';
 import voltaire_logo from '../images/voltaire-logo.png';
 
@@ -42,16 +42,16 @@ export const DesktopContent = () => {
 								homepage_02_lowRes,
 								homepage_03_lowRes,
 								homepage_04_lowRes,
-								homepage_05_lowRes,
+								//homepage_05_lowRes,
 							]}
 							highRes={[
 								homepage_01_highRes,
 								homepage_02_highRes,
 								homepage_03_highRes,
 								homepage_04_highRes,
-								homepage_05_highRes,
+								//homepage_05_highRes,
 							]}
-							length={5}
+							length={4}
 						/>
 					</div>
 					<div className='description-container'>
@@ -64,9 +64,8 @@ export const DesktopContent = () => {
 						facility ensures rider comfort with a heated lounge and a heated tack room
 						equipped with lockers for boarders. With four tack-up bays, as well as two
 						indoor and two outdoor wash stalls, the facility caters to all equestrian
-						needs. Abordale Equestrian provides riding lessons for all skill levels,
-						from beginners to competitive riders, ensuring personalized attention and
-						growth for each individual.
+						needs. Abordale Equestrian provides personalized attention and growth for
+						each individual.
 						<div className='contact-info'>
 							<div className='info'>
 								<div className='button-container'>
@@ -300,8 +299,7 @@ export const MobileContent = () => {
 				relaxing escape into nature. The facility ensures rider comfort with a heated lounge
 				and a heated tack room equipped with lockers for boarders. With four tack-up bays,
 				as well as two indoor and two outdoor wash stalls, the facility caters to all
-				equestrian needs. Abordale Equestrian provides riding lessons for all skill levels,
-				from beginners to competitive riders, ensuring personalized attention and growth for
+				equestrian needs. Abordale Equestrian provides personalized attention and growth for
 				each individual.
 			</div>
 			<div className='get-started'>
@@ -366,14 +364,14 @@ export const MobileContent = () => {
 						highResSrc={homepage_04_highRes}
 					/>
 				</div>
-				<div className='img-wrapper'>
+				{/* <div className='img-wrapper'>
 					<Image
 						styleWrapper={styleWrapper}
 						styleImage={styleImage}
 						lowResSrc={homepage_05_lowRes}
 						highResSrc={homepage_05_highRes}
 					/>
-				</div>
+				</div> */}
 				<div className='bottom-space' />
 			</div>
 		</MobileDiv>
